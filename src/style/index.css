@@ -1,0 +1,44 @@
+@import url('https://fonts.cdnfonts.com/css/faktum-test');
+@font-face {
+    font-family: 'faktum-light';
+    src: url('../../Fonts/faktum-test/faktum-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family:'Faktum Test', sans-serif;
+}
+p{
+    font-family: 'faktum-light';
+    line-height: 28px ;
+}
+body {
+    background: #0F0202 !important;
+}
+h1,h2,h3,h4,h5,h6,button{
+    font-family:'Faktum Test', sans-serif !important;
+}
+h1,h2,h3,h4,h5,h6,p{
+    color: #f5f5f5 !important;
+
+}
+.frame-secImg img:nth-child(2){
+    margin-top: -392px;
+    display: flex;
+}
+.frame-secImg img:nth-child(1){
+    width: 90%;
+}
+@media (max-width: 1024px) {
+    .frame-secImg img:nth-child(2) {
+        width: 92% !;
+        margin-top: -400px ;
+    }
+}
+@media (max-width: 767px){
+    .frame-secImg img:nth-child(2){
+        width: 370px;
+        margin: auto;
+        margin-top: -200px;
+    }
+}

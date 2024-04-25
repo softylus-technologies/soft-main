@@ -1,0 +1,85 @@
+.FooterCon-container{
+    background-image: url(../../../static/Frame\ 7030.svg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-FooterCon{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.content-FooterCon h2{
+    color: #f5f5f5;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: center;
+    width: 60%;
+}
+.content-FooterCon h2 span{
+    color:rgba(236, 34, 39, 1);
+}
+.content-FooterCon p{
+    margin-top: 10px;
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    width: 60%;
+}
+.btn-footercon{
+    color: #EC2227;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    background: #f5f5f5;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+.btn-footercon img{
+    margin-left: 10px;
+}
+.btn-footercon:hover{
+    background-color: #f5f5f5 !important;
+    color: #EC2227 !important;
+}
+@media (min-width:1024px) {
+    .sec-card{
+        width:1300px;
+    }
+}
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1024px) {
+    .content-FooterCon h2{
+        font-size: 38px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .FooterCon-container{
+        height: 100%;
+        margin-top: 50px;
+    }
+    .content-FooterCon h2{
+        font-size: 24px;
+        width: 90%;
+        line-height: 40px;
+    }
+    .content-FooterCon p{
+        width: 90%;
+    }
+}

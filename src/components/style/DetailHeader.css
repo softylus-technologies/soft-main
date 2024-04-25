@@ -1,0 +1,40 @@
+.DetailHeader-sec{
+    background-image: url(/Hero.svg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.DetailHeader-container{
+    display: contents;
+}
+.DetailHeader-container h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    width: 60%;
+    text-align: center;
+}
+.DetailHeader-container h1 span{
+    color: #EC2227;
+}
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 767px) {
+    .DetailHeader-container h1{
+        font-size: 30px;
+        width: 85%;
+    }
+.DetailHeader-sec{
+    height: 300px;
+}
+}

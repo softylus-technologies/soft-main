@@ -1,0 +1,98 @@
+.Clients-sec{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.Clients-container{
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.center-clints-title{
+    display: flex;
+    justify-content: center;
+}
+.Clients-title{
+    width: 50%;
+}
+.Clients-title h1{
+    text-align: center;
+    font-family: 'Faktum Test';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+}
+.Clients-title h1 span{
+    color: #EC2227;
+}
+.Clients-title p{
+    text-align: center;
+}
+.clients-logo-sec {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns grid */
+    grid-template-rows: auto; /* Row height as per content */
+  }
+  .client-image-border{
+    border-bottom: 1px solid #F5F5F580; /* White border at the bottom */
+    border-right: 1px solid #F5F5F580; /* White border to the right */
+  }
+  .client-image-border:nth-child(4){
+    border-right: none; 
+  }
+  .client-image-border:nth-child(8){
+    border-right: none; 
+  }
+  .client-image-border:nth-child(12){
+    border-right: none; 
+  }
+  .client-image-border:nth-child(16){
+    border-right: none; 
+  }
+  .client-image-border:nth-child(20){
+    border-right: none; 
+  }
+  .clients-logo-sec img {
+    width: 100%; /* Full width of the cell */
+    height: 220px;
+    scale: 80%; /* Maintain aspect ratio */
+    object-fit: scale-down !important; /* Do not stretch the image */
+    padding: 20px; /* Spacing inside each cell */
+    box-sizing: border-box; /* Include padding in the width and height */
+   
+  }
+
+  /* Target the last image in each row to remove the right border */
+  .clients-logo-sec img:nth-child(4n) {
+    border-right: none;
+  }
+  
+  /* If you have a full last row, remove the bottom border from the images in the last row */
+  /* Adjust the number of images in the last row as necessary */
+  @media (max-width: 1200px) {
+    
+  }
+  
+  @media (max-width: 1028px) {
+    .Clients-title h1{
+      font-size: 40px;
+    }
+    .Clients-title{
+      width: 70%;
+
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .clients-logo-sec{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .Clients-title h1{
+      font-size: 30px;
+    }
+    .Clients-title{
+      width: 90%;
+    }
+  
+  }

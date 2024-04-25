@@ -1,0 +1,40 @@
+[
+    {
+      "Title": "Our Social Media Management Process",
+      "SubHeading": "We believe that a systematic approach is key to delivering exceptional social media results. Our process starts with understanding your business goals and target audience, followed by meticulous research, planning, content creation, community management, and analytics tracking. We focus on ROI-driven strategies to ensure that your social media efforts deliver measurable results and maximize your online potential.",
+      "imageSrc": "/Group (2) SSM.svg",
+      "component": "DetailSec"
+    },
+    {
+      "Title": "Our Social Media Management Team ",
+      "SubHeading": "Our team is the cornerstone of our social media management success. Composed of experienced social media specialists, content creators, and data analysts, we work in unison to bring your brand to the forefront of social media platforms. The team's technical prowess and commitment to excellence have culminated in multiple successful social media campaigns that have helped businesses achieve their online goals.",
+      "imageSrc": "/Group (3) DetailSeo.svg",
+      "component": "DetailSec"
+    },{
+        "Title": "Why Social Media Management Matters",
+        "SubHeading": "Social media management is more than just posting content; it's about building relationships with your audience, generating quality leads, and driving engagement. In today's digital age, social media management is a necessity for staying competitive and achieving long-term success.",
+        "imageSrc": "/Group (2) Detail digital marketing.svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (4).svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Our Web Development Team",
+        "SubHeading": "Our team is the cornerstone of our web development success. Composed of experienced web developers, creative designers, and strategic project managers, we work in unison to bring your digital vision to life. The team's technical prowess and commitment to excellence have culminated in multiple award-winning web projects that set industry standards.",
+        "imageSrc": "/Group () DetailMobile.svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Social Media Management and Digital Marketing: A Winning Combination",
+        "SubHeading": "Social media management and digital marketing go hand in hand. That's why we offer integrated social media management and digital marketing services to ensure that your brand is optimized for online success. By combining our expertise in both areas, we can help you achieve maximum ROI and long-term success.",
+        "imageSrc": "/Group (3) SMM.svg",
+        "component": "DetailSec"
+      },
+      {
+        "Title": "Beyond Social Media Management: A Full Spectrum Digital Agency",
+        "SubHeading": "Softylus Technologies transcends traditional social media management. Our expertise encompasses a full suite of digital services including web development, mobile app development, and UX/UI design. Partner with us to tap into a holistic approach for digital excellence and market leadership.",
+        "imageSrc": "/Group (6).svg",
+        "component": "DetailSec"
+      }
+  ]

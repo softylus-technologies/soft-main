@@ -1,0 +1,40 @@
+[
+  {
+    "Title": "Our SEO Process",
+    "SubHeading": "We believe that a systematic approach is key to delivering exceptional SEO results. Our process starts with understanding your business goals and target audience, followed by meticulous keyword research, on-page optimization, content creation, link building, and analytics tracking. We focus on white-hat SEO techniques to ensure long-term success and avoid penalties from search engines",
+    "imageSrc": "/Group (2) DetailSeo.svg",
+    "component": "DetailSec"
+  },
+  {
+    "Title": "Our SEO Team ",
+    "SubHeading": "Our team is the cornerstone of our SEO success. Composed of experienced SEO specialists, content writers, and data analysts, we work in unison to bring your website to the top of search engine results pages. The team's technical prowess and commitment to excellence have culminated in multiple successful SEO campaigns that have helped businesses achieve their online goals.",
+    "imageSrc": "/Group (3) DetailSeo.svg",
+    "component": "DetailSec"
+  },{
+      "Title": "Why SEO Matters?",
+      "SubHeading": "SEO is more than just ranking higher on search engine results pages. It's about attracting the right audience, generating quality leads, and maximizing your online potential. In today's digital age, SEO is a necessity for staying competitive and achieving long-term success.  ",
+      "imageSrc": "/Group (3).svg",
+      "component": "DetailSec"
+    },{
+      "Title": "Responsive Web Development for Every Device",
+      "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+      "imageSrc": "/Group (4).svg",
+      "component": "DetailSec"
+    },{
+      "Title": "Our Web Development Team",
+      "SubHeading": "Our team is the cornerstone of our web development success. Composed of experienced web developers, creative designers, and strategic project managers, we work in unison to bring your digital vision to life. The team's technical prowess and commitment to excellence have culminated in multiple award-winning web projects that set industry standards.",
+      "imageSrc": "/Group () DetailMobile.svg",
+      "component": "DetailSec"
+    },{
+      "Title": "SEO and Web Development: A Winning Combination",
+      "SubHeading": "SEO and web development go hand in hand. That's why we offer integrated SEO and web development services to ensure that your website is optimized for search engines from the ground up. By combining our expertise in both areas, we can help you achieve maximum ROI and long-term success",
+      "imageSrc": "/Group (4) DetailSeo.svg",
+      "component": "DetailSec"
+    },
+    {
+      "Title": "Beyond SEO: A Full Spectrum Digital Agency",
+      "SubHeading": "Softylus Technologies transcends traditional SEO. Our expertise encompasses a full suite of digital services including web development, mobile app development, digital marketing, and UX/UI design. Partner with us to tap into a holistic approach for digital excellence and market leadership.",
+      "imageSrc": "/Group (5) DetailSeo.svg",
+      "component": "DetailSec"
+    }
+]

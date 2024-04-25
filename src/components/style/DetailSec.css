@@ -1,0 +1,21 @@
+.DetailSec-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+}
+.DetailSec-container{
+    display: flex;
+    width: 1100px;
+    gap: 30px;
+    align-items: center;
+}
+.DetailSec-container h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
+    .DetailSec-container{
+        width: 90%;
+    }
+}

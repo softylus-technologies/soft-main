@@ -1,0 +1,43 @@
+
+.clints-home {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.clints-img img{
+    aspect-ratio: 16/9;
+    object-fit: contain !important;
+}
+
+
+@media (max-width: 1028px) {
+    .container-clints{
+        display: flex;
+        justify-content: center;
+    }
+    .clints-home {
+        justify-content: space-between;
+        display: flex;
+        overflow-x: auto;
+        gap: 40px;
+        width: 90%;
+        /* For Webkit browsers like Chrome and Safari */
+    }
+    .clints-home::-webkit-scrollbar {
+        display: none;
+    }
+    .clints-img {
+        flex: 0 0 auto; /* Prevents images from stretching */
+        width: 150px; /* Example width, adjust as needed */
+        /* Add more styling as needed */
+        height: 70px;
+    }
+    .itqan-img{
+        width: 50px;
+    }
+ 
+}

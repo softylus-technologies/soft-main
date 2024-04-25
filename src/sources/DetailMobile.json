@@ -1,0 +1,46 @@
+[
+    {
+      "Title": "Our Approach to Mobile App Development",
+      "SubHeading": "Our ethos in mobile app creation is grounded in a bespoke, user-focused methodology. Starting from ideation to launch, we engage in rigorous analysis, design, development, testing, and market deployment, adhering to the highest industry standards. By leveraging the latest tech stacks, we ensure that your mobile app is scalable, secure, and superior in performance.",
+      "imageSrc": "/Group (2) DetailMobile.svg",
+      "component": "DetailSec"
+    },
+    {
+      "Title": "The Architects Behind Our Mobile Solutions  ",
+      "SubHeading": "At the core of Softylus Technologies are the visionary app developers, UI/UX designers, and strategic project overseers. Our collaborative approach melds expertise and passion, resulting in multiple award-winning applications that become benchmarks for the mobile development industry.      ",
+      "imageSrc": "/Group (3) DetailMobile.svg",
+      "component": "DetailSec"
+    },{
+        "Title": "The Importance of Mobile Development",
+        "SubHeading": "Mobile development is crucial in bridging the gap between brands and users in the digital landscape. A well-crafted app is the conduit for storytelling, marketing, and engaging customers on the go. In today's mobile-first world, a sophisticated app is imperative for any business looking to make a mark.",
+        "imageSrc": "/Group (4) DetailMobile.svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (4).svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Our Web Development Team",
+        "SubHeading": "Our team is the cornerstone of our web development success. Composed of experienced web developers, creative designers, and strategic project managers, we work in unison to bring your digital vision to life. The team's technical prowess and commitment to excellence have culminated in multiple award-winning web projects that set industry standards.",
+        "imageSrc": "/Group () DetailMobile.svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (4).svg",
+        "component": "DetailSec"
+      },
+      {
+        "Title": "SEO and Web Development: Your Digital Success Duo",
+        "SubHeading": "SEO is integrated into every layer of our web development process. By optimizing site structure, loading speeds, and content for search engines, we lay a solid foundation for your online visibility. Our development philosophy aligns with the latest SEO best practices to help your website rank higher and attract more organic traffic.",
+        "imageSrc": "/Group (5) DetailMobile.svg",
+        "component": "DetailSec"
+      },
+      {
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (6).svg",
+        "component": "DetailSec"
+      }
+  ]

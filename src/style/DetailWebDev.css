@@ -1,0 +1,28 @@
+.DetailHeader-B  button{
+    display: none !important;
+}
+.right-img,.section-image-left .DetailSec-container{
+    flex-direction: row-reverse !important;
+}
+.btn-ServicesExplain{
+    background: #f5f5f5 !important;
+    color: #EC2227 !important;
+}
+.btn-ServicesExplain img{
+    margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+  
+}
+
+@media (max-width: 767px) {
+    .right-img,.section-image-left .DetailSec-container{
+        flex-direction: column-reverse !important;
+        width: 85%;
+    }
+}

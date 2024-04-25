@@ -1,0 +1,64 @@
+.Industries-sec{
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+}
+.Industries-container{
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Industries-container h1{
+    text-align: center;
+    width: 75%;
+}
+.Industries-container p{
+    text-align: center;
+    width: 75%;
+    margin-top: 15px;
+}
+.Industries-card{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.Industries-card p{
+    text-align: left;
+    width: 100%;
+}
+.Industries-singel-card{
+    padding: 15px 30px;
+    background: #1D1313;
+    width: 47%;
+    border-radius: 20px;
+}
+.Industries-singel-card img{
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1024px) {
+    .Industries-card{
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .Industries-card{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .Industries-singel-card{
+        width: 85%;
+    }
+    .Industries-container h1,.Industries-container p{
+        text-align: left;
+        width: 85%;
+    }
+}

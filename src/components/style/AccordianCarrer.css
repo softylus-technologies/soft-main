@@ -1,0 +1,48 @@
+.cJuMiW{
+    border: none !important;
+}
+.sc-dkPuFg svg {
+    color: white !important;
+    border: 1px solid;
+    border-radius: 50%;
+}
+.dpOJTS{
+    background: none !important;
+    height: 800px !important;
+    
+}
+.ktwGSM,.sc-dkPuFg{
+    background: none !important;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    flex-direction: row;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: #EC2227;
+    background: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+.accordian-name {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.cJuMiW{
+    background: none !important;
+    padding: 2rem !important;
+    align-items: flex-start !important;
+}
+.kNVMgy{
+    width: 1300px !important;
+}
+.sc-dkPuFg h1{
+    font-size: 24px !important;
+}
+.cJuMiW p{
+    font-size: 16px !important;
+}

@@ -1,0 +1,149 @@
+.sec-project{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.title-project{
+    width: 40%;
+    text-align: center;
+}
+.title-project h1{
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 0px !important; 
+    padding: 20px;
+    border: none !important;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    padding: 10px;
+  }
+
+  .card:hover .card-image img {
+    transform: translateY(-10px); 
+  }
+  
+  .card.active .card-image img {
+    transform: translateY(-70%); 
+  }
+  
+  .card.active .card-content {
+    transform: translateY(-0%); 
+  }
+  /*style card*/
+  .Vend-card.card{
+    background: linear-gradient(95.96deg, #930004 12.81%, #DB070D 100%);
+  }
+  .features-card.card{
+    background: linear-gradient(112deg, #FFC000 -23.59%, #FF7A00 62.12%);
+  }
+  /* .features-card.active .card-image img{
+    transform: translateY(-60%) !important;
+  } */
+  .vend.mobile-card.card{
+    background: linear-gradient(130.28deg, #C28483 1.82%, #925E5D 96.47%);
+  }
+  .deco-card.card{
+    background: linear-gradient(111.88deg, #D1D9C2 -23.59%, #748557 62.12%);
+  }
+  .mansa-card.card{
+    background: #f9f9f9;
+  }
+  .mansa-card.card h2,.mansa-card.card p{
+    color: #0F0202 !important;
+  }
+  .salis-card.card{
+    background: linear-gradient(149.82deg, #81A0EA 2.52%, #2149A6 81.61%);
+  }
+  .logo-project-card.card{
+    background: #220362;
+  }
+  .hon-card.card{
+    background: linear-gradient(130.28deg, #2563EB 1.82%, #022981 96.47%);
+  }
+  .features1-card.card{
+    background: linear-gradient(130.28deg, #7239EA 1.82%, #022981 96.47%);
+  }
+  .features2-card.card{
+    background: #E9E7FD;
+  }
+  .features3-card.card{
+    background: #A24141;
+  }
+  .features4-card.card{
+    background: linear-gradient(130.28deg, #FFCA73 1.82%, #E1910B 96.47%);
+
+  }
+  .features5-card.card{
+    background: #D6D6D6;
+  }
+  .features6-card.card{
+    background: #662BE1;
+  }
+  .features7-card.card{
+    background: #CED4FF;
+  }
+  .features8-card.card{
+    background: #3D4FB4;
+  }
+  /* Responsive breakpoints */
+  @media (max-width: 1200px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for even smaller screens */
+    }
+    .title-project{
+      width: 70%;
+    }
+    .card.active.Vend-card img{
+      transform: translateY(-100%) !important;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .gallery {
+      grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+    .title-project h1{
+      font-size: 30px;
+
+    }
+    .title-project{
+      width: 85%;
+      text-align: left;
+    }
+  }

@@ -1,0 +1,55 @@
+.faq-sec {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 200px;
+}
+.faq-sec h1{
+    color: var(--white, #FFF);
+    text-align: center;
+    
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+}
+.faq-conainer{
+    width: 50%;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1c35hjw-MuiPaper-root-MuiAccordion-root {
+    background: none;
+    border-bottom: 2px solid #1D1313;
+}
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    color: white;
+} 
+ p.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root {
+    color: #FFF;
+    font-family: 'Faktum Test';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    width: 85%;
+ }
+.p-faq{
+    font-family: 'faktum-light' !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    color: #cdcdcd !important;
+}
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1024px) {
+    .faq-conainer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .faq-conainer {
+        width: 90%;
+    }
+}

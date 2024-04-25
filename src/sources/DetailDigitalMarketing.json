@@ -1,0 +1,40 @@
+[
+    {
+      "Title": "Our Digital Marketing Process",
+      "SubHeading": "We believe that a systematic approach is key to delivering exceptional digital marketing results. Our process starts with understanding your business goals and target audience, followed by meticulous research, planning, execution, and analytics tracking. We focus on ROI-driven strategies to ensure that your digital marketing efforts deliver measurable results and maximize your online potential.",
+      "imageSrc": "/Group (2) DetailSeo.svg",
+      "component": "DetailSec"
+    },
+    {
+      "Title": "Our Digital Marketing Team ",
+      "SubHeading": "Our team is the cornerstone of our digital marketing success. Composed of experienced digital marketers, content creators, and data analysts, we work in unison to bring your brand to the forefront of the digital landscape. The team's technical prowess and commitment to excellence have culminated in multiple successful digital marketing campaigns that have helped businesses achieve their online goals.  ",
+      "imageSrc": "/Group (3) DetailSeo.svg",
+      "component": "DetailSec"
+    },{
+        "Title": "Why Digital Marketing Matters",
+        "SubHeading": "Digital marketing is more than just promoting your brand online. It's about building relationships with your audience, generating quality leads, and driving growth. In today's digital age, digital marketing is a necessity for staying competitive and achieving long-term success.",
+        "imageSrc": "/Group (2) Detail digital marketing.svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (4).svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Our Web Development Team",
+        "SubHeading": "Our team is the cornerstone of our web development success. Composed of experienced web developers, creative designers, and strategic project managers, we work in unison to bring your digital vision to life. The team's technical prowess and commitment to excellence have culminated in multiple award-winning web projects that set industry standards.",
+        "imageSrc": "/Group () DetailMobile.svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Digital Marketing and Web Development: A Winning Combination",
+        "SubHeading": "Digital marketing and web development go hand in hand. That's why we offer integrated digital marketing and web development services to ensure that your website is optimized for search engines and user experience. By combining our expertise in both areas, we can help you achieve maximum ROI and long-term success.",
+        "imageSrc": "/Group (3) Detail digital marketing.svg",
+        "component": "DetailSec"
+      },
+      {
+        "Title": "Beyond Digital Marketing: A Full Spectrum Digital Agency",
+        "SubHeading": "Softylus Technologies transcends traditional digital marketing. Our expertise encompasses a full suite of digital services including web development, mobile app development, and UX/UI design. Partner with us to tap into a holistic approach for digital excellence and market leadership.",
+        "imageSrc": "/Group (5) DetailSeo.svg",
+        "component": "DetailSec"
+      }
+  ]

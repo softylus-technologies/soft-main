@@ -1,0 +1,27 @@
+[
+    {
+      "id": "panel1",
+      "question": "What services does your software agency offer?",
+      "answer": "Our agency specializes in a wide range of software services including custom software development, mobile app development, web development, UI/UX design, and cloud solutions. We also provide post-launch support and maintenance to ensure your software continues to run smoothly."
+    },
+    {
+      "id": "panel2",
+      "question": "How do you ensure the security and privacy of the software you develop?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    },
+    {
+        "id": "panel3",
+        "question": "Can you integrate our existing software or third-party applications with the new software you develop?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+      },
+      {
+        "id": "panel4",
+        "question": "How long will it take to develop my software?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+      },
+      {
+        "id": "panel5",
+        "question": "How do you handle post-launch support and updates?",
+        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+      }
+  ]

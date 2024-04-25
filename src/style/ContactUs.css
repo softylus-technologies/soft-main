@@ -1,0 +1,116 @@
+.contact-sec {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+.contact-container {
+    display: flex;
+    width: 1300px;
+    justify-content: space-between;
+}
+.contact-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.contact-title h1{
+    color: #FFF;
+    font-family: 'Faktum Test';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.contact-form{
+    background: #130C0C;
+    border-radius: 20px;
+    padding: 35px;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.label-sec {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+.happy-clients h2{
+    font-weight: 700;
+}
+.label-sec label{
+    color: var(--White, var(--White, #F5F5F5));
+    font-family: 'Faktum Test';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.label-sec input{
+    width: 28em;
+    background: none;
+    border-radius: 8px;
+    border: 1px solid rgba(245, 245, 245, 0.60);
+    height: 3em;
+    padding: 10px;
+    color: #F5F5F5;
+    font-family:'Faktum Test' ;
+}
+.slider-contact .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: none;
+}
+    
+
+.label-sec textarea{
+    background: none;
+    border-radius: 8px;
+    border: 1px solid rgba(245, 245, 245, 0.60);
+    height: 10em;
+    padding: 10px;
+    color: #F5F5F5;
+    font-family:'Faktum Test' ;
+}
+.slider-contact .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+    padding: 0px !important;
+}
+.rc-anchor-normal-footer{
+    display: none;
+}
+.rc-anchor-light{
+    background: none !important;
+}@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1024px) {
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        gap: 100px;
+    }
+    .contact-title{
+        width: 100%;
+    }
+    .label-sec input{
+        width: 19em;
+    }
+    .contact-title h1{
+        font-size: 30px;
+    }
+    .contact-sec{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

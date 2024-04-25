@@ -1,0 +1,46 @@
+[
+    {
+      "Title": "Who We Are: A Web Development Powerhouse",
+      "SubHeading": "We believe that a systematic approach is key to delivering exceptional web projects. Our process starts with understanding your business goals, followed by meticulous planning, design, development, testing, and deployment. We focus on agile methodologies to ensure flexibility and efficiency, resulting in web applications that are robust, secure, and ready to scale with your business.",
+      "imageSrc": "/Group (1).svg",
+      "component": "DetailSec"
+    },
+    {
+      "Title": "Our Web Development Team",
+      "SubHeading": "Our team is the cornerstone of our web development success. Composed of experienced web developers, creative designers, and strategic project managers, we work in unison to bring your digital vision to life. The team's technical prowess and commitment to excellence have culminated in multiple award-winning web projects that set industry standards.",
+      "imageSrc": "/Group (2).svg",
+      "component": "DetailSec"
+    },{
+        "Title": "Establish Your Brand with Stellar Web Development",
+        "SubHeading": "Your brand deserves to be seen and heard. Through strategic web development, we craft sites that reflect your brand's values, message, and aesthetics. By focusing on user experience, design, and functionality, we ensure that your website resonates with your audience and leaves a lasting impression.",
+        "imageSrc": "/Group (3).svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (4).svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Our Web Development Team",
+        "SubHeading": "Our team is the cornerstone of our web development success. Composed of experienced web developers, creative designers, and strategic project managers, we work in unison to bring your digital vision to life. The team's technical prowess and commitment to excellence have culminated in multiple award-winning web projects that set industry standards.",
+        "imageSrc": "/Group (5).svg",
+        "component": "DetailSec"
+      },{
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (4).svg",
+        "component": "DetailSec"
+      },
+      {
+        "Title": "SEO and Web Development: Your Digital Success Duo",
+        "SubHeading": "SEO is integrated into every layer of our web development process. By optimizing site structure, loading speeds, and content for search engines, we lay a solid foundation for your online visibility. Our development philosophy aligns with the latest SEO best practices to help your website rank higher and attract more organic traffic.",
+        "imageSrc": "/Group (5).svg",
+        "component": "DetailSec"
+      },
+      {
+        "Title": "Responsive Web Development for Every Device",
+        "SubHeading": "Users interact with websites across a multitude of devices, making responsive design critical. We specialize in creating web experiences that are consistent and functional on desktops, tablets, and smartphones. Our responsive designs ensure that your site's layout and content adapt flawlessly to all screen sizes, enhancing user experience and SEO.",
+        "imageSrc": "/Group (6).svg",
+        "component": "DetailSec"
+      }
+  ]
