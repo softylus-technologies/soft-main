@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Softylus",
+        name: "Softylus ",
         short_name: "Softylus",
         start_url: "/",
         background_color: "#ffffff",
