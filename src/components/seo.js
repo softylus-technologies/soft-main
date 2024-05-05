@@ -3,7 +3,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, title, children }) {
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description 
 
 
   return (
