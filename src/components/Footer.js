@@ -41,27 +41,27 @@ const Footer = () => {
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li class="mb-2 text-white	">
-                  <Link to="/About" className="text-white	no-underline">
+                  <Link to="/about" className="text-white	no-underline">
                     About Softylus
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/Industries">
+                  <Link className="text-white	no-underline" to="/industries">
                     Industries
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/Careers">
+                  <Link className="text-white	no-underline" to="/careers">
                     Careers
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/Clients">
+                  <Link className="text-white	no-underline" to="/clients">
                     Clients
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/ContactUs">
+                  <Link className="text-white	no-underline" to="/contact-us">
                     Contact us
                   </Link>
                 </li>
@@ -73,30 +73,30 @@ const Footer = () => {
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailWebDev">
+                  <Link className="text-white	no-underline" to="/detail-web-dev">
                     Software and web development
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailMobile">
+                  <Link className="text-white	no-underline" to="/detail-mobile">
                     Mobile development
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailSeo">
+                  <Link className="text-white	no-underline" to="/detail-seo">
                     SEO page services
                   </Link>
                 </li>
                 <li class="mb-2">
                   <Link
                     className="text-white	no-underline"
-                    to="/DetailDigitalMarketing"
+                    to="/detail-digital-marketing"
                   >
                     Detail digital marketing
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailSMM">
+                  <Link className="text-white	no-underline" to="/detail-smm">
                     Social media management
                   </Link>
                 </li>
@@ -105,7 +105,7 @@ const Footer = () => {
             <div>
               <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailWebDev">
+                  <Link className="text-white	no-underline" to="/detail-web-dev">
                     UI/UX
                   </Link>
                 </li>

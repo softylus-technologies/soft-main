@@ -20,5 +20,17 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Softylus",
+        short_name: "Softylus",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#663399",
+        display: "standalone",
+        icon: "static/fav Softylus.svg", // This path is relative to the root of the site.
+      },
+    },
   ],
 };

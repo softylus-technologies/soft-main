@@ -15,9 +15,13 @@ import TowSideLayout from "../components/tow-side-layout/TowSideLayout";
 import IconCard from "../components/icon-card/IconCard";
 import { Link } from "gatsby";
 import FeatureSlider from "../components/feature-slider/FeatureSlider";
+import Seo from "../components/seo";
 const About = () => {
   return (
     <>
+    <Seo title="About Softylus | Your Software Solution Experts"
+    metaDescription="Learn more about Softylus, a leader in software development. Our mission is to bridge technological gaps through innovative, user-centric solutions."
+    />
       <NavBar />
       <Header
         Title="Pioneering innovation in software development excellence "

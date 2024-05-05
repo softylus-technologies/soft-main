@@ -19,11 +19,12 @@ const NavBar = () => {
         </div>
 
         <div className="navBar-page">
-          <Link to="/Services">Services</Link>
-          <Link to="/Clients">Clients</Link>
-          <Link to="/About">About Us</Link>
-          <Link to="/Projects">Projects</Link>
-          <Link to="/ContactUs" className="btn-contact contact-pc">
+          <Link to="/services">Services</Link>
+          <Link to="/industries">Industries</Link>
+          <Link to="/clients">Clients</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/contact-us" className="btn-contact contact-pc">
             Contact Us
           </Link>
         </div>
@@ -50,7 +51,7 @@ const NavBar = () => {
               <Link to="/About">About Us</Link>
               <Link to="/Projects">Projects</Link>
               <div className="hamb-sec-3">
-                <Link to="/ContactUs" className="btn-contact-hamb">
+                <Link to="/contact-us" className="btn-contact-hamb">
                   Contact Us
                 </Link>
               </div>

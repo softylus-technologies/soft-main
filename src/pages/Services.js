@@ -17,9 +17,12 @@ import FAQ from "../components/FAQ";
 import services from "../sources/services.json"; // Make sure the path is correct
 import { Link } from "gatsby";
 import TowSideLayout from "../components/tow-side-layout/TowSideLayout";
+import Seo from "../components/seo";
 const Services = () => {
   return (
     <>
+    <Seo title="Comprehensive Software Solutions | Softylus Services"
+    metaDescription="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs."/>
       <NavBar />
       <Header
         Title="All-in-one development services for your business "

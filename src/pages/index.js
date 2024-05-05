@@ -16,10 +16,13 @@ import IconCard from "../components/icon-card/IconCard";
 import { Link } from "gatsby";
 import BlogSection from "../components/blog-section/BlogSection";
 import FeatureSlider from "../components/feature-slider/FeatureSlider";
-
+import Seo from "../components/seo";
 const IndexPage = () => {
   return (
     <>
+    <Seo title="Pioneering Software Development | Softylus"
+    metaDescription="Discover Softylus, your premier partner in software development excellence. Specializing in bespoke solutions for businesses globally. Contact us to transform your vision into reality."
+    />
       <NavBar />
 
       <Header

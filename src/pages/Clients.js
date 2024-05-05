@@ -3,10 +3,13 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Wefeaturedon from "../components/Wefeaturedon"
 import FooterCon from "../components/FooterCon"
+import Seo from '../components/seo';
 import "../style/Clients.css"
 const Clients = () => {
   return (
     <>
+    <Seo title="Our Clients | Softylus Success Stories"
+    metaDescription=" Proudly serving a diverse clientele. Read success stories and testimonials from businesses that have achieved remarkable growth with Softylus's software solutions."/>
     <NavBar/>
     <div className='Clients-sec'>
         <div className='Clients-container'>

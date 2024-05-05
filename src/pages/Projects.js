@@ -4,6 +4,7 @@ import imagesData from '../sources/projects.json';
 import FooterCon from "../components/FooterCon"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
+import Seo from '../components/seo';
 const ProjectCard = ({ image, title, description, onClick, isActive,className }) => {
   return (
     <div className={`${className} card ${isActive ? 'active' : ''}`} onClick={onClick}>
@@ -27,6 +28,9 @@ const Projects = () => {
 
   return (
     <>
+    <Seo title='Our Projects | Showcase of Softylus Innovations'
+    metaDescription="Dive into our portfolio of completed projects. From web applications to mobile platforms, see how our innovative solutions have propelled businesses forward."
+    />
     <NavBar/>
     <div className='sec-project'>
       <div className='title-project'>

@@ -2,6 +2,8 @@ import React from "react";
 import "./style/Cards.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Button } from "reactstrap";
+import { Link } from "gatsby";
+
 const Cards = () => {
   return (
     <section className="container-cards">
@@ -13,7 +15,8 @@ const Cards = () => {
         </p>
       </header>
       <article className="pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col gap-4 md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 ">
-        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px]">
+        <Link to="/detail-web-dev">
+        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Softwaredev.svg"
             alt="Software and Web Development"
@@ -25,7 +28,9 @@ const Cards = () => {
             and complex system integrations.
           </p>
         </div>
-        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px]">
+        </Link>
+        <Link to="/detail-mobile">
+        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Mobiledev.svg"
             alt="Mobile Development Services"
@@ -37,7 +42,9 @@ const Cards = () => {
             launched? Your search ends here.
           </p>
         </div>
-        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px]">
+        </Link>
+        <Link to="">
+        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/UXDesign.svg"
             alt="UI/UX Design Services"
@@ -49,7 +56,9 @@ const Cards = () => {
             intuitive digital products.
           </p>
         </div>
-        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px]">
+        </Link>
+        <Link to="">
+        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Softwaredev (1).svg"
             alt="Maintenance and Update Services"
@@ -61,7 +70,9 @@ const Cards = () => {
             because if we can spoil our customers, then why not?
           </p>
         </div>
-        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px]">
+        </Link>
+        <Link to="">
+        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Mobiledev (1).svg"
             alt="Analysis and Planning Services"
@@ -73,7 +84,9 @@ const Cards = () => {
             requirements with the teams responsible to assist you with that.
           </p>
         </div>
-        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px]">
+        </Link>
+        <Link to="/detail-seo">
+        <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Softwaredev (2).svg"
             alt="SEO Services"
@@ -85,6 +98,7 @@ const Cards = () => {
             today's digital landscape.
           </p>
         </div>
+        </Link>
       </article>
       <Button
         className="btn-card"

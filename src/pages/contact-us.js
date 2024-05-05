@@ -14,7 +14,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { CardCustomer } from "../components/CardCustomer";
 import RECAPTCHA from "react-google-recaptcha";
-
+import Seo from "../components/seo";
 function ContactForm() {
   // Define state variables to store form data
   const [formData, setFormData] = useState({
@@ -42,10 +42,13 @@ function ContactForm() {
 
   return (
     <>
+    <Seo title="Get in Touch | Contact Softylus"
+    metaDescription="Ready to start your software development journey? Contact Softylus today to discuss your project needs and learn how we can help elevate your business."
+    />
       <NavBar />
       <div class="container ">
         <img
-          className="circle-sec !left-[unset] !right-[-350px]"
+          className="circle-sec !left-[unset] "
           id="circle1"
           src="/Frame 1000003358.svg"
         />

@@ -3,6 +3,9 @@
     font-size: 40px;
     font-weight: 400;
 }
+a {
+    text-decoration: none !important;
+}
 .title-cards p{
     color: #F5F5F5;
     font-size: 16px;
@@ -76,6 +79,14 @@
     padding: 15px 30px !important;
     border-radius: 25px !important;
 
+}
+.card-hover{
+    transition: all .3s ease-in;
+
+}
+.card-hover:hover{
+    transform: scale(1.05);
+    box-shadow: 0 19px 38px -12px rgba(0,0,0,.2), 0 15px 12px 0 rgba(0,0,0) !important;
 }
 @media (max-width:1024px) {
     .sec-card{

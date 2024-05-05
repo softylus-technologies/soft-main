@@ -15,6 +15,7 @@ h1.Say-Coustmer-title{
 }
 .swiper-wrapper{
     margin-bottom: 20px;
+    align-items: center;
 }
 span.swiper-pagination-bullet {
     background: white !important;
