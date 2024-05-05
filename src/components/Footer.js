@@ -110,12 +110,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailMobile">
+                  <Link className="text-white	no-underline" to="/about">
                     Hosting Services
                   </Link>
                 </li>
                 <li class="mb-2">
-                  <Link className="text-white	no-underline" to="/DetailSeo">
+                  <Link className="text-white	no-underline" to="/about">
                     Follow-Up and maintenance
                   </Link>
                 </li>
