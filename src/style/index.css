@@ -29,7 +29,9 @@ h1,h2,h3,h4,h5,h6,p{
 .frame-secImg img:nth-child(1){
     width: 90%;
 }
-
+.border-radius30{
+    border-radius: 30px;
+}
 @media (max-width: 1024px) {
     .frame-secImg img:nth-child(2) {
         width: 92% !;
