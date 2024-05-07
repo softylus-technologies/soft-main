@@ -43,7 +43,7 @@ function ContactForm() {
   return (
     <>
     <Seo title="Get in Touch | Contact Softylus"
-    metaDescription="Ready to start your software development journey? Contact Softylus today to discuss your project needs and learn how we can help elevate your business."
+    description="Ready to start your software development journey? Contact Softylus today to discuss your project needs and learn how we can help elevate your business."
     />
       <NavBar />
       <div class="container ">

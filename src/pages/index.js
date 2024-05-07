@@ -20,11 +20,11 @@ import Seo from "../components/seo";
 const IndexPage = () => {
   return (
     <>
-    <Seo title="Pioneering Software Development | Softylus"
-    metaDescription="Discover Softylus, your premier partner in software development excellence. Specializing in bespoke solutions for businesses globally. Contact us to transform your vision into reality."
-    />
+    
       <NavBar />
-
+      <Seo title="Pioneering Software Development | Softylus"
+    description="Discover Softylus, your premier partner in software development excellence. Specializing in bespoke solutions for businesses globally. Contact us to transform your vision into reality."
+    />
       <Header
         Title="Elevate your software development endeavors to new heights. "
         SubHeading="Build world-class digital products with a team of design, development and strategy experts. All in one place."
@@ -100,4 +100,3 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;

@@ -22,7 +22,7 @@ const Services = () => {
   return (
     <>
     <Seo title="Comprehensive Software Solutions | Softylus Services"
-    metaDescription="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs."/>
+    description="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs."/>
       <NavBar />
       <Header
         Title="All-in-one development services for your business "

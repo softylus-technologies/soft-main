@@ -29,7 +29,7 @@ const Projects = () => {
   return (
     <>
     <Seo title='Our Projects | Showcase of Softylus Innovations'
-    metaDescription="Dive into our portfolio of completed projects. From web applications to mobile platforms, see how our innovative solutions have propelled businesses forward."
+    description="Dive into our portfolio of completed projects. From web applications to mobile platforms, see how our innovative solutions have propelled businesses forward."
     />
     <NavBar/>
     <div className='sec-project'>

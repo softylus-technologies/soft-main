@@ -9,7 +9,7 @@ const Clients = () => {
   return (
     <>
     <Seo title="Our Clients | Softylus Success Stories"
-    metaDescription=" Proudly serving a diverse clientele. Read success stories and testimonials from businesses that have achieved remarkable growth with Softylus's software solutions."/>
+    description=" Proudly serving a diverse clientele. Read success stories and testimonials from businesses that have achieved remarkable growth with Softylus's software solutions."/>
     <NavBar/>
     <div className='Clients-sec'>
         <div className='Clients-container'>

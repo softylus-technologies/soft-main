@@ -20,7 +20,7 @@ const About = () => {
   return (
     <>
     <Seo title="About Softylus | Your Software Solution Experts"
-    metaDescription="Learn more about Softylus, a leader in software development. Our mission is to bridge technological gaps through innovative, user-centric solutions."
+    description="Learn more about Softylus, a leader in software development. Our mission is to bridge technological gaps through innovative, user-centric solutions."
     />
       <NavBar />
       <Header
