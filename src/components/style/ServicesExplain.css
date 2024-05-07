@@ -16,7 +16,9 @@
     font-size: 32px;
     margin-top: 15px;
 }
-
+.ServicesExplain-img-sec{
+    width: 100%;
+}
 @media (max-width: 1200px) {
     
 }
