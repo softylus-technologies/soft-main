@@ -51,6 +51,10 @@ header.Header-container {
 .btn-header img{
     margin-left: 15px;
 }
+/* .bg-transparent img{
+    width: 100%;
+    object-fit: cover;
+} */
  /* Responsive breakpoints */
  @media (max-width: 1200px) {
     

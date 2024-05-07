@@ -58,7 +58,6 @@ export default function CustomModal({ btnText, title, children, ...rest }) {
                     className="text-lg font-medium leading-6 text-gray-900 flex justify-between"
                   >
                     {title}
-                    Hello
                   </Dialog.Title>
                   <IoMdClose
                     className="text-main absolute top-5 right-5 text-2xl cursor-pointer "

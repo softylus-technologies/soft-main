@@ -103,7 +103,7 @@ const Cards = () => {
       <Button
         className="btn-card"
         aria-label="See more services"
-        href="/Services"
+        href="/services"
       >
         See more services
       </Button>

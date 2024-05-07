@@ -80,7 +80,12 @@
 }
 .rc-anchor-light{
     background: none !important;
-}@media (max-width: 1200px) {
+}
+.border-white{
+    --bs-border-opacity:0.6;
+}
+
+@media (max-width: 1200px) {
     
 }
 

@@ -2,9 +2,9 @@ import React from "react";
 
 function TowSmallSide({ children, imgUrl, reverse }) {
   return (
-    <section className="md:mx-auto py-10 pl-4 pr-4 md:pl-0 md:pr-0  ">
+    <section className="md:mx-auto py-10 pl-4 pr-4 md:pl-0 md:pr-0  flex justify-center">
       <div
-        className={` grid grid-cols-1 lg:grid-cols-3 gap-x-2 gap-y-4 ${
+        className={` grid grid-cols-1 lg:grid-cols-3 gap-x-2 gap-y-4 max-w-5xl ${
           reverse ? "lg:flex-row-reverse" : ""
         }`}
       >
@@ -20,7 +20,7 @@ function TowSmallSide({ children, imgUrl, reverse }) {
             reverse ? "lg:order-1" : ""
           }flex mx-auto items-start justify-start w-100 h-100 relative `}
         >
-          <img className="w-full h-full object-cover" src={imgUrl} />
+          <img className="w-full h-full object-containt max-w-80 max-h-80" src={imgUrl} />
         </div>
       </div>
     </section>

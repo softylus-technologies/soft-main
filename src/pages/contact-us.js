@@ -15,6 +15,8 @@ import "swiper/css/navigation";
 import { CardCustomer } from "../components/CardCustomer";
 import RECAPTCHA from "react-google-recaptcha";
 import Seo from "../components/seo";
+import ReCAPTCHA from 'react-google-recaptcha';
+
 function ContactForm() {
   // Define state variables to store form data
   const [formData, setFormData] = useState({
@@ -36,10 +38,24 @@ function ContactForm() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add your logic here to handle the form submission, e.g., send data to a server.
     console.log(formData);
   };
+  const [isVerified, setIsVerified] = useState(false);
 
+  const handleVerification = (response) => {
+    if (response) {
+      setIsVerified(true);
+    }
+  };
+
+  const handleSubmit1 = (event) => {
+    event.preventDefault();
+    if (isVerified) {
+      // Submit your form data here
+    } else {
+      // Show error message or prevent form submission
+    }
+  };
   return (
     <>
     <Seo title="Get in Touch | Contact Softylus"
@@ -249,9 +265,15 @@ function ContactForm() {
                         className="block w-full rounded-md border border-white bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       ></textarea>
                     </div>
+                    <ReCAPTCHA
+                  style={{ marginTop: "1.5rem" }}
+                  sitekey="6Le8I9QpAAAAANFDoyNMJ8k-jxeHYBSaoWDDOlDg"
+                  onChange={handleVerification}
+                />
                   </div>
                 </div>
                 <div className="mt-8 flex justify-start">
+                
                   {/* <Link
                     to="/ContactUs/"
                     className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"

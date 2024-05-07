@@ -45,7 +45,7 @@ const Careers = () => {
           </p>
         </div>
         <div className="flex flex-col">
-          <form className="flex gap-2 w-full mx-auto">
+          {/* <form className="flex gap-2 w-full mx-auto">
             <div className="relative z-0 w-full mb-5 group flex gap-1 mx-auto px-3">
               <input
                 type="email"
@@ -68,7 +68,7 @@ const Careers = () => {
                 <IoMdSearch /> Search
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
 

@@ -17,6 +17,7 @@
 .navBar-page {
     display: flex;
     gap: 40px;
+    align-items: center;
 }
 button.btn.btn-danger {
     background: none;

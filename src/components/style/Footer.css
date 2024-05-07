@@ -62,7 +62,12 @@ ul{
 .social-icon a{
     z-index: 5;
 }
-
+address {
+    margin-top: 26px;
+}
+address p{
+    margin-bottom: .5rem;
+}
 @media (min-width:1024px) {
     .Footer-sec{
         width:1300px;

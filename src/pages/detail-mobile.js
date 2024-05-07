@@ -12,7 +12,6 @@ import ServicesExplain from "../components/ServicesExplain";
 const DetailMobile = () => {
   const [details, setDetails] = useState([]);
   useEffect(() => {
-    // Load the detail data from the JSON file
     setDetails(detailData);
   }, [details]);
 
@@ -29,12 +28,10 @@ const DetailMobile = () => {
         imageSrc="/Images DetailMobile.svg"
       />
       {details.map((detail, index) => {
-        // Determine if the index is odd or even for the class name
         const className =
           index % 2 === 0 ? "section-image-right" : "section-image-left";
         console.log(className);
 
-        // Check if a different component should be rendered for the 4th and 5th items
         if (index === 3) {
           return (
             <ServicesExplain
