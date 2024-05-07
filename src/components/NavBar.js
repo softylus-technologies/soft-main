@@ -3,12 +3,20 @@ import "./style/NavBar.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-
+import Dropdown from'react-bootstrap/Dropdown';
 const NavBar = () => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsOpen(false);
+  };
   return (
     <div className="w-full pt-4 md:px-[70px]  flex">
       <nav className="NavBar-sec">
@@ -19,7 +27,24 @@ const NavBar = () => {
         </div>
 
         <div className="navBar-page">
-          <Link to="/services">Services</Link>
+         
+      <Dropdown
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      show={isOpen} 
+      >
+      <Dropdown.Toggle variant="success" id="dropdown-basic" >
+            <Link to="/services">Services</Link>
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="/detail-web-dev">Software and web development</Dropdown.Item>
+        <Dropdown.Item href="/detail-mobile">Mobile development</Dropdown.Item>
+        <Dropdown.Item href="/detail-seo">SEO page services</Dropdown.Item>
+        <Dropdown.Item href="/detail-digital-marketing/">Detail digital marketing</Dropdown.Item>
+        <Dropdown.Item href="/detail-smm">Social media management</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
           <Link to="/industries">Industries</Link>
           <Link to="/clients">Clients</Link>
           <Link to="/about">About Us</Link>

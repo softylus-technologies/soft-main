@@ -22,7 +22,7 @@ const IndexPage = () => {
     <>
     
       <NavBar />
-      <Seo title="Pioneering Software Development | Softylus"
+      <Seo title="Pioneering Software Development | Softylus "
     description="Discover Softylus, your premier partner in software development excellence. Specializing in bespoke solutions for businesses globally. Contact us to transform your vision into reality."
     />
       <Header
@@ -83,7 +83,7 @@ const IndexPage = () => {
         <Cards />
 
         <SecTwo />
-        <FeatureSlider />
+        <FeatureSlider  />
         <BlogSection />
         {/* <Wefeaturedon /> */}
       </div>
