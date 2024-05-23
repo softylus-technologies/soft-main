@@ -55,7 +55,7 @@ const NavBar = () => {
         </div>
 
         <div className="NavBar-sec-3">
-          <Link to="/ContactUs" className="btn-contact">
+          <Link to="/contact-us" className="btn-contact">
             Contact Us
           </Link>
         </div>

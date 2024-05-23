@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../style/ContactUs.css";
@@ -16,46 +16,85 @@ import { CardCustomer } from "../components/CardCustomer";
 import RECAPTCHA from "react-google-recaptcha";
 import Seo from "../components/seo";
 import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';  // Ensure axios is imported if making HTTP requests
 
 function ContactForm() {
-  // Define state variables to store form data
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
     phone: "",
   });
-  const [capVal, setCapVal] = useState(null);
-  // Handle form input changes
+  const [isVerified, setIsVerified] = useState(false);
+  const [formError, setFormError] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prev => ({
+      ...prev,
       [name]: value,
-    });
+    }));
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleVerification = (value) => {
+    setIsVerified(value ? true : false);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-  };
-  const [isVerified, setIsVerified] = useState(false);
+    if (!isVerified) {
+      alert('Please verify that you are not a robot.');
+      return;
+    }
 
-  const handleVerification = (response) => {
-    if (response) {
-      setIsVerified(true);
+    try {
+      const response = await axios.post("https://unruffled-galois.65-21-12-13.plesk.page/api/contact-uses", { data: formData }, {
+        headers: {
+          "Accept": "*/*",
+          "Content-Type": "application/json",
+          "Authorization": `Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd` 
+        }
+      });
+
+      if (response.status === 200) {
+        setFormSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+          phone: ''
+        });
+      } else {
+        setFormError(true);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setFormError(true);
+    }
+  };
+// Testimonials 
+
+const [testimonials, setTestimonials] = useState([]);
+useEffect(() => {
+  const fetchTestimonials = async () => {
+    try {
+      const response = await axios.get("https://unruffled-galois.65-21-12-13.plesk.page/api/customer-says", {
+        headers: {
+          "Accept": "*/*",
+          "Content-Type": "application/json",
+          "Authorization": "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd"
+        }
+      });
+      setTestimonials(response.data);
+    } catch (error) {
+      console.error("Error fetching testimonials:", error);
     }
   };
 
-  const handleSubmit1 = (event) => {
-    event.preventDefault();
-    if (isVerified) {
-      // Submit your form data here
-    } else {
-      // Show error message or prevent form submission
-    }
-  };
+  fetchTestimonials();
+}, []);
   return (
     <>
     <Seo title="Get in Touch | Contact Softylus"
@@ -125,54 +164,16 @@ function ContactForm() {
                       onSwiper={(swiper) => console.log(swiper)}
                       onSlideChange={() => console.log("slide change")}
                     >
-                      <SwiperSlide>
-                        <CardCustomer
-                          SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-                          Title="Sally Baalbaki"
-                          SubProfile="CEO, Decoration one"
-                          imageSrc="/coding.gif"
-                        />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <CardCustomer
-                          SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-                          Title="Sally Baalbaki"
-                          SubProfile="CEO, Decoration one"
-                          imageSrc="/coding.gif"
-                        />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <CardCustomer
-                          SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-                          Title="Sally Baalbaki"
-                          SubProfile="CEO, Decoration one"
-                          imageSrc="/coding.gif"
-                        />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <CardCustomer
-                          SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-                          Title="Sally Baalbaki"
-                          SubProfile="CEO, Decoration one"
-                          imageSrc="/coding.gif"
-                        />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <CardCustomer
-                          SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-                          Title="Sally Baalbaki"
-                          SubProfile="CEO, Decoration one"
-                          imageSrc="/coding.gif"
-                        />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <CardCustomer
-                          SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-                          Title="Sally Baalbaki"
-                          SubProfile="CEO, Decoration one"
-                          imageSrc="/coding.gif"
-                        />
-                      </SwiperSlide>
+                      {testimonials.map((testimonial, index) => (
+                        <SwiperSlide key={index}>
+                          <CardCustomer
+                            SubHeading={testimonial.SubHeading}
+                            Title={testimonial.Title}
+                            SubProfile={testimonial.SubProfile}
+                            imageSrc={testimonial.imageSrc}
+                          />
+                        </SwiperSlide>
+                      ))}
                     </Swiper>
                   </div>
                 </div>

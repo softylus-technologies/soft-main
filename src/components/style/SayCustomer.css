@@ -1,11 +1,13 @@
-.Say-Coustmer-sec{
+.Say-Customer-sec{
     margin-top: 70px;
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 0 10px
 } 
-
+.Say-Coustmer-container{
+    width: 90% ;
+}
 .slider-sec{
     margin-top: 50px;
 }
@@ -21,7 +23,6 @@ span.swiper-pagination-bullet {
     background: white !important;
     width: 16px;
     height: 16px;
-
 }
 .Say-Coustmer-sec .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
 padding-bottom: 30px;

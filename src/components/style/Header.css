@@ -11,6 +11,9 @@ header.Header-container {
     padding-bottom: 150px;
     background-position: right center;
 }
+.bg-ps-buttom{
+    background-position: bottom;
+}
 .Header-sec {
     display: flex;
     justify-content: space-between;
