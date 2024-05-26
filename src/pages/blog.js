@@ -72,7 +72,7 @@ const Blog = () => {
             <div key={blogs[blogs.length - 1].id} className="blog-card-big">
               <img src={blogs[blogs.length - 1].imgUrl} alt={blogs[blogs.length - 1].title} />
               <div className="blog-card-big-content">
-              <h3 className="mt-4 h6-size clamp-3-lines md:mt-0">{blogs[blogs.length - 1].title}</h3>
+              <h3 className="mt-4 h6-size clamp-3-lines md:mt-0 ">{blogs[blogs.length - 1].title}</h3>
               <p className="clamp-4-lines mt-4 line-height-p">{blogs[blogs.length - 1].desc}</p>
               </div>
             </div>
