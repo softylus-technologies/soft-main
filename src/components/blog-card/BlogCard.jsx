@@ -14,7 +14,7 @@ function BlogCard({ item }) {
           {item.title}
         </h5>
 
-        <p class="mb-3 md:text-base text-sm font-normal text-gray-700 dark:text-gray-400">
+        <p class="mb-3 md:text-base text-sm font-normal text-gray-700 dark:text-gray-400 clamp-4-lines">
           {item.desc}
         </p>
         <Link

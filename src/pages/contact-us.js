@@ -3,23 +3,15 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../style/ContactUs.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { CardCustomer } from "../components/CardCustomer";
-import RECAPTCHA from "react-google-recaptcha";
-import Seo from "../components/seo";
 import ReCAPTCHA from 'react-google-recaptcha';
+import Seo from "../components/seo";
 import axios from 'axios';  // Ensure axios is imported if making HTTP requests
 
 function ContactForm() {
-  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,6 +21,7 @@ function ContactForm() {
   const [isVerified, setIsVerified] = useState(false);
   const [formError, setFormError] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [testimonials, setTestimonials] = useState([]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -74,53 +67,55 @@ function ContactForm() {
       setFormError(true);
     }
   };
-// Testimonials 
 
-const [testimonials, setTestimonials] = useState([]);
-useEffect(() => {
-  const fetchTestimonials = async () => {
-    try {
-      const response = await axios.get("https://unruffled-galois.65-21-12-13.plesk.page/api/customer-says", {
-        headers: {
-          "Accept": "*/*",
-          "Content-Type": "application/json",
-          "Authorization": "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd"
-        }
-      });
-      setTestimonials(response.data);
-    } catch (error) {
-      console.error("Error fetching testimonials:", error);
-    }
-  };
+  // Testimonials
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await axios.get("https://strapi.softylus.com/api/customer-says?populate=imageSrc", {
+          headers: {
+            "Accept": "*/*",
+            "Content-Type": "application/json",
+            "Authorization": "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd"
+          }
+        });
+        setTestimonials(response.data.data);
+      } catch (error) {
+        console.error("Error fetching testimonials:", error);
+      }
+    };
 
-  fetchTestimonials();
-}, []);
+    fetchTestimonials();
+  }, []);
+
   return (
     <>
-    <Seo title="Get in Touch | Contact Softylus"
-    description="Ready to start your software development journey? Contact Softylus today to discuss your project needs and learn how we can help elevate your business."
-    />
+      <Seo 
+        title="Get in Touch | Contact Softylus"
+        description="Ready to start your software development journey? Contact Softylus today to discuss your project needs and learn how we can help elevate your business."
+      />
       <NavBar />
-      <div class="container ">
+      <div className="container">
         <img
-          className="circle-sec !left-[unset] "
+          className="circle-sec !left-[unset]"
           id="circle1"
           src="/Frame 1000003358.svg"
+          alt="Decorative"
         />
       </div>
-      <div className="md:px-[70px]  mx-auto mt-10">
-        <div className="relative  bg-[#130C0C] ">
+      <div className="md:px-[70px] mx-auto mt-10">
+        <div className="relative bg-[#130C0C]">
           <div className="mx-auto grid grid-cols-1 lg:grid-cols-2">
-            <div className="relative px-4 pb-10 pt-10 sm:pt-10 lg:static  lg:py-20">
-              <div className=" mx-auto lg:mx-0 lg:max-w-lg flex flex-col justify-between gap-20">
+            <div className="relative px-4 pb-10 pt-10 sm:pt-10 lg:static lg:py-20">
+              <div className="mx-auto lg:mx-0 lg:max-w-lg flex flex-col justify-between gap-20">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight text-white">
                     Do you have an idea in mind? We'd love to hear from you.
                   </h2>
                   <p className="mt-6 text-lg leading-8 text-gray-300">
                     We’re happy to talk about your project details. Share your
-                    thoughts with us, or hit us up to simply learn About the
-                    services we have to offer
+                    thoughts with us, or hit us up to simply learn about the
+                    services we have to offer.
                   </p>
                 </div>
                 <div className="happy-clients w-100">
@@ -146,13 +141,7 @@ useEffect(() => {
                           spaceBetween: 10,
                         },
                       }}
-                      modules={[
-                        Navigation,
-                        Pagination,
-                        Scrollbar,
-                        A11y,
-                        Autoplay,
-                      ]}
+                      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                       spaceBetween={0}
                       autoplay={{
                         delay: 4500,
@@ -164,13 +153,13 @@ useEffect(() => {
                       onSwiper={(swiper) => console.log(swiper)}
                       onSlideChange={() => console.log("slide change")}
                     >
-                      {testimonials.map((testimonial, index) => (
-                        <SwiperSlide key={index}>
+                      {testimonials.map((testimonial) => (
+                        <SwiperSlide key={testimonial.id}>
                           <CardCustomer
-                            SubHeading={testimonial.SubHeading}
-                            Title={testimonial.Title}
-                            SubProfile={testimonial.SubProfile}
-                            imageSrc={testimonial.imageSrc}
+                            SubHeading={testimonial.attributes.SubHeading}
+                            Title={testimonial.attributes.Title}
+                            SubProfile={testimonial.attributes.SubProfile}
+                            imageSrc= {`https://strapi.softylus.com/${testimonial.attributes.imageSrc?.data?.attributes?.url}` || '/default-image.jpg'}
                           />
                         </SwiperSlide>
                       ))}
@@ -182,13 +171,14 @@ useEffect(() => {
             <form
               action="#"
               method="POST"
-              className="px-4 pb-10 pt-10 sm:pt-10 lg:static  lg:py-20"
+              className="px-4 pb-10 pt-10 sm:pt-10 lg:static lg:py-20"
+              onSubmit={handleSubmit}
             >
-              <div className="mx-auto  lg:mr-0 lg:max-w-lg">
+              <div className="mx-auto lg:mr-0 lg:max-w-lg">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div className="sm:col-span-2">
                     <label
-                      for="name"
+                      htmlFor="name"
                       className="block text-sm font-semibold leading-6 text-white"
                     >
                       Name
@@ -208,7 +198,7 @@ useEffect(() => {
                   </div>
                   <div className="sm:col-span-2">
                     <label
-                      for="phone-number"
+                      htmlFor="phone"
                       className="block text-sm font-semibold leading-6 text-white"
                     >
                       Phone number
@@ -228,7 +218,7 @@ useEffect(() => {
                   </div>
                   <div className="sm:col-span-2">
                     <label
-                      for="email"
+                      htmlFor="email"
                       className="block text-sm font-semibold leading-6 text-white"
                     >
                       Email
@@ -246,10 +236,9 @@ useEffect(() => {
                       />
                     </div>
                   </div>
-
                   <div className="sm:col-span-2">
                     <label
-                      for="message"
+                      htmlFor="message"
                       className="block text-sm font-semibold leading-6 text-white"
                     >
                       Message
@@ -261,31 +250,26 @@ useEffect(() => {
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        placeholder="Massage"
+                        placeholder="Message"
                         rows="4"
                         className="block w-full rounded-md border border-white bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
                       ></textarea>
                     </div>
                     <ReCAPTCHA
-                  style={{ marginTop: "1.5rem" }}
-                  sitekey="6Le8I9QpAAAAANFDoyNMJ8k-jxeHYBSaoWDDOlDg"
-                  onChange={handleVerification}
-                />
+                      style={{ marginTop: "1.5rem" }}
+                      sitekey="6Le8I9QpAAAAANFDoyNMJ8k-jxeHYBSaoWDDOlDg"
+                      onChange={handleVerification}
+                    />
                   </div>
                 </div>
                 <div className="mt-8 flex justify-start">
-                
-                  {/* <Link
-                    to="/ContactUs/"
-                    className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
-                  ></Link> */}
                   <button
                     type="submit"
-                    className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-main  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
+                    className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
                   >
                     Get free consultation
                     <svg
-                      class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                      className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -293,9 +277,9 @@ useEffect(() => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
@@ -312,169 +296,3 @@ useEffect(() => {
 }
 
 export default ContactForm;
-
-// <div className="md:px-[70px] mx-auto">
-//   <div className="contact-sec bg-[#130C0C] p-3 rounded-lg ">
-//     <div className="w-100 flex">
-//       <div className="contact-title">
-//         <div>
-//           <h1>Do you have an idea in mind? We'd love to hear from you.</h1>
-//           <p>
-//             We’re happy to talk about your project details. Share your thoughts
-//             with us, or hit us up to simply learn about the services we have to
-//             offer.
-//           </p>
-//         </div>
-// <div className="happy-clients">
-//   <h2>Meet our happy clients</h2>
-//   <div className="slider-sec slider-contact">
-//     <Swiper
-//       breakpointsInverse={true}
-//       breakpoints={{
-//         640: {
-//           slidesPerView: 1,
-//           spaceBetween: 20,
-//         },
-//         768: {
-//           slidesPerView: 1,
-//           spaceBetween: 40,
-//         },
-//         1024: {
-//           slidesPerView: 1,
-//           spaceBetween: 50,
-//         },
-//         1030: {
-//           slidesPerView: 2,
-//           spaceBetween: 50,
-//         },
-//       }}
-//       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-//       spaceBetween={0}
-//       autoplay={{
-//         delay: 4500,
-//         disableOnInteraction: false,
-//       }}
-//       loop={true}
-//       pagination={{ clickable: true }}
-//       scrollbar={{ draggable: true }}
-//       onSwiper={(swiper) => console.log(swiper)}
-//       onSlideChange={() => console.log("slide change")}
-//     >
-//       <SwiperSlide>
-//         <CardCustomer
-//           SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-//           Title="Sally Baalbaki"
-//           SubProfile="CEO, Decoration one"
-//           imageSrc="/coding.gif"
-//         />
-//       </SwiperSlide>
-//       <SwiperSlide>
-//         <CardCustomer
-//           SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-//           Title="Sally Baalbaki"
-//           SubProfile="CEO, Decoration one"
-//           imageSrc="/coding.gif"
-//         />
-//       </SwiperSlide>
-//       <SwiperSlide>
-//         <CardCustomer
-//           SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-//           Title="Sally Baalbaki"
-//           SubProfile="CEO, Decoration one"
-//           imageSrc="/coding.gif"
-//         />
-//       </SwiperSlide>
-//       <SwiperSlide>
-//         <CardCustomer
-//           SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-//           Title="Sally Baalbaki"
-//           SubProfile="CEO, Decoration one"
-//           imageSrc="/coding.gif"
-//         />
-//       </SwiperSlide>
-//       <SwiperSlide>
-//         <CardCustomer
-//           SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-//           Title="Sally Baalbaki"
-//           SubProfile="CEO, Decoration one"
-//           imageSrc="/coding.gif"
-//         />
-//       </SwiperSlide>
-//       <SwiperSlide>
-//         <CardCustomer
-//           SubHeading="Have worked with Softylus for almost two years. They're a kind group of people who do exceptional design and development work at a fair price. Highly recommended :)"
-//           Title="Sally Baalbaki"
-//           SubProfile="CEO, Decoration one"
-//           imageSrc="/coding.gif"
-//         />
-//       </SwiperSlide>
-//     </Swiper>
-//   </div>
-// </div>
-//       </div>
-//       <div className="contact-form">
-//         <form onSubmit={handleSubmit}>
-//           <div className="label-sec">
-//             <label htmlFor="name">Name:</label>
-//             <input
-// type="text"
-// id="name"
-// name="name"
-// value={formData.name}
-// onChange={handleInputChange}
-// required
-// placeholder="Name"
-//             />
-//           </div>
-//           <div className="label-sec">
-//             <label htmlFor="phone">Phone Number:</label>
-//             <input
-//   type="tel"
-//   id="phone"
-//   name="phone"
-//   value={formData.phone}
-//   onChange={handleInputChange}
-//   required
-//   placeholder="Phone number"
-// />
-//           </div>
-
-//           <div className="label-sec">
-//             <label htmlFor="email">Email:</label>
-//             <input
-//               type="email"
-//               id="email"
-//               name="email"
-//               value={formData.email}
-//               onChange={handleInputChange}
-//               required
-//               placeholder="emailaddress@email.com"
-//             />
-//           </div>
-//           <div className="label-sec">
-//             <label htmlFor="message">Message:</label>
-//             <textarea
-//               id="message"
-//               name="message"
-//               value={formData.message}
-//               onChange={handleInputChange}
-//               required
-//               placeholder="Massage"
-//             />
-//           </div>
-//           <RECAPTCHA
-//             sitekey="6Lczn1EoAAAAANkOd0qmjLegXvq1pa9zJND4LTCv"
-//             onChange={(val) => {
-//               setCapVal(val);
-//             }}
-//           />
-//           <input type="hidden" name="_gotcha" style={{ display: "none" }} />
-
-//           <button type="submit" className="btn-sec">
-//             Send Email
-//           </button>
-//         </form>
-//       </div>
-//     </div>
-//   </div>
-// </div>;

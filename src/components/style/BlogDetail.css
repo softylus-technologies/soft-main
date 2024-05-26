@@ -1,0 +1,23 @@
+.BlogDetail-sec{
+    margin-top: 150px;
+}
+.BlogDetail-card-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.BlogDetail-card-info h1{
+    text-align: center;
+ 
+}
+.BlogDetail-card-info img{
+    width: 100%;
+    max-height: 700px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-top: 60px;
+}
+.BlogDetail-des{
+    margin-top: 60px;
+}
