@@ -97,8 +97,8 @@
         font-weight: 200 !important;
         margin-top: 20px;
     }
-    .h-420{
-        height: 480px;
+    .h-480{
+        height: 480px !important;
     }
     .blog-container{
         flex-direction: column-reverse;
