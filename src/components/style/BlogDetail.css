@@ -93,6 +93,10 @@
     text-overflow: ellipsis;
 }
 @media (max-width:1024px){
+    .font-normal-css{
+        font-weight: 200 !important;
+        margin-top: 20px;
+    }
     .h-420{
         height: 420px;
     }

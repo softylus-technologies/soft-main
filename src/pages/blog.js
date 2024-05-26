@@ -25,7 +25,7 @@ const Blog = () => {
             .join("\n");
 
           return {
-            title: blog.attributes.title, // Corrected the typo from 'tilte' to 'title'
+            title: blog.attributes.tilte, // Corrected the typo from 'tilte' to 'title'
             desc: description,
             url: blog.attributes.url || "#",
             id: blog.id,

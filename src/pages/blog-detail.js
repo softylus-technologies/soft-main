@@ -32,7 +32,7 @@ const BlogDetail = () => {
             .join("\n");
 
           return {
-            title: blog.attributes.title,
+            title: blog.attributes.tilte,
             desc: description,
             url: blog.attributes.url || "#",
             id: blog.id,
@@ -65,18 +65,15 @@ const BlogDetail = () => {
   return (
     <>
       <NavBar />
-      <section className="md:px-[70px] mx-auto flex justify-center flex-col items-center pl-4 pr-4">
-        <h1 className="text-center mt-20">Our latest news</h1>
-        <p className="text-center max-w-4xl mb-20 mt-6">
-          Dive into the digital frontier: Unraveling the latest trends, expert insights, and in-depth analyses in software development – your go-to resource for navigating the ever-evolving landscape of technology.
-        </p>
+      <section className="md:px-[70px] mx-auto flex justify-center flex-col items-center pl-4 pr-4 mt-20">
+       
         <div className="blog-container">
           <div className="blog-list  pl-4 pr-4 pb-6">
             {blogs.map((blog) => (
               <div key={blog.id} className="blog-card-list " onClick={() => handleBlogClick(blog.id)}>
                 <img src={blog.imgUrl} alt={blog.title} />
                 <div className="blog-card-list-content">
-                  <h6 className="clamp-3-lines">{blog.title}</h6>
+                  <h6 className="clamp-3-lines md:font-normal font-normal-css ">{blog.title}</h6>
                   <p className="clamp-2-lines line-height-p">{blog.desc}</p>
                 </div>
               </div>
@@ -86,7 +83,7 @@ const BlogDetail = () => {
             <div className="show-post  pl-4 pr-4">
               <img src={selectedBlog.imgUrl} alt={selectedBlog.title} />
               <div className="blog-card-big-content">
-                <h1 className="mt-4 h6-size md:mt-0">{selectedBlog.title}</h1>
+                <h1 className="mt-4  md:mt-0">{selectedBlog.title}</h1>
                 <p className="mt-4 line-height-p">{selectedBlog.desc}</p>
               </div>
             </div>
