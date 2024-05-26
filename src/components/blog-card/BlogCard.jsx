@@ -5,9 +5,9 @@ function BlogCard({ item }) {
   return (
     <div
       key={item.id}
-      class="max-w-sm bg-mainDark rounded-lg ease-out duration-300 md:hover:h-[110%] transition-all shadow w-fit  h-full mx-auto relative overflow-hidden group"
+      class=" max-w-xl bg-mainDark rounded-lg ease-out duration-300 md:hover:h-[110%] transition-all shadow w-fit  h-full mx-auto relative overflow-hidden group"
     >
-      <img class="rounded-t-lg" src={item.imgUrl} alt="" />
+      <img class="rounded-t-lg w-full" src={item.imgUrl} alt="" />
 
       <div class="px-3 py-4">
         <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900  ">
