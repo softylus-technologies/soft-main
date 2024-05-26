@@ -13,9 +13,9 @@ function TowSideLayout({ children, imgUrl, img2Url, reverse }) {
         <div className="flex mx-auto items-start justify-start w-100 h-100 relative">
           {img2Url ? (
             <>
-              <img className="w-fit h-fit object-cover" src={imgUrl} />
+              <img className="w-full h-fit object-cover" src={imgUrl} />
               <img
-                className="w-fit h-fit left-0 top-0 object-contain z-102 absolute scale-[1.03] md:scale-[1.09]"
+                className=" w-full h-fit left-0 top-0 object-contain z-102 absolute scale-[1.03] md:scale-[1.09]"
                 src={img2Url}
               />
             </>

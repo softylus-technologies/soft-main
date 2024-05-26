@@ -27,7 +27,8 @@ const NavBar = () => {
         </div>
 
         <div className="navBar-page">
-         
+       <Link to="../../">Home</Link>  
+       <Link to="/projects">Projects</Link>
       <Dropdown
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -45,10 +46,9 @@ const NavBar = () => {
         <Dropdown.Item href="/detail-smm">Social media management</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
+    <Link to="/about">About Us</Link>
+    <Link to="/clients">Clients</Link>
           <Link to="/industries">Industries</Link>
-          <Link to="/clients">Clients</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/projects">Projects</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact-us" className="btn-contact contact-pc">
             Contact Us
