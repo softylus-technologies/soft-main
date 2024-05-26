@@ -38,6 +38,7 @@
 }
 .blog-card-list img{
     max-width: 234px;
+    border-radius: 20px;
 }
 .blog-card-list {
     display: flex;
@@ -57,6 +58,7 @@
     width: 100%;
     object-fit: cover;
     max-height: 400px;
+    border-radius: 20px;
 }
 .clamp-3-lines{
     -webkit-line-clamp: 3;
@@ -81,6 +83,7 @@
     }
     .blog-card-big img{
         max-width: 200px;
+        border-radius: 20px;
       
     }
     .blog-card-big h6{
@@ -117,5 +120,8 @@
     }
     .blog-card-list img{
         max-width: 200px;
+    }
+    .BlogDetail-sec{
+        margin-top: 50px;
     }
 }
