@@ -58,6 +58,13 @@
     object-fit: cover;
     max-height: 400px;
 }
+.clamp-3-lines{
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 @media (max-width:1024px){
     .blog-container{
         flex-direction: column-reverse;
@@ -73,7 +80,7 @@
             margin-bottom: 25px;
     }
     .blog-card-big img{
-        max-width: 234px;
+        max-width: 200px;
       
     }
     .blog-card-big h6{
@@ -100,5 +107,15 @@
     .blog-list{
         height: 100%;
         
+    }
+    .h6-size{
+        font-size: 16px;
+        margin-top: 0 !important;
+    }
+    .line-height-p{
+        line-height: 20px;
+    }
+    .blog-card-list img{
+        max-width: 200px;
     }
 }

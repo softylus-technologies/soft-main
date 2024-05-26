@@ -54,12 +54,12 @@ const BlogDetail = () => {
   <>    
   <NavBar />
     <Seo
-        title={`Blog - ${attributes.title}`}
+        title={`Blog - ${attributes.tilte}`}
         description={attributes.description.map((desc) =>
           desc.children.map((child) => child.text).join(' ')
         ).join(' ')}
       />
-      <section className='BlogDetail-sec md:px-[70px] mx-auto pl-4 pr-4  '>
+      <section className='BlogDetail-sec md:px-[70px] mx-auto pl-4 pr-4 md:mt-5'>
         <div className='BlogDetail-container'>
           
           <div className='BlogDetail-card'>

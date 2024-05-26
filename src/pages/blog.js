@@ -60,8 +60,8 @@ const Blog = () => {
               <div key={blog.id} className="blog-card-list">
                 <img src={blog.imgUrl} alt={blog.title} />
                 <div className="blog-card-list-content">
-                <h6 className="">{blog.title}</h6>
-                <p className="clamp-2-lines">{blog.desc}</p>
+                <h6 className="clamp-3-lines">{blog.title}</h6>
+                <p className="clamp-2-lines line-height-p">{blog.desc}</p>
                 </div>
               </div>
               </Link>
@@ -72,8 +72,8 @@ const Blog = () => {
             <div key={blogs[blogs.length - 1].id} className="blog-card-big">
               <img src={blogs[blogs.length - 1].imgUrl} alt={blogs[blogs.length - 1].title} />
               <div className="blog-card-big-content">
-              <h6 className="mt-4">{blogs[blogs.length - 1].title}</h6>
-              <p className="clamp-4-lines mt-4">{blogs[blogs.length - 1].desc}</p>
+              <h3 className="mt-4 h6-size clamp-3-lines md:mt-0">{blogs[blogs.length - 1].title}</h3>
+              <p className="clamp-4-lines mt-4 line-height-p">{blogs[blogs.length - 1].desc}</p>
               </div>
             </div>
             </Link>
