@@ -93,6 +93,9 @@
     text-overflow: ellipsis;
 }
 @media (max-width:1024px){
+    .h-420{
+        height: 420px;
+    }
     .blog-container{
         flex-direction: column-reverse;
     }
