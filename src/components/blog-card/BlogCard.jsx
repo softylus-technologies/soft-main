@@ -5,7 +5,7 @@ function BlogCard({ item }) {
   return (
     <div
       key={item.id}
-      class=" max-w-xl bg-mainDark rounded-lg ease-out duration-300 md:hover:h-[110%] transition-all shadow w-fit  h-480 mx-auto relative overflow-hidden group"
+      class=" w-4/5 bg-mainDark rounded-lg ease-out duration-300 md:hover:h-[110%] transition-all shadow   h-480 mx-auto relative overflow-hidden group"
     >
       <img class="rounded-t-lg w-full" src={item.imgUrl} alt="" />
 
