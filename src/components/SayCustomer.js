@@ -54,7 +54,7 @@ const SayCustomer = () => {
             }}
           >
             {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
+              <SwiperSlide key={testimonial.id} className=" max-w-md">
                 <CardCustomer
                   SubHeading={testimonial.attributes.SubHeading}
                   Title={testimonial.attributes.Title}

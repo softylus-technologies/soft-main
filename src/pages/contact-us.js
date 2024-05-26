@@ -156,9 +156,9 @@ function ContactForm() {
                       {testimonials.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>
                           <CardCustomer
-                            SubHeading={testimonial.attributes.SubHeading}
-                            Title={testimonial.attributes.Title}
-                            SubProfile={testimonial.attributes.SubProfile}
+                            SubHeading={testimonial.attributes.description}
+                            Title={testimonial.attributes.Name}
+                            SubProfile={testimonial.attributes.position}
                             imageSrc= {`https://strapi.softylus.com/${testimonial.attributes.imageSrc?.data?.attributes?.url}` || '/default-image.jpg'}
                           />
                         </SwiperSlide>

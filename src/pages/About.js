@@ -34,6 +34,7 @@ const About = () => {
             "Authorization": "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd"
           }
         });
+      
         setTestimonials(response.data.data);
       } catch (error) {
         console.error("Error fetching testimonials:", error);
@@ -106,9 +107,9 @@ const About = () => {
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
                 <CardCustomer
-                  SubHeading={testimonial.attributes.SubHeading}
-                  Title={testimonial.attributes.Title}
-                  SubProfile={testimonial.attributes.SubProfile}
+                  SubHeading={testimonial.attributes.description}
+                  Title={testimonial.attributes.Name}
+                  SubProfile={testimonial.attributes.position}
                   imageSrc={testimonial.attributes.imageSrc?.data?.attributes?.url 
                     ? `https://strapi.softylus.com${testimonial.attributes.imageSrc.data.attributes.url}`
                     : '/default-image.jpg'}

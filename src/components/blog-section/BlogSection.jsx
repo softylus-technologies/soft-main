@@ -9,7 +9,7 @@ const BlogSection = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "https://strapi.softylus.com/api/blogs?populate=img",
+          "https://strapi.softylus.com/api/blogs?populate=img&sort=createdAt:desc&pagination[limit]=3",
           {
             headers: {
               Authorization: "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd",
@@ -23,11 +23,11 @@ const BlogSection = () => {
             .join("\n");
 
           return {
-            title: blog.attributes.tilte, // Assuming it's a typo and should be 'title'
+            title: blog.attributes.title, // Corrected the typo from 'tilte' to 'title'
             desc: description,
             url: blog.attributes.url || "#",
             id: blog.id,
-            url:`/blog-detail/?id=${blog?.id}` ,
+            url: `/blog-detail/?id=${blog.id}`,
             imgUrl: blog.attributes.img.data
               ? `https://strapi.softylus.com${blog.attributes.img.data.attributes.url}`
               : "/default-image.jpg",

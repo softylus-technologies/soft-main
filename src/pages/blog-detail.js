@@ -5,6 +5,8 @@ import { Link } from "gatsby";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../components/style/BlogDetail.css"
+
+
 const BlogDetail = () => {
   const location = useLocation(); // Get the location object
   const params = new URLSearchParams(location.search); // Parse the query parameters
@@ -57,9 +59,9 @@ const BlogDetail = () => {
           desc.children.map((child) => child.text).join(' ')
         ).join(' ')}
       />
-      <section className='BlogDetail-sec md:px-[70px] mx-auto '>
+      <section className='BlogDetail-sec md:px-[70px] mx-auto pl-4 pr-4  '>
         <div className='BlogDetail-container'>
-          {/* <Link to="/blogs"><button>Back<img src='/RA.png' alt="Back"/></button></Link> */}
+          
           <div className='BlogDetail-card'>
             <div className='BlogDetail-card-info'>
             <h1 className=''>{attributes.tilte}</h1>
@@ -77,6 +79,8 @@ const BlogDetail = () => {
           </div>
         </div>
       </section>
+     
+
       <Footer />
       </>
 
