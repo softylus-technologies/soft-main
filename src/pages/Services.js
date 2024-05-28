@@ -51,13 +51,7 @@ const Services = () => {
           </div>
         </TowSideLayout>
 
-        {/* <SimpleSection
-        Title="Get Your Software Development Services Sorted Out"
-        SubHeading="Having us as your partnered team means you won't have to juggle different service providers to meet your different needs. You’ll have it all covered splendidly in one place with people who care and prioritize you with 24/7 customer support."
-        buttonText="Get free consultation"
-        imageSrc="/Image services1.svg"
-        path="/ContactUs"
-      /> */}
+       
         <div className="secvices-Banner relative p-10">
           <img
             className="circle !top-[-10%] !bottom-[unset] !right-100 "
@@ -66,13 +60,11 @@ const Services = () => {
           />
           <h1>Technologies we used</h1>
           <div className="md:bg-service-desktop bg-service-mobile min-h-[50vh] bg-center bg-no-repeat	bg-contain"></div>
-          {/* <img src="/services Banner.svg" className="banner-serves" />
-        <img src="/Image serves mobile.svg" className="banner-mobile" /> */}
+       
         </div>
         {services.map((service, index) => {
           console.log(service); // This should log each service item
           const isOdd = index % 2 !== 0;
-          // const className = isOdd ? "section-image-left" : "section-image-right";
 
           return (
             <TowSideLayout reverse={isOdd} imgUrl={service.imageSrc}>
@@ -87,15 +79,6 @@ const Services = () => {
                 </Link>
               </div>
             </TowSideLayout>
-            // <div key={index} className={className}>
-            //   <SimpleSection
-            //     Title={service.title}
-            //     SubHeading={service.subHeading}
-            //     buttonText={service.buttonText}
-            //     imageSrc={service.imageSrc}
-            //     path={service.path}
-            //   />
-            // </div>
           );
         })}
 
