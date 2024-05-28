@@ -78,21 +78,35 @@
   }
   .project-detail-border {
     position: relative;
-    padding: 10px 8px; /* Adjust padding as needed */
+    padding: 3px 8px; /* Adjust padding as needed */
     border-radius: 10px; /* Adjust the border-radius as needed */
     border: 1px solid #db070e7e;
     margin: 0 !important;
   }
-  
-
-  .swiper-Discover-Slide{
-    width: 525px !important;
+  .project-detail-icon{
+    padding: 8px 8px;
   }
+.swiper-Discover{
+  max-width: 90vw;
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+}
+span.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+}
+  /* .swiper-Discover-Slide{
+    width: 525px !important;
+  } */
   .btn-sliider {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+    z-index: 111;
+    position: relative; /* or absolute/fixed/sticky as needed */
 }
+
 .projectDiscussion-sec{
   margin-top: 110px;
 }
@@ -124,6 +138,15 @@
   font-weight: 300;
   align-items: center;
   gap: 5px;
+}
+.projectDiscussion-content {
+  flex: 1;
+}
+.projectDiscussion-img {
+  flex: 1;
+}
+.projectDiscussion-img img{
+  width: 100%;
 }
   /*
   .card.active .card-image img {
@@ -195,10 +218,34 @@
       grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
     }
   }
-  
+
   @media (max-width: 1024px) {
+    .projectDiscussion-content h1{
+      font-size: 40px;
+    }
+    .projectDiscussion-content p{
+      font-size: 18px;
+    }
+    .projectDiscussion-span{
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
     .gallery {
       grid-template-columns: repeat(2, 1fr); /* 2 columns for even smaller screens */
+    }
+    span.swiper-pagination-bullet {
+      width: 8px !important;
+      height: 8px !important;
+    }
+    .projectDiscussion-container{
+      flex-direction: column;
+    }
+    .btn-sliider{
+      display: none;
+    }
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+      justify-content: center;
+      
     }
     .title-project{
       width: 70%;

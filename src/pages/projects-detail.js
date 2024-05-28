@@ -7,12 +7,12 @@ import { useLocation } from '@reach/router';
 import "../style/projects.css";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import ProjectDiscussion from "../components/project-discussion.js";
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import ProjectDiscussion from "../components/project-discussion.js";
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { Link } from "gatsby";
-
-
 
 const SliderButtons = () => {
   const swiper = useSwiper();
@@ -21,8 +21,9 @@ const SliderButtons = () => {
       <button onClick={() => swiper.slidePrev()} className=''><img src='/Frame 1000003368.png' /></button>
       <button onClick={() => swiper.slideNext()} className=''><img src='/Frame 1000003367.png' /></button>
     </div>
-  )
-}
+  );
+};
+
 const ProjectDetail = () => {
   const location = useLocation(); // Get the location object
   const params = new URLSearchParams(location.search); // Parse the query parameters
@@ -66,7 +67,7 @@ const ProjectDetail = () => {
     const dollarSigns = [];
     for (let i = 1; i <= maxPrice; i++) {
       dollarSigns.push(
-        <span key={i} style={{ opacity: i <= price ? 1 : 0.3 }}>$</span>
+        <span key={i} style={{ opacity: i <= price ? 1 : 0.3 }}>$ </span>
       );
     }
     return dollarSigns;
@@ -75,7 +76,7 @@ const ProjectDetail = () => {
   return (
     <>
       <NavBar />
-      <section className='project-detail-sec md:px-[70px] mx-auto'> 
+      <section className='project-detail-sec md:px-[70px] mx-auto  py-10 pl-4 pr-4'> 
         <div className="project-detail-conntent">
             <div className='project-detail-title'>
                 <p className='project-detail-border'>{tag}</p>
@@ -89,24 +90,23 @@ const ProjectDetail = () => {
                         <img
                           src={`https://strapi.softylus.com${tech.attributes.url}`}
                           alt={tech.attributes.name}
-                          className='project-detail-border'
+                          className='project-detail-border project-detail-icon'
                         />
                       </div>
                     ))}
                 </div>
                 <div className=" mb-14">
-            <Link
-              to="/contact-us"
-              className="no-underline inline-flex items-center justify-center px-4 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
-            >
-             Build me one!
-            </Link>
-          </div>
+                  <Link
+                    to="/contact-us"
+                    className="no-underline inline-flex items-center justify-center px-4 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
+                  >
+                    Build me one!
+                  </Link>
+                </div>
             </div>
             <div className="project-detail-image">
-            <Swiper
+              <Swiper
                 className="swiper-Discover"
-                breakpointsInverse={true}
                 breakpoints={{
                   900: {
                     slidesPerView: 1,
@@ -117,17 +117,16 @@ const ProjectDetail = () => {
                     spaceBetween: 50,
                   },
                   1300: {
-                    slidesPerView: 3,
+                    slidesPerView: 2.5,
                     spaceBetween: 50,
                   },
                   1640: {
-                    slidesPerView: 3,
+                    slidesPerView: 2.5,
                     spaceBetween: 50,
                   },
                 }}
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 pagination={{ clickable: true }}
-
                 spaceBetween={0}
                 direction="horizontal"
                 scrollbar={{ draggable: true }}

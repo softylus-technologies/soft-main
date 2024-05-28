@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 const projectDiscussion = () => {
   return (
-    <section className='projectDiscussion-sec md:px-[70px] mx-auto'>
+    <section className='projectDiscussion-sec md:px-[70px] mx-auto  py-10 pl-4 pr-4'>
         <div className='projectDiscussion-container'>
             <div className='projectDiscussion-content'>
                 <img src='/Mask group.png'/>
