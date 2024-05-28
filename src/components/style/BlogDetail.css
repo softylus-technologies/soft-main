@@ -30,6 +30,7 @@
 }
 
 
+
 .blog-list {
     display: flex;
     flex-direction: column;
@@ -37,24 +38,44 @@
     height: 550px;
     overflow-y: auto;
     width: 50%;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(236, 34, 39, .5) #f1f1f100;
-    scrollbar-width: 1px !important;
 }
 
 /* Scrollbar for WebKit browsers */
 .blog-list::-webkit-scrollbar {
-    width: 1px;
+    width: 10px;
+    border-radius: 20px !important;
 }
-
 .blog-list::-webkit-scrollbar-track {
     background: #f1f1f100;
+    border-radius: 10px;
 }
 
 .blog-list::-webkit-scrollbar-thumb {
-    background-color: rgba(236, 34, 39, 1);
+    background-color: rgba(236, 34, 39, 0.3);
     border-radius: 10px;
-    border: 1px solid #f1f1f100;
+    border: 2px solid #f1f1f100;
+}
+
+/* For Firefox */
+.blog-list {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(236, 34, 39, 0.3) #f1f1f100;
+    
+}
+
+.blog-list::-moz-scrollbar {
+    width: 10px;
+}
+
+.blog-list::-moz-scrollbar-track {
+    background: #f1f1f100;
+    border-radius: 10px;
+}
+
+.blog-list::-moz-scrollbar-thumb {
+    background-color: rgba(236, 34, 39, 0.3);
+    border-radius: 10px;
+    border: 2px solid #f1f1f100;
 }
 
 .blog-card-list img{
