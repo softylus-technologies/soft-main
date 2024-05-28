@@ -72,10 +72,10 @@ const NavBar = () => {
               <Link to="../" className="mx-auto">
                 <img src="/Logo Softylus.svg" alt="Softylus Logo" />
               </Link>
-              <Link to="/Services">Services</Link>
-              <Link to="/Clients">Clients</Link>
-              <Link to="/About">About Us</Link>
-              <Link to="/Projects">Projects</Link>
+              <Link to="/services">Services</Link>
+              <Link to="/clients">Clients</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/projects">Projects</Link>
               <Link to="/blog">Blog</Link>
               <div className="hamb-sec-3">
                 <Link to="/contact-us" className="btn-contact-hamb">
