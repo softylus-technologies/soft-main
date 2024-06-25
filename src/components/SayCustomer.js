@@ -38,6 +38,7 @@ const SayCustomer = () => {
         <h1 className="Say-Customer-title">See what our customers say about us</h1>
         <div className="slider-sec relative">
           <Swiper
+          className='Say-Customer-swiper'
             breakpoints={{
               640: { slidesPerView: 1.5, spaceBetween: 30 },
               768: { slidesPerView: 2, spaceBetween: 10 },
