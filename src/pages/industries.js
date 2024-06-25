@@ -1,12 +1,12 @@
 import React from 'react'
-import SayCustomer from '../components/SayCustomer'
+import SayCustomer from '../components/SayCustomer'; // Correct import without curly braces for default export
 import FooterCon from "../components/FooterCon"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Wefeaturedon from "../components/Wefeaturedon"
 import "../style/Industries.css"
-const Industries = () => {
+const industries = () => {
   return (
     <>
     <NavBar/>
@@ -69,4 +69,4 @@ const Industries = () => {
   )
 }
 
-export default Industries
+export default industries ;

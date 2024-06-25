@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import CardCustomer from "./CardCustomer";
-import "./style/SayCustomer.css";
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css'; // Ensure you are importing the bundle CSS
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+
+import {CardCustomer} from './CardCustomer';
+import './style/SayCustomer.css';
+
+// Install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const SayCustomer = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    console.log("Fetching testimonials...");
     const fetchTestimonials = async () => {
       try {
         const response = await axios.get("https://strapi.softylus.com/api/customer-says?populate=imageSrc", {
@@ -43,7 +44,6 @@ const SayCustomer = () => {
               1024: { slidesPerView: 2, spaceBetween: 20 },
               1030: { slidesPerView: 3, spaceBetween: 20 },
             }}
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             spaceBetween={30}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
@@ -54,14 +54,16 @@ const SayCustomer = () => {
             }}
           >
             {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id} className=" max-w-md">
+              <SwiperSlide key={testimonial.id} className="max-w-md">
                 <CardCustomer
-                  SubHeading={testimonial.attributes.SubHeading}
-                  Title={testimonial.attributes.Title}
-                  SubProfile={testimonial.attributes.SubProfile}
-                  imageSrc={testimonial.attributes.imageSrc?.data?.attributes?.url 
-                    ? `https://strapi.softylus.com${testimonial.attributes.imageSrc.data.attributes.url}`
-                    : '/default-image.jpg'}
+                 SubHeading={testimonial.attributes.description}
+                 Title={testimonial.attributes.Name}
+                 SubProfile={testimonial.attributes.position}
+                  imageSrc={
+                    testimonial.attributes.imageSrc?.data?.attributes?.url
+                      ? `https://strapi.softylus.com${testimonial.attributes.imageSrc.data.attributes.url}`
+                      : '/default-image.jpg'
+                  }
                 />
               </SwiperSlide>
             ))}

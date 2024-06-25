@@ -6,12 +6,12 @@ import FooterCon from "../components/FooterCon";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Clients from "../components/clients";
-import FeatureSection2 from "../components/FeatureSection2";
-import Wefeaturedon from "../components/Wefeaturedon";
-import OurDevelopment from "../components/OurDevelopment";
-import SimpleSection from "../components/SimpleSection";
-import SimpleSection2 from "../components/SimpleSection2";
+// import Clients from "../components/clients";
+// import FeatureSection2 from "../components/FeatureSection2";
+// import Wefeaturedon from "../components/Wefeaturedon";
+// import OurDevelopment from "../components/OurDevelopment";
+// import SimpleSection from "../components/SimpleSection";
+// import SimpleSection2 from "../components/SimpleSection2";
 import SayCustomer from "../components/SayCustomer";
 import FAQ from "../components/FAQ";
 import services from "../sources/services.json"; // Make sure the path is correct
