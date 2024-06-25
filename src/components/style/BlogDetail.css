@@ -85,6 +85,7 @@
 .blog-card-list {
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 .clamp-2-lines{
     -webkit-line-clamp: 2;

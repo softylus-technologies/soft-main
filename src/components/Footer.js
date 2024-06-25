@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <footer class="bg-transparent py-20 relative">
         <div class="mx-auto w-full md:px-[70px] ">
-          <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+          <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
             <div>
               <img
                 src="/Logo_Softylus.svg"
@@ -102,7 +102,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li class="mb-2">
                   <Link className="text-white	no-underline" to="/detail-web-dev">
@@ -120,7 +120,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
