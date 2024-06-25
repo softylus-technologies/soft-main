@@ -148,6 +148,9 @@ span.swiper-pagination-bullet {
 .projectDiscussion-img img{
   width: 100%;
 }
+.swiper-Discover img {
+  width: 100%;
+}
   /*
   .card.active .card-image img {
     transform: translateY(-70%); 

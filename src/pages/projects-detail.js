@@ -138,7 +138,7 @@ const ProjectDetail = () => {
                     <img
                       src={`https://strapi.softylus.com${image.attributes.url}`}
                       alt={image.attributes.name}
-                    />
+                      />
                   </SwiperSlide>
                 ))}
                 <SliderButtons/>
