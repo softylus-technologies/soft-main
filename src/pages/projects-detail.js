@@ -18,8 +18,8 @@ const SliderButtons = () => {
   const swiper = useSwiper();
   return (
     <div className="btn-sliider">
-      <button onClick={() => swiper.slidePrev()} className=''><img src='/Frame 1000003368.png' /></button>
-      <button onClick={() => swiper.slideNext()} className=''><img src='/Frame 1000003367.png' /></button>
+      <button onClick={() => swiper.slidePrev()} className='' style={{ transform: 'rotate(180deg)' }}><img src='/Frame 1000003367.png' /></button>
+      <button onClick={() => swiper.slideNext()} className='' ><img src='/Frame 1000003367.png' /></button>
     </div>
   );
 };
