@@ -1,11 +1,11 @@
 <svg width="298" height="322" viewBox="0 0 298 322" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g filter="url(#filter0_d_1460_2306)">
 <rect x="34.0371" y="17.642" width="130.243" height="282.341" rx="11.2936" fill="url(#pattern0)" shape-rendering="crispEdges"/>
-<rect x="32.1548" y="15.7597" width="134.008" height="286.105" rx="13.1759" stroke="#C9CCFF" stroke-width="3.76454" shape-rendering="crispEdges"/>
+<rect x="32.1548" y="15.7597" width="134.008" height="286.105" rx="13.1759" stroke="#C9CCFF" strokeWidth="3.76454" shape-rendering="crispEdges"/>
 </g>
 <g filter="url(#filter1_d_1460_2306)">
 <rect x="133.223" y="17.642" width="130.243" height="282.341" rx="11.2936" fill="url(#pattern1)" shape-rendering="crispEdges"/>
-<rect x="131.34" y="15.7597" width="134.008" height="286.105" rx="13.1759" stroke="#C9CCFF" stroke-width="3.76454" shape-rendering="crispEdges"/>
+<rect x="131.34" y="15.7597" width="134.008" height="286.105" rx="13.1759" stroke="#C9CCFF" strokeWidth="3.76454" shape-rendering="crispEdges"/>
 </g>
 <defs>
 <filter id="filter0_d_1460_2306" x="0.157082" y="0.230968" width="198.004" height="350.103" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

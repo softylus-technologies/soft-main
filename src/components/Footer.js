@@ -7,9 +7,9 @@ import { faLinkedin } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <>
-      <footer class="bg-transparent py-20 relative">
-        <div class="mx-auto w-full md:px-[70px] ">
-          <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+      <footer className="bg-transparent py-20 relative">
+        <div className="mx-auto w-full md:px-[70px] ">
+          <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
             <div>
               <img
                 src="/Logo_Softylus.svg"
@@ -36,31 +36,31 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Company
               </h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li class="mb-2 text-white	">
+              <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
+                <li className="mb-2 text-white	">
                   <Link to="/about" className="text-white	no-underline">
                     About Softylus
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/industries">
                     Industries
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/careers">
                     Careers
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/clients">
                     Clients
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/contact-us">
                     Contact us
                   </Link>
@@ -68,26 +68,26 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Services
               </h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li class="mb-2">
+              <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/detail-web-dev">
                     Software and web development
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/detail-mobile">
                     Mobile development
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/detail-seo">
                     SEO page services
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link
                     className="text-white	no-underline"
                     to="/detail-digital-marketing"
@@ -95,7 +95,7 @@ const Footer = () => {
                     Detail digital marketing
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/detail-smm">
                     Social media management
                   </Link>
@@ -103,18 +103,18 @@ const Footer = () => {
               </ul>
             </div>
             {/* <div>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li class="mb-2">
+              <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/detail-web-dev">
                     UI/UX
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/about">
                     Hosting Services
                   </Link>
                 </li>
-                <li class="mb-2">
+                <li className="mb-2">
                   <Link className="text-white	no-underline" to="/about">
                     Follow-Up and maintenance
                   </Link>

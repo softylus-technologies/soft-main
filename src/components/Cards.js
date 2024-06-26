@@ -43,7 +43,7 @@ const Cards = () => {
           </p>
         </div>
         </Link>
-        <Link to="">
+        <Link to="#">
         <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/UXDesign.svg"
@@ -57,7 +57,7 @@ const Cards = () => {
           </p>
         </div>
         </Link>
-        <Link to="">
+        <Link to="#">
         <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Softwaredev (1).svg"
@@ -71,7 +71,7 @@ const Cards = () => {
           </p>
         </div>
         </Link>
-        <Link to="">
+        <Link to="#">
         <div className="bg-mainDark flex flex-col px-4 py-3 gap-2 items-start text-left rounded-[20px] card-hover">
           <img
             src="/Mobiledev (1).svg"

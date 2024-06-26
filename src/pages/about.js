@@ -66,7 +66,7 @@ const About = () => {
             optimal solutions’ reach around the globe, so that, geographical
             barriers no longer hinder anyone from advancing
           </p>
-          <div class="grid grid-rows-2 md:grid-flow-col gap-3 grid-flow-row ">
+          <div className="grid grid-rows-2 md:grid-flow-col gap-3 grid-flow-row ">
             <IconCard imageUrl="/icon1.svg" text="User-Centric Focus" />
             <IconCard imageUrl="/icon3.svg" text="Performance Optimization" />
             <IconCard imageUrl="/icon2.svg" text="Developmental Accuracy" />

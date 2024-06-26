@@ -14,7 +14,7 @@ const projectDiscussion = () => {
                 to="/contact-us"
                 className="no-underline mb-4 inline-flex items-center justify-center px-4 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
                 >
-                Book Zoom Call<img src="/Arrow 1 (1).svg" class="mx-2"></img>
+                Book Zoom Call<img src="/Arrow 1 (1).svg" className="mx-2"></img>
                 </Link>
                 <div className='projectDiscussion-span'>
                     <span><img src='/Vector (3).png'/>No pressure</span>
