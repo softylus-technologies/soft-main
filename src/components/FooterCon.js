@@ -8,7 +8,7 @@ const FooterCon = ({ Title, TitleOverSpan, SubHeading, hideSoftylus,buttonTitle 
     <footer className="FooterCon-container">
       <div className="content-FooterCon">
         <h2>
-          {Title} {hideSoftylus ? null : <span style={{ display: "block" }}>Softylus</span>} {TitleOverSpan}
+          {Title} {hideSoftylus ? null : <span style={{ display: "inline" }}>Softylus</span>} {TitleOverSpan}
         </h2>
         <p>{SubHeading}</p>
         <Link
