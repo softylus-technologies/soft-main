@@ -83,14 +83,41 @@ a {
     border-radius: 25px !important;
 
 }
-.card-hover{
-    transition: all .3s ease-in;
+.card-hover {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial subtle shadow */
+}
 
+.card-hover:hover {
+    transform: translateY(-5px); /* Lifts the card slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
-.card-hover:hover{
-    transform: scale(1.05);
-    box-shadow: 0 19px 38px -12px rgba(0,0,0,.2), 0 15px 12px 0 rgba(0,0,0) !important;
+
+.card-hover img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+
+.card-hover .content {
+    padding: 20px;
+}
+
+.card-hover .title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-hover .description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 @media (max-width:1024px) {
     .sec-card{
         grid-template-columns: repeat(2, 1fr);
