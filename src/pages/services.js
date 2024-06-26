@@ -84,8 +84,9 @@ const Services = () => {
       </div>
       <FooterCon
         Title="See if"
-        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
-        SubHeading="Discover if Softylus is the right partner for your next project. Talk to us and get the expert help you need – no extra fees, free consultation."
+        TitleOverSpan="Let's collaborate on creating something exceptional. Talk to our experts and get the guidance you need – no extra fees, just valuable insights."
+        hideSoftylus = "none"
+        buttonTitle="Schedule Your Free Consultation"
       />
       <Footer />
     </>

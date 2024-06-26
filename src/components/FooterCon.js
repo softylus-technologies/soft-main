@@ -2,19 +2,20 @@ import React from "react";
 import "./style/FooterCon.css";
 import { Button } from "reactstrap";
 import { Link } from "gatsby";
-const FooterCon = ({ Title, TitleOverSpan, SubHeading }) => {
+
+const FooterCon = ({ Title, TitleOverSpan, SubHeading, hideSoftylus,buttonTitle }) => {
   return (
     <footer className="FooterCon-container">
       <div className="content-FooterCon">
         <h2>
-          {Title} <span>Softylus</span> {TitleOverSpan}
+          {Title} {hideSoftylus ? null : <span style={{ display: "block" }}>Softylus</span>} {TitleOverSpan}
         </h2>
         <p>{SubHeading}</p>
         <Link
           to="/contact-us/"
-          className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
+          className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-main bg-white hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
         >
-          Get free consultation
+          {buttonTitle ? buttonTitle : "Get free consultation"}
           <svg
             className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
             aria-hidden="true"

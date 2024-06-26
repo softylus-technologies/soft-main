@@ -7,7 +7,42 @@ import "react-tabs/style/react-tabs.css";
 import TowSideLayout from "./tow-side-layout/TowSideLayout";
 import { Link } from "gatsby";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { graphql, useStaticQuery } from 'gatsby';
+
 const SecTwo = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
+    }
+  `);
+
+  const industries = [
+    {
+      title: "Blockchain",
+      description: "Revolutionize your business with our blockchain expertise. We develop secure, transparent, and decentralized solutions for supply chain management, financial services, and data integrity.",
+      keywords: ["Decentralized applications (DApps)", "Smart contracts", "Cryptocurrency integration", "Blockchain security", "Enterprise blockchain solutions"],
+    },
+    {
+      title: "Crowdfunding",
+      description: "Empower your fundraising efforts with our state-of-the-art crowdfunding platforms. We create user-friendly, secure, and scalable solutions that connect innovators with backers.",
+      keywords: ["Peer-to-peer lending", "Equity crowdfunding", "Reward-based platforms", "Donor management", "Campaign analytics"],
+    },
+    {
+      title: "Fin-Tech",
+      description: "Transform the financial landscape with our innovative FinTech solutions. We develop advanced platforms for digital banking, payment processing, and financial management.",
+      keywords: ["Mobile banking", "Payment gateways", "Robo-advisors", "Blockchain in finance", "RegTech solutions"],
+    },
+    {
+      title: "E-commerce",
+      description: "Boost your online retail presence with our powerful e-commerce solutions. We create scalable, feature-rich platforms that offer seamless shopping experiences across devices.",
+      keywords: ["Mobile commerce", "Omnichannel retail", "Personalized shopping experiences", "Inventory management", "Secure payment integration"],
+    },
+  ];
+
   return (
     <TowSideLayout reverse={true} imgUrl={"/Frame 1000003299.svg"}>
       <h1 className="text-3xl md:text-5xl mb-3">
@@ -16,53 +51,19 @@ const SecTwo = () => {
       <div>
         <Tabs>
           <TabList>
-            <Tab>Blockchain</Tab>
-            <Tab>Crowdfunding</Tab>
-            <Tab>Fin-Tech</Tab>
-            <Tab>E-commerce</Tab>
+            {industries.map((industry, index) => (
+              <Tab key={index}>{industry.title}</Tab>
+            ))}
           </TabList>
 
-          <TabPanel className="w-100">
-            <p className="p-tab">
-              Blockchain is a decentralized and distributed digital ledger
-              technology. It's most commonly associated with cryptocurrencies
-              like Bitcoin but has broader applications. Blockchain ensures
-              transparency, security, and immutability of data, making it
-              valuable in industries such as finance, supply chain management,
-              and healthcare.
-            </p>
-          </TabPanel>
-          <TabPanel>
-            <p className="p-tab">
-              Blockchain is a decentralized and distributed digital ledger
-              technology. It's most commonly associated with cryptocurrencies
-              like Bitcoin but has broader applications. Blockchain ensures
-              transparency, security, and immutability of data, making it
-              valuable in industries such as finance, supply chain management,
-              and healthcare.
-            </p>
-          </TabPanel>
-          <TabPanel>
-            <p className="p-tab">
-              Blockchain is a decentralized and distributed digital ledger
-              technology. It's most commonly associated with cryptocurrencies
-              like Bitcoin but has broader applications. Blockchain ensures
-              transparency, security, and immutability of data, making it
-              valuable in industries such as finance, supply chain management,
-              and healthcare.
-            </p>
-          </TabPanel>
-          <TabPanel>
-            <p className="p-tab">
-              Blockchain is a decentralized and distributed digital ledger
-              technology. It's most commonly associated with cryptocurrencies
-              like Bitcoin but has broader applications. Blockchain ensures
-              transparency, security, and immutability of data, making it
-              valuable in industries such as finance, supply chain management,
-              and healthcare.
-            </p>
-          </TabPanel>
-          {/* ... other TabPanel contents with unique descriptions ... */}
+          {industries.map((industry, index) => (
+            <TabPanel key={index} className="w-100">
+              <p className="p-tab">
+                {industry.description}
+              </p>
+            </TabPanel>
+          ))}
+          
         </Tabs>
       </div>
       <div className="my-4">
@@ -78,71 +79,3 @@ const SecTwo = () => {
 };
 
 export default SecTwo;
-
-{
-  /* <div className="medd-sec">
-        <section className="sec sec-2">
-          <div className="sec-left">
-            <img
-              src="Frame 1000003299.svg"
-              alt="Describe what the image represents"
-            />
-          </div>
-          <div className={`sec-right sec-right-2`}>
-            <h1 className="sec-title-2">
-              We work across many industries – find yours!
-            </h1>
-            <Tabs>
-              <TabList>
-                <Tab>Blockchain</Tab>
-                <Tab>Crowdfunding</Tab>
-                <Tab>Fin-Tech</Tab>
-                <Tab>E-commerce</Tab>
-              </TabList>
-
-              <TabPanel>
-                <p className="p-tab">
-                  Blockchain is a decentralized and distributed digital ledger
-                  technology. It's most commonly associated with
-                  cryptocurrencies like Bitcoin but has broader applications.
-                  Blockchain ensures transparency, security, and immutability of
-                  data, making it valuable in industries such as finance, supply
-                  chain management, and healthcare.
-                </p>
-              </TabPanel>
-              <TabPanel>
-                <p className="p-tab">
-                  Blockchain is a decentralized and distributed digital ledger
-                  technology. It's most commonly associated with
-                  cryptocurrencies like Bitcoin but has broader applications.
-                  Blockchain ensures transparency, security, and immutability of
-                  data, making it valuable in industries such as finance, supply
-                  chain management, and healthcare.
-                </p>
-              </TabPanel>
-              <TabPanel>
-                <p className="p-tab">
-                  Blockchain is a decentralized and distributed digital ledger
-                  technology. It's most commonly associated with
-                  cryptocurrencies like Bitcoin but has broader applications.
-                  Blockchain ensures transparency, security, and immutability of
-                  data, making it valuable in industries such as finance, supply
-                  chain management, and healthcare.
-                </p>
-              </TabPanel>
-              <TabPanel>
-                <p className="p-tab">
-                  Blockchain is a decentralized and distributed digital ledger
-                  technology. It's most commonly associated with
-                  cryptocurrencies like Bitcoin but has broader applications.
-                  Blockchain ensures transparency, security, and immutability of
-                  data, making it valuable in industries such as finance, supply
-                  chain management, and healthcare.
-                </p>
-              </TabPanel>
-        
-            </Tabs>
-          </div>
-        </section>
-      </div> */
-}
