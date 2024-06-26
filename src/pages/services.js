@@ -25,28 +25,25 @@ const Services = () => {
     description="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs."/>
       <NavBar />
       <Header
-        Title="All-in-one development services for your business "
-        SubHeading="Looking for a trustworthy partner to lead you through every step of the software development process? At Softylus, we answer business problems with custom-made software. So, you can focus on other important parts of your business, we will handle the rest."
-        buttonText="Get free consultation"
+        Title="All-in-One Development Services for Your Business"
+        SubHeading="Looking for a trustworthy partner to guide you through every step of the software development process? At Softylus, we solve business challenges with custom-made software. Focus on other crucial aspects of your business while we handle the tech."
+        buttonText="Explore Our Solutions"
       />
       <div className="md:px-[70px] mx-auto">
         <TowSideLayout reverse={true} imgUrl="/Image services1.svg">
           <h1 className="text-4xl mb-3">
-            Get Your Software Development Services Sorted Out
+          Streamline Your Software Development Journey
           </h1>
           <p>
-            Having us as your partnered team means you won't have to juggle
-            different service providers to meet your different needs. You’ll
-            have it all covered splendidly in one place with people who care and
-            prioritize you with 24/7 customer support.
+          Partner with us and eliminate the need to juggle multiple service providers. Get comprehensive solutions in one place with a team that prioritizes your success and offers 24/7 customer support.
           </p>
 
           <div className="my-4">
             <Link
-              to="/ContactUs"
+              to="/contact-us"
               className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
             >
-              Get free consultation
+             Schedule a Free Consultation
             </Link>
           </div>
         </TowSideLayout>
@@ -58,7 +55,7 @@ const Services = () => {
             id="circle1"
             src="/Frame 1000003358.svg"
           />
-          <h1>Technologies we used</h1>
+          <h1>Our Technology Stack</h1>
           <div className="md:bg-service-desktop bg-service-mobile min-h-[50vh] bg-center bg-no-repeat	bg-contain"></div>
        
         </div>
@@ -87,8 +84,8 @@ const Services = () => {
       </div>
       <FooterCon
         Title="See if"
-        TitleOverSpan="is right for you.Let’s make something great"
-        SubHeading="Talk to us and get the help you need with no extra fees, consult for free."
+        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
+        SubHeading="Discover if Softylus is the right partner for your next project. Talk to us and get the expert help you need – no extra fees, free consultation."
       />
       <Footer />
     </>

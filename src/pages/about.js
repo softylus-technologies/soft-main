@@ -74,7 +74,7 @@ const About = () => {
           </div>
           <div className="my-4">
             <Link
-              to="/ContactUs"
+              to="/contact-us"
               className="no-underline inline-flex items-center justify-center px-3 py-3 text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
             >
               Get free consultation
@@ -125,8 +125,8 @@ const About = () => {
       </div>
       <FooterCon
         Title="See if"
-        TitleOverSpan="is right for you.Let’s make something great"
-        SubHeading="Talk to us and get the help you need with no extra fees, consult for free."
+        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
+        SubHeading="Discover if Softylus is the right partner for your next project. Talk to us and get the expert help you need – no extra fees, free consultation."
       />
       <Footer />
     </>

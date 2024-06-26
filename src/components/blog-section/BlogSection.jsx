@@ -23,7 +23,7 @@ const BlogSection = () => {
             .join("\n");
 
           return {
-            title: blog.attributes.title, // Corrected the typo from 'tilte' to 'title'
+            title: blog.attributes.tilte, 
             desc: description,
             url: blog.attributes.url || "#",
             id: blog.id,
@@ -46,7 +46,7 @@ const BlogSection = () => {
   return (
     <section className="mx-2 md:mx-auto py-10 relative h-full">
       <h1 className="text-3xl md:text-5xl text-center my-10">
-        Our Latest Articles
+        Latest Insights
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
         {blogs.map((item) => (

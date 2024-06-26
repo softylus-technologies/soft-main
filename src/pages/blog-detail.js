@@ -92,8 +92,8 @@ const BlogDetail = () => {
       </section>
       <FooterCon
         Title="See if"
-        TitleOverSpan="is right for you.Let’s make something great"
-        SubHeading="is right for you.Let’s make something great"
+        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
+        SubHeading="is right for you.Let's Create Something Exceptional Together"
       />
       <Footer />
     </>

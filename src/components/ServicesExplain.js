@@ -22,7 +22,7 @@ const ServicesExplain = ({
           {/* Ensure that <h1> is used once per page for the main title */}
           <p className="p-text">{SubHeading}</p>
           <Link
-            to="/ContactUs/"
+            to="/contact-us/"
             className="no-underline font-bold inline-flex items-center justify-center px-4 py-3 text-base  text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
           >
             {buttonText}

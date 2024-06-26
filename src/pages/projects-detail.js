@@ -176,8 +176,8 @@ const ProjectDetail = () => {
       <ProjectDiscussion />
       <FooterCon
         Title="See if"
-        TitleOverSpan="is right for you.Let’s make something great"
-        SubHeading="Talk to us and get the help you need with no extra fees, consult for free."
+        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
+        SubHeading="Discover if Softylus is the right partner for your next project. Talk to us and get the expert help you need – no extra fees, free consultation."
       />
       <Footer />
     </>

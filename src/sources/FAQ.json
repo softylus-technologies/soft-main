@@ -1,27 +1,32 @@
 [
     {
       "id": "panel1",
-      "question": "What services does your software agency offer?",
-      "answer": "Our agency specializes in a wide range of software services including custom software development, mobile app development, web development, UI/UX design, and cloud solutions. We also provide post-launch support and maintenance to ensure your software continues to run smoothly."
+      "question": "What services does Softylus offer?",
+      "answer": "Softylus provides a comprehensive range of software development services, including web development, mobile app development, UI/UX design, full-stack custom software development, hosting services, digital marketing, and social media management. We offer end-to-end solutions tailored to meet your specific business needs."
     },
     {
       "id": "panel2",
-      "question": "How do you ensure the security and privacy of the software you develop?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+      "question": "How long does it typically take to complete a project?",
+      "answer": "Project timelines vary depending on the scope and complexity of the work. A simple website might take 4-6 weeks, while a complex mobile app could take 3-6 months or more. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements."
     },
     {
         "id": "panel3",
-        "question": "Can you integrate our existing software or third-party applications with the new software you develop?",
-        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+        "question": "What technologies does Softylus specialize in?",
+        "answer": "We have expertise in a wide range of technologies, including but not limited to: Web: HTML5, CSS3, JavaScript, React, Angular, Vue.js, Node.js, PHP, Python Mobile: Swift (iOS), Kotlin (Android), React Native, Flutter (cross-platform) Databases: MySQL, PostgreSQL, MongoDB, Firebase Cloud: AWS, Google Cloud, Microsoft Azure"
       },
       {
         "id": "panel4",
-        "question": "How long will it take to develop my software?",
-        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+        "question": "How do you ensure the quality and security of your software?",
+        "answer": "We follow industry best practices for quality assurance and security. This includes: Rigorous testing processes (unit testing, integration testing, user acceptance testing) Regular code reviews Adherence to OWASP security guidelines Implementation of SSL certificates and data encryption Continuous monitoring and updates to address potential vulnerabilities"
       },
       {
         "id": "panel5",
-        "question": "How do you handle post-launch support and updates?",
-        "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+        "question": "Do you offer ongoing support and maintenance after project completion?",
+        "answer": "We believe in transparent and regular communication. Depending on your preference, we can set up weekly or bi-weekly progress meetings, use project management tools for real-time updates, and are always available via email or phone for any urgent matters. What makes Softylus different from other software development companies?Softylus stands out due to our: Comprehensive service offering (development, design, marketing, and hosting) Tailored solutions that align with your business goals Experienced team with diverse technical expertise Commitment to clear communication and transparency Focus on long-term partnerships rather than one-off projects Free consultations to ensure we understand and meet your needs"
+      },
+      {
+        "id": "panel6",
+        "question": "Can you work with clients remotely?",
+        "answer": "Absolutely! We have experience working with clients globally. Our processes and communication tools are optimized for remote collaboration, ensuring smooth project execution regardless of geographical locations. How do you price your services? Our pricing is project-based and depends on factors such as scope, complexity, and timeline. We provide detailed quotes after our initial consultation and requirements gathering. We're committed to offering competitive rates while ensuring high-quality deliverables. Do you offer any guarantees on your work? We stand behind the quality of our work. We offer a warranty period on all our projects, during which we'll address any bugs or issues at no additional cost. The specific terms of the warranty are outlined in our project agreements"
       }
   ]

@@ -21,7 +21,7 @@ const DetailWebDev = () => {
       <NavBar />
       <DetailHeader
         Title="See if"
-        TitleOverSpan="is right for you.Let’s make something great"
+        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
       />
 
       <DetailHero

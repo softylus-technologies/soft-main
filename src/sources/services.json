@@ -1,48 +1,48 @@
 [
     {
       "title": "Website Development",
-      "subHeading": "Studying your options to hire experts for Web development? WordPress development? Or Web Applications? That’s exactly what we’re for. Our team has built, modified, and upgraded numerous websites and web applications.From some websites to bigger ones, we have worked with individuals, start-ups, small businesses, and big enterprises. There is nothing that we haven’t seen or got our expert hands involved with. Get more users engaged with your website.",
-      "buttonText": "Get free consultation",
+      "subHeading": "From small business websites to complex web applications, our expert team has built, modified, and upgraded numerous digital platforms. We serve individuals, startups, SMEs, and large enterprises. Boost user engagement with a website tailored to your needs.",
+      "buttonText": "Discover Web Solutions",
       "imageSrc": "/website develop.svg",
       "path":"/detail-web-dev"
     },
     {
-      "title": "Mobile Apps Development",
-      "subHeading": "Looking at other mobile apps excites you? Let our mobile app developers ideate the vision you have. Android or iOS; no matter the mobile system needs, we know to make it function smoothly. Our team is capable of building mobile a cross-platform application so you’re launched app is easily accessed from mobile or the web. How do you know what’s works better for you? Just consult with us and we’ll happily guide you. Our consultations are free with no extra charges, but extra benefits for sure!",
-      "buttonText": "Get free consultation",
+      "title": "Mobile App Development",
+      "subHeading": "Turn your app vision into reality with our skilled mobile developers. Whether it's Android, iOS, or cross-platform, we ensure smooth functionality across all devices. Not sure what's best for you? Our free consultation will guide you towards the ideal solution.",
+      "buttonText": "Explore Mobile Options",
       "imageSrc": "/mobile app deve.svg",
       "path":"../detail-mobile"
     },
     {
         "title": "UI/UX Design",
-        "subHeading": "There is more to your user experience than great looks and aesthetic designs. Collaborating with us means you’ll get designs for your websites, or apps that represent your tone and voice as they should be. This means, no more hours of searching, skipping crucial CTAs, not being able to find easy contact methods, or having to ask for constant support. Our UI/UX design team knows how to pull out brilliant designs that’ll facilitate the journey of your users on the page. We provide Web Design, Wireframing, Prototyping, Product Visualization, User Testing, User Experience, User Interface, and Content Entry. No bounce backs or lost users anymore.",
-        "buttonText": "Get free consultation",
+        "subHeading": "Elevate user experience beyond aesthetics. Our designs represent your brand voice while optimizing user journeys. We specialize in web design, wireframing, prototyping, product visualization, user testing, and content integration. Say goodbye to high bounce rates and lost users.",
+        "buttonText": "Transform Your UX",
         "imageSrc": "/UI UX.svg"
       },
       {
         "title": "Full Stack Custom Software Development",
-        "subHeading": "Navigating the web to find a qualified full-stack developer? You can take a break now and consult with our full-stack developers. You see, determining the best choices for your business could turn the tables on how you’ll have your start. Good for you, we’re here to consult with you for free. Why? Because it matters to us that you understand what’s going on even if you’re not an expert.Frontend, backend, or even system integrations. We know how to build and install the best solution for your website or mobile with the implementation of up-to-date technologies. Outdated solutions are not something that we offer.",
-        "buttonText": "Get free consultation",
+        "subHeading": "Seeking qualified full-stack developers? Look no further. We offer expertise in frontend, backend, and system integrations, implementing cutting-edge technologies for optimal performance. Let's discuss your project requirements – consultation is free!",
+        "buttonText": "Start Your Project",
         "imageSrc": "/full stack.svg"
       },
       {
-        "title": "Hosting Service",
-        "subHeading": "We provide hosting services for websites through various plan options that include WordPress hosting, personal use, small businesses, and enterprise. Choosing us as your hosting service means; super fast loading pages, secured data, high privacy, and budget-friendly options that you can’t find elsewhere with robust performance and outstanding quality.Own a domain today, make it yours, and host it smartly with us.",
-        "buttonText": "Get free consultation",
+        "title": "Hosting Services",
+        "subHeading": "WChoose from our range of hosting plans, including WordPress hosting, personal use, small business, and enterprise solutions. Enjoy super-fast loading times, robust security, and budget-friendly options that don't compromise on quality.",
+        "buttonText": "Secure Your Hosting",
         "imageSrc": "/hosting service.svg"
       },
       {
         "title": "Digital Marketing",
-        "subHeading": "Our digital marketing services are designed to cater to your unique business goals, fostering growth and success in the ever-evolving online landscape. By combining cutting-edge strategies with a client-centric approach, we aim to deliver measurable and sustainable results. Whether you're looking to increase brand awareness, drive sales, or enhance customer engagement, our team of skilled professionals is dedicated to crafting a customized digital marketing roadmap that aligns seamlessly with your objectives.",
-        "buttonText": "Get free consultation",
+        "subHeading": "Our tailored digital marketing strategies align with your unique business goals. From increasing brand awareness to driving sales and enhancing customer engagement, we deliver measurable and sustainable results in the dynamic online landscape.",
+        "buttonText": "Boost Your Online Presence",
         "imageSrc": "/Image right Digital Marketing.svg",
         "path":"../detail-smm"
       }
       ,
       {
         "title": "Social Media Management",
-        "subHeading": "Our Social Media Management Services are designed to empower your brand with a dynamic and impactful social media presence, fostering engagement, building relationships, and driving tangible results in the ever-evolving digital landscape.Embracing a holistic approach, we understand that each social media platform has its unique dynamics and audience behavior. Our experienced team crafts tailored strategies for platforms such as Facebook, Instagram, Twitter, LinkedIn, and more, ensuring a nuanced and effective approach to your online presence.",
-        "buttonText": "Get free consultation",
+        "subHeading": "Empower your brand with our dynamic social media management services. We craft platform-specific strategies for Facebook, Instagram, Twitter, LinkedIn, and more, ensuring an impactful online presence that drives engagement and tangible results.",
+        "buttonText": "Elevate Your Social Media",
         "imageSrc": "/Image right Social Media Management.svg",
         "path":"../detail-digital-marketing"
       }

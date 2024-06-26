@@ -11,7 +11,7 @@ const FooterCon = ({ Title, TitleOverSpan, SubHeading }) => {
         </h2>
         <p>{SubHeading}</p>
         <Link
-          to="/ContactUs/"
+          to="/contact-us/"
           className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
         >
           Get free consultation

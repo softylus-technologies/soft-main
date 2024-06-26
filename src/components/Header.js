@@ -90,10 +90,10 @@ const Header = ({
           </p>
 
           <Link
-            to="/ContactUs"
+            to="/contact-us"
             className="no-underline  inline-flex items-center justify-center px-5 py-3 text-base font-extrabold	 text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 "
           >
-            Speak to Sales <img src="/Arrow 1 (1).svg" className="mx-2" />
+            {buttonText} <img src="/Arrow 1 (1).svg" className="mx-2" />
           </Link>
         </div>
         <div className="lg:mt-0  lg:flex w-100 h-100 bg-transparent">
