@@ -83,6 +83,11 @@ a {
     border-radius: 25px !important;
 
 }
+.card-hover img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 .card-hover {
     position: relative;
     overflow: hidden;
@@ -95,12 +100,6 @@ a {
 .card-hover:hover {
     transform: translateY(-5px); /* Lifts the card slightly */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
-.card-hover img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 .card-hover .content {
