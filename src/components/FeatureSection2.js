@@ -41,8 +41,8 @@ const FeatureSection2 = ({ Title, SubHeading, buttonText, onButtonClick, imageSr
     </aside>
   </section>
 </div>
-<div class="container">
-    <img class="circle-sec" id="circle1" src='/Frame 1000003358.svg'/>
+<div className="container">
+    <img className="circle-sec" id="circle1" src='/Frame 1000003358.svg'/>
 </div>
 </>
   )

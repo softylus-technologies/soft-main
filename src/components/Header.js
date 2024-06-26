@@ -77,8 +77,8 @@ const Header = ({
               {overSpan && overSpan?.split(",")?.length > 1
                 ? overSpan
                     ?.split(",")
-                    .map((span) => (
-                      <span className="mx-1 text-main absolute over-span top-[-0.8em]">
+                    .map((span,index) => (
+                      <span key={index} className="mx-1 text-main absolute over-span top-[-0.8em]">
                         {span}
                       </span>
                     ))

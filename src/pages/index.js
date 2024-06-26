@@ -35,8 +35,8 @@ const IndexPage = () => {
       <div className="md:px-[70px] mx-auto">
         <ClientSlider />
 
-        <div class="container">
-          <img class="circle-sec" id="circle1" src="/Frame 1000003358.svg" />
+        <div className="container">
+          <img className="circle-sec" id="circle1" src="/Frame 1000003358.svg" />
         </div>
         <TowSideLayout imgUrl={"/coding.gif"} img2Url={"/Frame ibrahim.svg"}>
           <h1 className="text-3xl md:text-5xl mb-3 mt-3">
@@ -47,7 +47,7 @@ const IndexPage = () => {
             mobile app development, and UI/UX design. We provide services for
             businesses of all sizes in different niches.
           </p>
-          <div class="grid grid-rows-2 md:grid-flow-col gap-3 grid-flow-row ">
+          <div className="grid grid-rows-2 md:grid-flow-col gap-3 grid-flow-row ">
             <IconCard imageUrl="/icon1.svg" text="User-Centric Focus" />
             <IconCard imageUrl="/icon3.svg" text="Performance Optimization" />
             <IconCard imageUrl="/icon2.svg" text="Developmental Accuracy" />
