@@ -21,6 +21,9 @@ a {
     align-content: center;
     align-items: center;
     gap: 50px;
+    background: url("/Vector (10).svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: bottom right !important;
 }
 .title-cards{
     width: 35%;

@@ -86,6 +86,9 @@
   .project-detail-icon{
     padding: 8px 8px;
   }
+  .project-detail-border-wrapper {
+    width: 38px;
+}
 .swiper-Discover{
   max-width: 90vw;
 }
@@ -106,7 +109,9 @@ span.swiper-pagination-bullet {
     z-index: 111;
     position: relative; /* or absolute/fixed/sticky as needed */
 }
-
+.btn-sliider img{
+  width: 30px !important;
+}
 .projectDiscussion-sec{
   margin-top: 110px;
 }
@@ -150,6 +155,9 @@ span.swiper-pagination-bullet {
 }
 .swiper-Discover img {
   width: 100%;
+}
+.disabled {
+  opacity: 30%;
 }
   /*
   .card.active .card-image img {

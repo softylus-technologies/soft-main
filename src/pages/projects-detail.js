@@ -16,10 +16,37 @@ import { Link } from "gatsby";
 
 const SliderButtons = () => {
   const swiper = useSwiper();
+  const [isFirstSlide, setIsFirstSlide] = useState(true);
+  const [isLastSlide, setIsLastSlide] = useState(false);
+
+  useEffect(() => {
+    const updateSlideStatus = () => {
+      setIsFirstSlide(swiper.isBeginning);
+      setIsLastSlide(swiper.isEnd);
+    };
+
+    swiper.on('slideChange', updateSlideStatus);
+
+    return () => {
+      swiper.off('slideChange', updateSlideStatus);
+    };
+  }, [swiper]);
+
   return (
     <div className="btn-sliider">
-      <button onClick={() => swiper.slidePrev()} className='' style={{ transform: 'rotate(180deg)' }}><img src='/Frame 1000003367.png' /></button>
-      <button onClick={() => swiper.slideNext()} className='' ><img src='/Frame 1000003367.png' /></button>
+      <button
+        onClick={() => swiper.slidePrev()}
+        className={isFirstSlide ? 'btn-slide prev disabled' : 'btn-slide prev'}
+        style={{ transform: 'rotate(180deg)' }}
+      >
+        <img src='/Frame 1000003367.png' />
+      </button>
+      <button
+        onClick={() => swiper.slideNext()}
+        className={isLastSlide ? 'btn-slide next disabled' : 'btn-slide next'}
+      >
+        <img src='/Frame 1000003367.png' />
+      </button>
     </div>
   );
 };
@@ -131,7 +158,7 @@ const ProjectDetail = () => {
                 direction="horizontal"
                 scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                onSlideChange={(swiper) => console.log('slide change')}
               >
                 {images.data.map(image => (
                   <SwiperSlide key={image.id} className="swiper-Discover-Slide">
@@ -141,7 +168,7 @@ const ProjectDetail = () => {
                       />
                   </SwiperSlide>
                 ))}
-                <SliderButtons/>
+                <SliderButtons />
               </Swiper>
             </div>
         </div>
