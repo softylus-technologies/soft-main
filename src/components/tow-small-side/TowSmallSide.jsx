@@ -1,10 +1,10 @@
 import React from "react";
-
+import "../style/Footer.css"
 function TowSmallSide({ children, imgUrl, reverse }) {
   return (
     <section className="md:mx-auto py-10 pl-4 pr-4 md:pl-0 md:pr-0 flex justify-center ">
       <div
-        className={` grid grid-cols-1 lg:grid-cols-3 gap-x-2 gap-y-4 w-4/5 ${
+        className={`full-width-media grid grid-cols-1 lg:grid-cols-3 gap-x-2 gap-y-4 w-4/5 ${
           reverse ? "lg:flex-row-reverse" : ""
         }`}
       >

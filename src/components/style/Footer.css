@@ -93,4 +93,7 @@ address p{
     img.logo {
         width: 160px;
     }
+    .full-width-media{
+        width: 100%;
+    }
 }

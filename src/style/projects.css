@@ -267,6 +267,15 @@ span.swiper-pagination-bullet {
   }
   
   @media (max-width: 767px) {
+    .project-detail-someDetail{
+      flex-wrap: wrap;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 60vw !important;
+  }
+  .swiper-Discover .swiper-wrapper {
+    padding-top: 10vw;
+}
     .gallery {
       grid-template-columns: 1fr; /* 1 column for mobile screens */
     }
