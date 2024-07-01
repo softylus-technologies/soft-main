@@ -29,9 +29,9 @@ function ContactForm() {
       ...prev,
       [name]: value,
     }));
-  };
+  };   
 
-  const handleVerification = (value) => {
+  const  handleVerification = (value) => {
     setIsVerified(value ? true : false);
   };
 
