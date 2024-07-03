@@ -10,7 +10,7 @@ function TowSideLayout({ children, imgUrl, img2Url, reverse }) {
       >
         
         <div className="content-section flex flex-col w-100 h-100">{children}</div>
-        <div className="flex mx-auto items-start justify-start w-100 h-100 relative">
+        <div className="gif-container flex mx-auto items-start justify-start w-100 h-100 relative">
           {img2Url ? (
             <>
               <img className="w-full h-fit object-cover" src={imgUrl} />

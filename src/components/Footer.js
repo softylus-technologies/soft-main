@@ -7,10 +7,10 @@ import { faLinkedin } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-transparent py-20 relative">
+      <footer className="footer-bottom bg-transparent py-20 relative">
         <div className="mx-auto w-full md:px-[70px] ">
           <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
-            <div>
+            <div className="company-info">
               <img
                 src="/Logo_Softylus.svg"
                 alt="Softylus Logo"
@@ -35,68 +35,68 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div>
+            <div className="company-links">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Company
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li className="mb-2 text-white	">
-                  <Link to="/about" className="text-white	no-underline">
+              <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
+                <li>
+                  <Link to="/about" className="no-underline">
                     About Softylus
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/industries">
+                <li>
+                  <Link className="no-underline" to="/industries">
                     Industries
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/careers">
+                <li>
+                  <Link className="no-underline" to="/careers">
                     Careers
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/clients">
+                <li>
+                  <Link className="no-underline" to="/clients">
                     Clients
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/contact-us">
+                <li>
+                  <Link className="no-underline" to="/contact-us">
                     Contact us
                   </Link>
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="company-links">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Services
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/detail-web-dev">
+              <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
+                <li>
+                  <Link className="no-underline" to="/detail-web-dev">
                     Software and web development
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/detail-mobile">
+                <li>
+                  <Link className="no-underline" to="/detail-mobile">
                     Mobile development
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/detail-seo">
+                <li>
+                  <Link className="no-underline" to="/detail-seo">
                     SEO page services
                   </Link>
                 </li>
-                <li className="mb-2">
+                <li>
                   <Link
-                    className="text-white	no-underline"
+                    className="no-underline"
                     to="/detail-digital-marketing"
                   >
                     Detail digital marketing
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/detail-smm">
+                <li>
+                  <Link className="no-underline" to="/detail-smm">
                     Social media management
                   </Link>
                 </li>
@@ -104,18 +104,18 @@ const Footer = () => {
             </div>
             {/* <div>
               <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/detail-web-dev">
+                <li>
+                  <Link className="no-underline" to="/detail-web-dev">
                     UI/UX
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/about">
+                <li>
+                  <Link className="no-underline" to="/about">
                     Hosting Services
                   </Link>
                 </li>
-                <li className="mb-2">
-                  <Link className="text-white	no-underline" to="/about">
+                <li>
+                  <Link className="no-underline" to="/about">
                     Follow-Up and maintenance
                   </Link>
                 </li>

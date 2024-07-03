@@ -3,7 +3,7 @@ import "./style/NavBar.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import Dropdown from'react-bootstrap/Dropdown';
+import Dropdown from "react-bootstrap/Dropdown";
 const NavBar = () => {
   const [modal, setModal] = useState(false);
 
@@ -18,7 +18,7 @@ const NavBar = () => {
     setIsOpen(false);
   };
   return (
-    <div className="w-full pt-4 md:px-[70px]  flex">
+    <div className="top-header w-full md:px-[70px]  flex">
       <nav className="NavBar-sec">
         <div>
           <Link to="../">
@@ -27,27 +27,37 @@ const NavBar = () => {
         </div>
 
         <div className="navBar-page">
-       <Link to="../../">Home</Link>  
-       <Link to="/projects">Projects</Link>
-      <Dropdown
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      show={isOpen} 
-      >
-      <Dropdown.Toggle variant="success" id="dropdown-basic" >
-            <Link to="/services">Services</Link>
-      </Dropdown.Toggle>
+          <Link to="../../">Home</Link>
+          <Link to="/projects">Projects</Link>
+          <Dropdown
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            show={isOpen}
+          >
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              <Link to="/services">Services</Link>
+            </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="/detail-web-dev">Software and web development</Dropdown.Item>
-        <Dropdown.Item href="/detail-mobile">Mobile development</Dropdown.Item>
-        <Dropdown.Item href="/detail-seo">SEO page services</Dropdown.Item>
-        <Dropdown.Item href="/detail-digital-marketing/">Detail digital marketing</Dropdown.Item>
-        <Dropdown.Item href="/detail-smm">Social media management</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    <Link to="/about">About Us</Link>
-    <Link to="/clients">Clients</Link>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/detail-web-dev">
+                Software and web development
+              </Dropdown.Item>
+              <Dropdown.Item href="/detail-mobile">
+                Mobile development
+              </Dropdown.Item>
+              <Dropdown.Item href="/detail-seo">
+                SEO page services
+              </Dropdown.Item>
+              <Dropdown.Item href="/detail-digital-marketing/">
+                Detail digital marketing
+              </Dropdown.Item>
+              <Dropdown.Item href="/detail-smm">
+                Social media management
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <Link to="/about">About Us</Link>
+          <Link to="/clients">Clients</Link>
           <Link to="/industries">Industries</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/contact-us" className="btn-contact contact-pc">
@@ -61,17 +71,23 @@ const NavBar = () => {
           </Link>
         </div>
       </nav>
-      <div>
+      <div className="nav-menu-btn-container">
         <Button color="danger" onClick={toggle}>
           <img src="/menu.svg" />
         </Button>
-        <Modal isOpen={modal} toggle={toggle} fullscreen>
-          <ModalHeader toggle={toggle}></ModalHeader>
+        <Modal
+          className="mobile-navbar-modal"
+          isOpen={modal}
+          toggle={toggle}
+          fullscreen
+        >
+          <ModalHeader toggle={toggle}>
+            <Link to="../">
+              <img src="/Logo Softylus.svg" alt="Softylus Logo" />
+            </Link>
+          </ModalHeader>
           <ModalBody>
             <div className="navBar-hamburger">
-              <Link to="../" className="mx-auto">
-                <img src="/Logo Softylus.svg" alt="Softylus Logo" />
-              </Link>
               <Link to="/services">Services</Link>
               <Link to="/clients">Clients</Link>
               <Link to="/about">About Us</Link>
