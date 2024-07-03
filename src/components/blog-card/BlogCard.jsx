@@ -1,15 +1,17 @@
 import { Link } from "gatsby";
 import React from "react";
 
-function BlogCard({ item }) {
+function BlogCard({ item, heightType = "hey" }) {
   return (
     <div
       key={item.id}
-      className=" w-4/5 bg-mainDark rounded-lg ease-out duration-300 md:hover:h-[110%] transition-all shadow   h-480 mx-auto relative overflow-hidden group"
+      className={heightType + " blog-card w-4/5 bg-mainDark rounded-lg ease-out duration-300 transition-all shadow mx-auto relative overflow-hidden group"}
     >
+      <div className="article-thumbnail-container">
       <img className="rounded-t-lg w-full" src={item.imgUrl} alt="" />
+      </div>
 
-      <div className="px-3 py-4">
+      <div className="content-preview-container px-3 py-4">
         <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900  ">
           {item.title}
         </h5>
@@ -19,7 +21,7 @@ function BlogCard({ item }) {
         </p>
         <Link
           to={item.url}
-          className="no-underline md:absolute  md:group-hover:translate-y-[0px]  ease-out duration-300 transition-all inline-flex  md:translate-y-[80px] items-center justify-center px-3 py-2 text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto "
+          className="read-more-btn no-underline md:group-hover:translate-y-[0px]  ease-out duration-300 transition-all inline-flex  md:translate-y-[80px] items-center justify-center px-3 py-2 text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 "
         >
           Read more
           <svg

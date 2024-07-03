@@ -1,6 +1,6 @@
-*{
+/* *{
     font-family: 'Darker Grotesque', sans-serif;
-}
+} */
 header.Header-container {
     display: flex;
     justify-content: flex-end;

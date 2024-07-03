@@ -65,10 +65,10 @@ const Header = ({
   );
 
   return (
-    <header className="bg-hero-pattern bg-cover	bg-right-center bg-no-repeat min-h-screen flex bg-ps-buttom  ">
+    <header className="main-header bg-hero-pattern bg-cover	bg-right-center bg-no-repeat min-h-screen flex bg-ps-buttom  ">
       <div className="grid max-w-screen-xl py-8 min-w-full  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-2">
-        <div className="mr-auto place-self-center md:pl-[70px] pl-4 pr-4">
-          <h1 className="py-2 overflow-hidden max-w-2xl mb-2 text-3xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">
+        <div className="heading-container mr-auto place-self-center md:pl-[70px] pl-4 pr-4">
+          <h1 className="primary-heading overflow-hidden max-w-2xl mb-2 text-3xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl dark:text-white">
             {Title}
             <div
               ref={container}
@@ -85,18 +85,18 @@ const Header = ({
                 : overSpan}
             </div>
           </h1>
-          <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 text-lg leading-loose dark:text-gray-400">
+          <p className="sub-heading max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 text-lg leading-loose dark:text-gray-400">
             {SubHeading}
           </p>
 
           <Link
             to="/contact-us"
-            className="no-underline  inline-flex items-center justify-center px-5 py-3 text-base font-extrabold	 text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 "
+            className="primary-cta no-underline inline-flex items-center justify-center text-base font-extrabold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 "
           >
             {buttonText} <img src="/Arrow 1 (1).svg" className="mx-2" />
           </Link>
         </div>
-        <div className="lg:mt-0  lg:flex w-100 h-100 bg-transparent">
+        <div className="hero-img-container lg:mt-0 lg:flex w-100 h-100 bg-transparent">
           <img src="/softylusHero.png" alt="Describe the image here" className=" w-full object-contain" />
         </div>
       </div>
