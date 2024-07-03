@@ -1,5 +1,5 @@
 # Build stage
-FROM node:18 as build
+FROM --platform=$BUILDPLATFORM node:18 as build
 
 WORKDIR /app
 
@@ -16,7 +16,13 @@ COPY . .
 RUN npm run build
 
 # Serve stage
-FROM gatsbyjs/gatsby:latest
+FROM --platform=$TARGETPLATFORM gatsbyjs/gatsby:latest
 
 # Copy the built site from the build stage
 COPY --from=build /app/public /pub
+
+# Expose port 8080 instead of 80
+EXPOSE 8080
+
+# Update the CMD to use port 8080
+CMD ["bash", "-c", "envsubst < /etc/nginx/conf.d/default.conf.tpl > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
