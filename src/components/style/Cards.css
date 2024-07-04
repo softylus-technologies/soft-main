@@ -152,6 +152,10 @@ a {
   align-items: center;
 }
 
+.services-container.container-cards .see-more-services-btn {
+  border-radius: calc(infinity * 1px) !important;
+}
+
 .services-cards-container > a {
   width: 420px;
   height: 300px;

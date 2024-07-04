@@ -513,6 +513,14 @@ p {
     margin: 0 !important;
   }
 
+  section.latest-insights-section
+    .articles-container
+    .blog-card
+    .read-more-btn {
+    font-size: 14px;
+    padding: 10px 20px !important;
+  }
+
   .our-features-section .heading-container .primary-heading,
   .services-container.container-cards .heading-container > h1,
   section.latest-insights-section > h1,
