@@ -93,6 +93,15 @@ address p {
 
 /* Improvements */
 
+.footer-bottom .company-info address {
+  margin-top: 28px;
+  margin-bottom: 55px;
+}
+
+.footer-bottom .company-info address p {
+  margin: 0;
+}
+
 ul.footer-links-list {
   display: flex;
   flex-direction: column;
