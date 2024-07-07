@@ -37,15 +37,32 @@
 .Industries-singel-card img{
     margin-bottom: 15px;
 }
-
+.swiper.swiper-proxysolutions.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+    max-width: 90vw;
+    display: none;
+}
 @media (max-width: 1200px) {
     
 }
 
 @media (max-width: 1024px) {
+    .swiper.swiper-proxysolutions.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+        display: block;
+        margin-top: 40px;
+    }
     .Industries-card{
         width: 90%;
     }
+    .Industries-singel-card{
+        width: 100%;
+    }
+    .Industries-container p{
+        text-align: left;
+    }
+    .Industries-card{
+        display: none;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -55,10 +72,13 @@
         align-items: center;
     }
     .Industries-singel-card{
-        width: 85%;
+        width: 100%;
     }
     .Industries-container h1,.Industries-container p{
         text-align: left;
         width: 85%;
+    }
+   .Industries-singel-card  p{
+        width: 100% !important;
     }
 }

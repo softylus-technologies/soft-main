@@ -49,8 +49,11 @@ padding-bottom: 30px;
 }
 
 @media (max-width: 1024px) {
-    .Say-Coustmer-container{
-        width: 100%;
+    .Say-Customer-container {
+        width: 90%;
+    }
+    .slider-sec.relative {
+        max-width: 100vw;
     }
     .Say-Coustmer-container .swiper-slide {
         /* height: 15em !important; */

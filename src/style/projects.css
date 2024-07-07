@@ -264,6 +264,9 @@ span.swiper-pagination-bullet {
     .card.active.Vend-card img{
       transform: translateY(-100%) !important;
     }
+    .projectDiscussion-sec{
+      margin-top: 50px;
+    }
   }
   
   @media (max-width: 767px) {
@@ -286,5 +289,8 @@ span.swiper-pagination-bullet {
     .title-project{
       width: 85%;
       text-align: left;
+    }
+    .project-detail-title{
+      gap: 20px;
     }
   }
