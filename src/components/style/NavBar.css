@@ -63,7 +63,7 @@ button.btn.btn-danger {
   max-width: 100% !important;
 }
 .modal-header {
-  border: none;
+  border: none !important;
 }
 .modal-content {
   background: black !important;
@@ -71,11 +71,14 @@ button.btn.btn-danger {
 
 .modal-body {
   text-align: center;
+  height: 100%;
+  overflow-y: hidden;
 }
 .navBar-hamburger {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  height: 100%;
 }
 .navBar-hamburger a {
   color: #f5f5f5;
