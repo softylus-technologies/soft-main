@@ -1,10 +1,10 @@
 import React from "react";
-
+import "../style/Cards.css"
 function TowSideLayout({ children, imgUrl, img2Url, reverse }) {
   return (
     <section className="our-features-section md:mx-auto pl-4 pr-4 md:pl-0 md:pr-0  ">
       <div
-        className={` flex items-start flex-col-reverse  lg:flex-row align md:gap-8 lg:gap-12 gap-4 ${
+        className={` flex items-start flex-col-reverse  lg:flex-row align md:gap-8 lg:gap-12 gap-4 md:flex-col-reverse items-center ${
           reverse ? "lg:flex-row-reverse" : ""
         }`}
       >

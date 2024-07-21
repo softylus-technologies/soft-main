@@ -124,6 +124,9 @@ a {
   .title-cards {
     width: 70%;
   }
+  .revers-colum{
+    flex-direction: column-reverse !important;
+  }
 }
 
 @media (max-width: 767px) {

@@ -30,7 +30,7 @@ button.btn.btn-danger {
   background: #0f0202 !important;
 }
 .dropdown-item:hover {
-  color: #f5f5f5;
+  color: #f5f5f5 !important;
 }
 .navBar-page a {
   color: #f5f5f5;

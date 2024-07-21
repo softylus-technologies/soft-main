@@ -18,6 +18,7 @@ import services from "../sources/services.json"; // Make sure the path is correc
 import { Link } from "gatsby";
 import TowSideLayout from "../components/tow-side-layout/TowSideLayout";
 import Seo from "../components/seo";
+import "../style/index.css"
 const Services = () => {
   return (
     <>
@@ -31,7 +32,7 @@ const Services = () => {
       />
       <div className="md:px-[70px] mx-auto">
         <TowSideLayout reverse={true} imgUrl="/Image services1.svg">
-          <h1 className="text-4xl mb-3">
+          <h1 className="text-5xl mb-3 title-res">
           Streamline Your Software Development Journey
           </h1>
           <p>

@@ -3,7 +3,7 @@ import "./style/CardCustomer.css";
 export const CardCustomer = ({ SubHeading, imageSrc, Title, SubProfile }) => {
   return (
     <div className="card-customer">
-      <p className="text-sm">{SubHeading}</p>
+      <p className="text-base mb-12" >{SubHeading}</p>
       <div className="profile-card">
         <img
           src={imageSrc}
