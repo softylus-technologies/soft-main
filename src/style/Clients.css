@@ -97,5 +97,24 @@
     .Clients-title{
       width: 90%;
     }
+    .client-image-border{
+      
+        border: 1px solid #F5F5F580; /* White border at the bottom */
+    }
+    .client-image-border:nth-child(4){
+       border: 1px solid #F5F5F580; 
+    }
+    .client-image-border:nth-child(8){
+       border: 1px solid #F5F5F580; 
+    }
+    .client-image-border:nth-child(12){
+       border: 1px solid #F5F5F580; 
+    }
+    .client-image-border:nth-child(16){
+       border: 1px solid #F5F5F580; 
+    }
+    .client-image-border:nth-child(20){
+       border: 1px solid #F5F5F580; 
+    }
   
   }
