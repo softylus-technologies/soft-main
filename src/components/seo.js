@@ -19,6 +19,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:creator"  />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+
       {children}
     </>
   )

@@ -1,8 +1,43 @@
 @import url("https://fonts.cdnfonts.com/css/faktum-test");
 @font-face {
+  font-family: "Faktum-Bold";
+  src: url("../../Fonts/faktum-test/Faktum-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faktum-ExtraBold";
+  src: url("../../Fonts/faktum-test/Faktum-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faktum-Light";
+  src: url("../../Fonts/faktum-test/Faktum-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faktum-Medium";
+  src: url("../../Fonts/faktum-test/Faktum-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Faktum-Regular";
+  src: url("../../Fonts/faktum-test/Faktum-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "faktum-light";
   src: url("../../Fonts/faktum-test/faktum-light.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 * {

@@ -48,7 +48,7 @@ const Blog = () => {
   return (<>
   <NavBar/>
     <section className="mx-2 md:mx-auto py-10 relative h-full flex flex-col items-center">
-       <h1 className="text-center mt-20">Our blog</h1>
+       <h1 className="text-center mt-20 margin-zero">Our blog</h1>
         <p className="text-center max-w-4xl mb-20 mt-6">
           Dive into the digital frontier: Unraveling the latest trends, expert insights, and in-depth analyses in software development – your go-to resource for navigating the ever-evolving landscape of technology.
         </p>
