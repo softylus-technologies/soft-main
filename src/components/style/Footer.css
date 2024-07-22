@@ -92,8 +92,8 @@ address p {
     flex-direction: column-reverse;
   }
   .full-width-media h1{
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 600;
   }
   .Footer-container p{
     font-size: 16px;
