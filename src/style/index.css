@@ -122,7 +122,7 @@ p {
 
 .main-header .heading-container .primary-heading {
   width: 100%;
-  max-width: 100%;
+  max-width: 100% !important;
   margin: 0 !important;
   font-weight: 700;
   font-size: 4rem;
