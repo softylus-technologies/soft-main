@@ -34,12 +34,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "faktum-light";
-  src: url("../../../Fonts/faktum-test/faktum-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
+
 .Footer-container {
   display: flex;
   justify-content: center;
