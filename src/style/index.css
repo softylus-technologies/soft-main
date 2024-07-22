@@ -242,11 +242,13 @@ p {
 .latest-insights-section > h1 {
   margin: 2rem 0 6rem 0;
 }
-
+.latest-insights-section{
+  height: 100%;
+}
 .latest-insights-section .articles-container {
   display: flex;
   gap: 2rem;
-  height: 510px;
+  flex-wrap: wrap;
 }
 
 .blog-card {

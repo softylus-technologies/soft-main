@@ -252,7 +252,7 @@ const Cards = () => {
           Customer-Focused, Results-Oriented, and Standards-Driven.
         </p>
       </header>
-      <article className="services-cards-container pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col md:grid-cols-2 md:grid-rows-3 lg:grid-rows-2 lg:grid-cols-3 ">
+      <article className="services-cards-container pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col md:grid-cols-1 md:grid-rows-6 lg:grid-rows-2 lg:grid-cols-3 ">
         {services_info.map((card) => (
           <Link to={card.link}>
             <div className="bg-mainDark flex flex-col px-4 py-3 items-start text-left rounded-[20px] card-hover">
