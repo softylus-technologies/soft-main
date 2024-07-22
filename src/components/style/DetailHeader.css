@@ -33,6 +33,7 @@
     .DetailHeader-container h1{
         font-size: 30px;
         width: 85%;
+        text-align: left;
     }
 .DetailHeader-sec{
     height: 300px;

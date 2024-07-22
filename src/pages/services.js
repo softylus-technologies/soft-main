@@ -60,13 +60,14 @@ const Services = () => {
           <div className="md:bg-service-desktop bg-service-mobile min-h-[50vh] bg-center bg-no-repeat	bg-contain"></div>
        
         </div>
+        <section className="spacing">
         {services.map((service, index) => {
           console.log(service); // This should log each service item
           const isOdd = index % 2 !== 0;
 
           return (
             <TowSideLayout reverse={isOdd} imgUrl={service.imageSrc}>
-              <h1 className="text-4xl mb-3">{service.title}</h1>
+              <h1 className="title-res text-4xl mb-3">{service.title}</h1>
               <p>{service.subHeading}</p>
               <div className="mt-4">
                 <Link
@@ -79,7 +80,7 @@ const Services = () => {
             </TowSideLayout>
           );
         })}
-
+      </section>
         <FAQ />
         <SayCustomer />
       </div>

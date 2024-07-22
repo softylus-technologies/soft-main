@@ -70,9 +70,21 @@
 }
 
 @media (max-width: 1024px) {
+  .FooterCon-container{
+    height: 100%;
+  }
   .content-FooterCon h2 {
     font-size: 38px;
     line-height: 50px;
+  }
+  .content-FooterCon h2 {
+    font-size: 32px;
+    width: 90%;
+    line-height: 40px;
+    font-weight: 400;
+  }
+  .content-FooterCon p {
+    width: 90%;
   }
 }
 

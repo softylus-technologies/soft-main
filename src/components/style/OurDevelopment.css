@@ -83,10 +83,10 @@ section.OurDevelopment-sec {
         gap: 20px
     }
     .OurDevelopment-sec-right{
-        width: 85%;
+        width: 100%;
     }
     .OurDevelopment-sec-left{
-        width: 85%;
+        width: 100%;
         overflow-y: hidden;
         overflow-x: auto;
         flex-direction: row;
@@ -101,10 +101,18 @@ section.OurDevelopment-sec {
         width: 100%;
     }
     section.OurDevelopment-sec {
-        margin-top: 100px;
+        margin-top: 0px;
     }
     .OurDevelopment-sec-right h1{
         font-size: 32px;
     }
     
+}
+@media (max-width: 767px){
+    section.OurDevelopment-sec {
+        margin-top: 100px;
+    }
+    .OurDevelopment-sec-left , .OurDevelopment-sec-right{
+        width: 85% !important;
+    }
 }

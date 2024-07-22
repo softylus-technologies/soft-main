@@ -18,7 +18,7 @@ const NavBar = () => {
     setIsOpen(false);
   };
   return (
-    <div className="top-header w-full md:px-[70px]  flex">
+    <div className="top-header w-full md:px-[70px]  flex items-center">
       <nav className="NavBar-sec">
         <div>
           <Link to="../">

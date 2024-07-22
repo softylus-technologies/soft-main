@@ -43,7 +43,7 @@ function ContactForm() {
     }
 
     try {
-      const response = await axios.post("https://unruffled-galois.65-21-12-13.plesk.page/api/contact-uses", { data: formData }, {
+      const response = await axios.post("https://strapi.softylus.com/api/contact-uses", { data: formData }, {
         headers: {
           "Accept": "*/*",
           "Content-Type": "application/json",
