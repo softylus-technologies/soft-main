@@ -4,7 +4,6 @@
     border-radius: 20px;
     /* transition: 10s all ease  !important; */
     width: 100%;
-    max-width: 450px;
 }
 .card-customer:hover{
      background: linear-gradient(96.9deg, #EC2227 12.93%, #DB070D 58.76%);

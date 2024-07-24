@@ -237,7 +237,7 @@ p {
 .latest-insights-section .articles-container {
   display: flex;
   gap: 2rem;
-  flex-wrap: wrap;
+
 }
 
 .blog-card {
@@ -292,8 +292,19 @@ p {
   flex-direction: column;
   gap: 50px;
 }
-
+@media (max-width: 1024px){
+  .latest-insights-section .articles-container{
+    flex-wrap: wrap;
+   
+  }
+  .latest-insights-section .articles-container .blog-card{
+    width: 45%;
+  }
+}
 @media (max-width: 767px) {
+  .latest-insights-section .articles-container .blog-card{
+    width: 100%;
+  }
   .top-header {
     padding: 20px 1rem;
     justify-content: space-between;

@@ -53,7 +53,7 @@ const IndexPage = () => {
               businesses of all sizes in different niches.
             </p>
           </div>
-          <div className="grid grid-rows-2 md:grid-flow-col gap-3 grid-flow-row ">
+          <div className="mt-3 grid grid-rows-2 md:grid-flow-col gap-3 grid-flow-row ">
             <IconCard imageUrl="/icon1.svg" text="User-Centric Focus" />
             <IconCard imageUrl="/icon3.svg" text="Performance Optimization" />
             <IconCard imageUrl="/icon2.svg" text="Developmental Accuracy" />
@@ -61,7 +61,7 @@ const IndexPage = () => {
           </div>
           <Link
             to="/contact-us"
-            className="primary-cta no-underline inline-flex items-center justify-center text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
+            className=" mt-3 primary-cta no-underline inline-flex items-center justify-center text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
           >
             Get free consultation
           </Link>
