@@ -57,7 +57,7 @@ const About = () => {
       {/* <Clients/>   */}
       <div className="md:px-[70px] mx-auto">
         <ClientSlider />
-        <TowSideLayout imgUrl={"/Imageright.svg"} reverse={true} >
+        <TowSideLayout imgUrl={"/Imageright.png"} reverse={true} >
           <h1 className=" text-4x1 mb-3 font-semibold md:mt-0">
             Make bold business statements, and We’ll deliver brilliant results
           </h1>
