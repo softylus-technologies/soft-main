@@ -13,12 +13,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Faktum-light";
-  src: url("../../Fonts/faktum-test/Faktum-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "Faktum-Medium";
@@ -39,7 +33,7 @@
   font-family: "Faktum Test", sans-serif;
 }
 p {
-  font-family: "faktum-light";
+  font-family: "Faktum-Regular";
   line-height: 28px;
 }
 body {
@@ -390,7 +384,7 @@ p {
 
   .our-features-section > div {
     flex-direction: column-reverse;
-    row-gap: 4rem !important;
+    row-gap: 2rem !important;
   }
 
   .our-features-section .content-section {
@@ -525,7 +519,7 @@ p {
   }
 
   .our-features-section .gif-container {
-    padding: 0 1rem;
+    padding: 0 0rem;
   }
 
   .featured-on-section {

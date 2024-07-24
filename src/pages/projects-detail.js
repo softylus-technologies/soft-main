@@ -57,6 +57,7 @@ const ProjectDetail = () => {
   const id = params.get('id'); // Get the 'id' parameter
 
   const [project, setProject] = useState(null);
+  const [modalImage, setModalImage] = useState(null);
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -99,16 +100,27 @@ const ProjectDetail = () => {
     }
     return dollarSigns;
   };
+  const openModal = (image) => {
+    setModalImage(image);
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
 
   return (
     <>
       <NavBar />
       <section className='project-detail-sec md:px-[70px] mx-auto  py-10 pl-4 pr-4'> 
+      <div className='blurred-circle'></div>
         <div className="project-detail-conntent">
+          
             <div className='project-detail-title'>
-                <p className='project-detail-border'>{tag}</p>
-                <h1>{title}</h1>
-                <p>{description}</p>
+                <p className='project-detail-border project-detail-border-tag'>{tag}</p>
+                <div>
+                  <h1>{title}</h1>
+                  <p>{description}</p>
+                </div>
                 <div className='project-detail-someDetail'>
                     <p className='project-detail-border'>{builtIn}</p>
                     <p className='project-detail-border'>{renderPrice(price)}</p>
@@ -122,10 +134,10 @@ const ProjectDetail = () => {
                       </div>
                     ))}
                 </div>
-                <div className=" mb-14">
+                <div className=" mb-14 project-detail-someDetail-button">
                   <Link
                     to="/contact-us"
-                    className="no-underline inline-flex items-center justify-center px-4 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
+                    className="no-underline inline-flex items-center justify-center px-5 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
                   >
                     Build me one!
                   </Link>
@@ -160,14 +172,16 @@ const ProjectDetail = () => {
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={(swiper) => console.log('slide change')}
               >
-                {images.data.map(image => (
-                  <SwiperSlide key={image.id} className="swiper-Discover-Slide">
-                    <img
-                      src={`https://strapi.softylus.com${image.attributes.url}`}
-                      alt={image.attributes.name}
-                      />
-                  </SwiperSlide>
-                ))}
+                 {images.data.map(image => (
+                <SwiperSlide key={image.id} className="swiper-Discover-Slide">
+                  <img
+                    src={`https://strapi.softylus.com${image.attributes.url}`}
+                    alt={image.attributes.name}
+                    onClick={() => openModal(image)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </SwiperSlide>
+              ))}
                 <SliderButtons />
               </Swiper>
             </div>
@@ -180,6 +194,20 @@ const ProjectDetail = () => {
         SubHeading="Discover if Softylus is the right partner for your next project. Talk to us and get the expert help you need – no extra fees, free consultation."
       />
       <Footer />
+      {modalImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div className="max-w-7xl max-h-4xl p-4 w-full">
+            <img
+              src={`https://strapi.softylus.com${modalImage.attributes.url}`}
+              alt={modalImage.attributes.name}
+              className="max-w-full max-h-full object-contain w-full"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

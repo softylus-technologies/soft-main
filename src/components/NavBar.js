@@ -1,61 +1,96 @@
-import React, { useState } from "react"; // Import useState
-import "./style/NavBar.css";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react";
 import { Link } from "gatsby";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import Dropdown from "react-bootstrap/Dropdown";
+import { StaticImage } from "gatsby-plugin-image";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import "./style/NavBar.css";
+
 const NavBar = () => {
   const [modal, setModal] = useState(false);
+  const [isMegaDropdownOpen, setIsMegaDropdownOpen] = useState(false);
 
-  const toggle = () => setModal(!modal);
-  const [isOpen, setIsOpen] = useState(false);
+  const toggleModal = () => setModal(!modal);
 
   const handleMouseEnter = () => {
-    setIsOpen(true);
+    setIsMegaDropdownOpen(true);
   };
 
   const handleMouseLeave = () => {
-    setIsOpen(false);
+    setIsMegaDropdownOpen(false);
   };
+
+  const megaDropdownContent = (
+    <div 
+      className={`mega-dropdown-menu ${isMegaDropdownOpen ? 'open' : ''}`}
+    >
+      <div className="container">
+        <div className="row">
+          <div className="">
+            <h4><Link to="/services">services</Link></h4>
+            <ul>
+              <li><Link to="/detail-web-dev"><img src="/icon3.svg" alt="All Access"/>Software and web development</Link></li>
+              <li><Link to="/detail-mobile"><img src="/icon3.svg" alt="All Access"/>Mobile development</Link></li>
+              <li><Link to="/detail-seo"><img src="/icon3.svg" alt="All Access"/>SEO page services</Link></li>
+              <li><Link to="/detail-digital-marketing"><img src="/icon3.svg" alt="All Access"/>Detail digital marketing</Link></li>
+              <li><Link to="/detail-smm"><img src="/icon3.svg" alt="All Access"/>Social media management</Link></li>
+            </ul>
+          </div>
+          {/* <div className="col-md-4">
+            <h4>Data Analysis</h4>
+            <ul>
+              <li><Link to="/competitor-analysis"><img src="/icon3.svg" alt="All Access"/>Competitor Analysis</Link></li>
+              <li><Link to="/price-monitoring"><img src="/icon3.svg" alt="All Access"/>Price Monitoring</Link></li>
+              <li><Link to="/sentiment-analysis"><img src="/icon3.svg" alt="All Access"/>Sentiment Analysis</Link></li>
+            </ul>
+          </div>
+          <div className="col-md-4">
+            <h4>Industries</h4>
+            <ul>
+              <li><Link to="/finance"><img src="/icon3.svg" alt="All Access"/>Finance</Link></li>
+              <li><Link to="/real-estate"><img src="/icon3.svg" alt="All Access"/>Real Estate</Link></li>
+              <li><Link to="/travel"><img src="/icon3.svg" alt="All Access"/>Travel</Link></li>
+            </ul>
+          </div> */}
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="top-header w-full md:px-[70px]  flex items-center">
+    <div className="top-header w-full md:px-[70px] flex items-center">
       <nav className="NavBar-sec">
         <div>
-          <Link to="../">
+          <Link to="/">
             <img src="/Logo Softylus.svg" alt="Softylus Logo" />
           </Link>
         </div>
 
         <div className="navBar-page">
-          <Link to="../../">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/projects">Projects</Link>
-          <Dropdown
+          <div
+            className="mega-dropdown"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            show={isOpen}
           >
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              <Link to="/services">Services</Link>
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-              <Dropdown.Item href="/detail-web-dev">
-                Software and web development
-              </Dropdown.Item>
-              <Dropdown.Item href="/detail-mobile">
-                Mobile development
-              </Dropdown.Item>
-              <Dropdown.Item href="/detail-seo">
-                SEO page services
-              </Dropdown.Item>
-              <Dropdown.Item href="/detail-digital-marketing/">
-                Detail digital marketing
-              </Dropdown.Item>
-              <Dropdown.Item href="/detail-smm">
-                Social media management
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+            <Link to="/services">
+              Services
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="dropdown-arrow"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </Link>
+            {megaDropdownContent}
+          </div>
           <Link to="/about">About Us</Link>
           <Link to="/clients">Clients</Link>
           <Link to="/industries">Industries</Link>
@@ -72,17 +107,17 @@ const NavBar = () => {
         </div>
       </nav>
       <div className="nav-menu-btn-container">
-        <Button color="danger" onClick={toggle}>
-          <img src="/menu.svg" />
+        <Button color="danger" onClick={toggleModal}>
+          <img src="/menu.svg" alt="Menu" />
         </Button>
         <Modal
           className="mobile-navbar-modal"
           isOpen={modal}
-          toggle={toggle}
+          toggle={toggleModal}
           fullscreen
         >
-          <ModalHeader toggle={toggle}>
-            <Link to="../">
+          <ModalHeader toggle={toggleModal}>
+            <Link to="/">
               <img src="/Logo Softylus.svg" alt="Softylus Logo" />
             </Link>
           </ModalHeader>
@@ -100,14 +135,6 @@ const NavBar = () => {
               </div>
             </div>
           </ModalBody>
-          {/* <ModalFooter>
-            <Button color="primary" onClick={toggle}>
-              Do Something
-            </Button>{" "}
-            <Button color="secondary" onClick={toggle}>
-              Cancel
-            </Button>
-          </ModalFooter> */}
         </Modal>
       </div>
     </div>

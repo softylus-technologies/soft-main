@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 const projectDiscussion = () => {
   return (
     <section className='projectDiscussion-sec md:px-[70px] mx-auto  py-10 pl-4 pr-4'>
+         <div className='blur-circle'></div>
         <div className='projectDiscussion-container'>
             <div className='projectDiscussion-content'>
                 <img src='/Mask group.png'/>
@@ -23,7 +24,8 @@ const projectDiscussion = () => {
                 </div>
             </div>
             <div className='projectDiscussion-img'>
-                <img src='/Group 427318923.png'/>
+                <img src='/aseel-call.svg'/>
+                <img src='/base.svg' className='projectDiscussion-img-base'/>
             </div>
         </div>
     </section>

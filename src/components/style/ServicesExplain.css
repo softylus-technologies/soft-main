@@ -8,15 +8,28 @@
 .ServicesExplain-container {
     display: flex;
     align-items: center;
-    width: 1300px;
-    gap: 25px;
+    width: 100%;
+    gap: 80px;
 }
 .ServicesExplain-title-sec h1{
     font-size: 32px;
     margin-top: 15px;
 }
+.ServicesExplain-title-sec{
+    width: 49%;
+}
 .ServicesExplain-img-sec{
+    width: 49%;
+}
+
+.ServicesExplain-img-sec img{
     width: 100%;
+}
+.ServicesExplain-title-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
 }
 @media (max-width: 1200px) {
     
@@ -27,6 +40,9 @@
 }
 
 @media (max-width: 1028px) {
+    .ServicesExplain-img-sec{
+        width: 100%;
+    }
     .ServicesExplain-container{
         flex-direction: column;
         gap: 50px;

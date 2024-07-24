@@ -18,9 +18,11 @@ const ServicesExplain = ({
         </div>
         <div className="ServicesExplain-title-sec">
           <img src={logo} alt="Description of the main image" />
-          <h1 className="h1-text">{Title}</h1>{" "}
-          {/* Ensure that <h1> is used once per page for the main title */}
-          <p className="p-text">{SubHeading}</p>
+          <div className="ServicesExplain-title-content">
+            <h1 className="h1-text">{Title}</h1>{" "}
+            {/* Ensure that <h1> is used once per page for the main title */}
+            <p className="p-text">{SubHeading}</p>
+          </div>
           <Link
             to="/contact-us/"
             className="no-underline font-bold inline-flex items-center justify-center px-4 py-3 text-base  text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
