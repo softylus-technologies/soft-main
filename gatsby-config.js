@@ -27,7 +27,7 @@ module.exports = {
         short_name: "Softylus",
         start_url: "/",
         background_color: "#ffffff",
-        theme_color: "#663399",
+        theme_color: "#EC2227",
         display: "standalone",
         icon: "static/fav Softylus.svg", // This path is relative to the root of the site.
       },
