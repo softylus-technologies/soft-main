@@ -369,4 +369,13 @@ span.swiper-pagination-bullet {
     .project-detail-title{
       gap: 20px;
     }
+    .project-detail-title{
+      align-items: flex-start;
+    }
+    .project-detail-someDetail{
+      justify-content: flex-start;
+    }
+    .blurred-circle::before, .blurred-circle::after, .blur-circle::after{
+      width: 200px;
+    }
   }
