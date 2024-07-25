@@ -119,6 +119,48 @@ const ProjectDetail = () => {
                 <p className='project-detail-border project-detail-border-tag'>{tag}</p>
                 <div>
                   <h1>{title}</h1>
+                  <div className="project-detail-image project-detail-image-mobile">
+              <Swiper
+                className="swiper-Discover"
+                breakpoints={{
+                  900: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                  },
+                  1070: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                  },
+                  1300: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 50,
+                  },
+                  1640: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                pagination={{ clickable: true }}
+                spaceBetween={0}
+                direction="horizontal"
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={(swiper) => console.log('slide change')}
+              >
+                 {images.data.map(image => (
+                <SwiperSlide key={image.id} className="swiper-Discover-Slide">
+                  <img
+                    src={`https://strapi.softylus.com${image.attributes.url}`}
+                    alt={image.attributes.name}
+                    onClick={() => openModal(image)}
+                    style={{ cursor: 'pointer' }}
+                  />
+                </SwiperSlide>
+              ))}
+                <SliderButtons />
+              </Swiper>
+            </div>
                   <p>{description}</p>
                 </div>
                 <div className='project-detail-someDetail'>
@@ -143,7 +185,7 @@ const ProjectDetail = () => {
                   </Link>
                 </div>
             </div>
-            <div className="project-detail-image">
+            <div className="project-detail-image ">
               <Swiper
                 className="swiper-Discover"
                 breakpoints={{

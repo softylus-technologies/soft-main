@@ -277,6 +277,9 @@ span.swiper-pagination-bullet {
     display: none;
   }
   /* Responsive breakpoints */
+  .project-detail-image-mobile{
+    display: none;
+  }
   @media (max-width: 1200px) {
     .gallery {
       grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
@@ -284,6 +287,25 @@ span.swiper-pagination-bullet {
   }
 
   @media (max-width: 1024px) {
+    /* .project-detail-conntent{
+      flex-direction: column-reverse;
+      gap: 20px;
+    } */
+     .project-detail-image-mobile{
+      display: block !important;
+     }
+     .project-detail-image{
+      display: none;
+     }
+    .project-detail-title{
+      max-width: 90%;
+    }
+    .project-detail-image{
+      margin-bottom: 15px;
+    }
+    .project-detail-title p{
+      text-align: left;
+    }
     .projectDiscussion-content h1{
       font-size: 40px;
     }
@@ -295,7 +317,7 @@ span.swiper-pagination-bullet {
       margin-bottom: 20px;
     }
     .projectDiscussion-img-base{
-      margin-left: 20px;
+      margin-left: 10px;
     }
     .gallery {
       grid-template-columns: repeat(2, 1fr); /* 2 columns for even smaller screens */
