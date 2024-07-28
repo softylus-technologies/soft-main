@@ -228,6 +228,7 @@ grid-template-columns: repeat(3,1fr);
 
 /* إخفاء الروابط في الشاشات الصغيرة */
 @media (max-width: 1024px) {
+
   .navBar-page {
     display: none;
     flex-direction: column;
@@ -416,6 +417,36 @@ grid-template-columns: repeat(3,1fr);
 
 
 }
+.mobile-navbar-modal .modal-content {
+  row-gap: 5rem;
+  padding: 20px 1rem !important;
+  background: #0f0202 !important;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.mobile-navbar-modal .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0;
+  position: sticky; /* Make the header sticky */
+  top: 0;
+  background: #0f0202;
+  z-index: 1000;
+}
+
+.mobile-navbar-modal .modal-content .modal-body {
+  padding: 0;
+  height: calc(100vh - 60px); /* Subtract the header height */
+  overflow-y: auto; /* Enable vertical scrolling for the body */
+}
+
+.mobile-navbar-modal .modal-content .modal-body .navBar-hamburger {
+  min-height: 100%; /* Ensure the content takes up at least full height */
+  padding-bottom: 20px; /* Add some padding at the bottom */
+}
+
 }
 
 /* Improvements */
