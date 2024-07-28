@@ -14,11 +14,11 @@ function SingleAccordion({ question, answer }) {
         {({ open }) => (
           <>
             <Disclosure.Button className="flex w-full justify-between md: rounded-lg lg:px-4 py-2  text-left text-sm font-medium 0 focus:outline-none focus-visible:ring">
-              <div className="flex gap-4 items-center justify-center">
+              <div className="flex gap-4 items-top justify-center">
                 {open ? (
-                  <CiCircleMinus className="text-3xl text-white" />
+                  <CiCircleMinus className="text-3xl text-white svg-width-hight" />
                 ) : (
-                  <CiCirclePlus className="text-3xl text-white" />
+                  <CiCirclePlus className="text-3xl text-white svg-width-hight" />
                 )}
                 <h2 className="text-2xl accordian-title-Careers">{question}</h2>
               </div>

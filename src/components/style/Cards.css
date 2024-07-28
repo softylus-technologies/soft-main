@@ -155,6 +155,7 @@ a {
 
 .services-container.container-cards .heading-container h1 {
   margin: 0 !important;
+  
 }
 
 .services-container.container-cards .heading-container {
@@ -232,4 +233,9 @@ a {
 
 .featured-on-section > h1 {
   margin: 0 0 3rem 0 !important;
+}
+@media (max-width:1024px){
+  .heading-container h1{
+    font-weight: 700;
+  }
 }

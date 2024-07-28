@@ -104,6 +104,25 @@ section.sec-width{
     .medd-sec{
         margin-top: 50px;
     }
+    .featured-on-section-content h1{
+        font-size: 26px;
+        text-align: left !important;
+        font-weight: 700;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .featured-on-section-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .latest-insights-section-content h1{
+        font-size: 26px;
+        text-align: left !important;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
 }
 
 

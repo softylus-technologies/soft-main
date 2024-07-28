@@ -4,7 +4,7 @@ import FooterCon from "../components/FooterCon"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-import Wefeaturedon from "../components/Wefeaturedon"
+import Wefeaturedon from "../components/feature-slider/FeatureSlider"
 import "../style/Industries.css"
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -124,7 +124,7 @@ const industries = () => {
                 autoplay={{ delay: 2000, disableOnInteraction: false }}
                 // loop={true}
                 Navigation={{ clickable: true }}
-                spaceBetween={0}
+                spaceBetween={30}
                 direction="horizontal"
                 onSwiper={(swiper) => console.log(swiper)}
               >

@@ -44,5 +44,8 @@
     .featured.img img{
         width: 130px;
     }
+    .featured-contianer{
+        margin-top: 50px;
+    }
 
 }

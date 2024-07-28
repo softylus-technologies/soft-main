@@ -58,6 +58,10 @@ padding-bottom: 30px;
     .Say-Customer-container {
         width: 90%;
     }
+    .Say-Customer-title{
+        font-weight: 700;
+        font-size: 24px;
+    }
     .Say-Customer-container  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
         display: inline-block;
         bottom: 4px !important;

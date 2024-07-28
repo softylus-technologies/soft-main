@@ -265,7 +265,7 @@ function ContactForm() {
                 <div className="mt-8 flex justify-start">
                   <button
                     type="submit"
-                    className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
+                    className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
                   >
                     Get free consultation
                     <svg

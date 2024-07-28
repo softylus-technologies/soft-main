@@ -13,7 +13,7 @@ const FooterCon = ({ Title, TitleOverSpan, SubHeading, hideSoftylus,buttonTitle 
         <p>{SubHeading}</p>
         <Link
           to="/contact-us/"
-          className="no-underline inline-flex items-center justify-center text-base font-medium text-main bg-white hover:opacity-85 border-0 rounded-full focus:ring-10"
+          className="no-underline inline-flex items-center justify-center text-base font-bold text-main bg-white hover:opacity-85 border-0 rounded-full focus:ring-10"
         >
           {buttonTitle ? buttonTitle : "Get free consultation"}
           <svg

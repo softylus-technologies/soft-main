@@ -14,9 +14,11 @@ const featurres = [
 function FeatureSlider() {
   return (
     <div className="featured-on-section md:container md:mx-auto overflow-hidden my-10">
+      <div className="featured-on-section-content">
       <h1 className="text-3xl md:text-5xl text-center">
         We featured on
       </h1>
+      </div>
       <SwiperComponent
         className="pb-0"
         slidesPerView={5}
@@ -30,15 +32,15 @@ function FeatureSlider() {
         breakpoints={{
           0: {
             slidesPerView: 1,
-            spaceBetween: 5,
+            spaceBetween: 50,
           },
           360: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 100,
           },
           576: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 100,
           },
           768: {
             slidesPerView: 4,

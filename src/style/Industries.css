@@ -41,6 +41,9 @@
     max-width: 90vw;
     display: none;
 }
+.Industries-container h1,.Industries-singel-card h2{
+    font-weight: 700;
+}
 @media (max-width: 1200px) {
     
 }

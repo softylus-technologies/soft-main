@@ -21,7 +21,7 @@ export default function CustomModal({ btnText, title, children, ...rest }) {
         <button
           type="button"
           onClick={openModal}
-          className=" bg-black/20 px-4 py-2 text-sm font-medium text-main bg-white rounded-full hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className="CustomModal-button bg-black/20 px-6 py-2 text-base font-bold text-main bg-white rounded-full hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >
           {btnText}
         </button>

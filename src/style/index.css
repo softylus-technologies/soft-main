@@ -116,6 +116,7 @@ p {
   font-weight: 700;
   font-size: 4rem;
   line-height: 1.3;
+  height: 100%;
 }
 
 .main-header .heading-container .primary-heading > div {
@@ -588,6 +589,7 @@ p {
     .read-more-btn {
     font-size: 14px;
     padding: 10px 20px !important;
+    font-weight: 700;
   }
 
   .our-features-section .heading-container .primary-heading,

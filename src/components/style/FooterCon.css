@@ -77,15 +77,20 @@
   .content-FooterCon h2 {
     font-size: 38px;
     line-height: 50px;
+    text-align: left;
   }
   .content-FooterCon h2 {
     font-size: 32px;
     width: 90%;
     line-height: 40px;
-    font-weight: 400;
-  }
+    }
   .content-FooterCon p {
     width: 90%;
+    text-align: left;
+  }
+  .content-FooterCon{
+    width: 90%;
+    align-items: flex-start;
   }
 }
 
@@ -101,10 +106,10 @@
     font-size: 24px;
     width: 90%;
     line-height: 40px;
-    font-weight: 400;
   }
   .content-FooterCon p {
     width: 90%;
+    font-weight: 400;
   }
   .content-FooterCon > a {
     padding: 10px 20px;

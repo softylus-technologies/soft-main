@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import Wefeaturedon from "../components/Wefeaturedon"
+import Wefeaturedon from "../components/feature-slider/FeatureSlider"
 import FooterCon from "../components/FooterCon"
 import Seo from '../components/seo';
 import "../style/Clients.css"

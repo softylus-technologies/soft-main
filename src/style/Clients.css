@@ -77,6 +77,10 @@
   @media (max-width: 1028px) {
     .Clients-title h1{
       font-size: 32px;
+      text-align: left;
+    }
+    .Clients-title p{
+      text-align: left;
     }
     .Clients-title{
       width: 70%;

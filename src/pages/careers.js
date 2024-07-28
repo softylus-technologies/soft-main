@@ -38,9 +38,9 @@ const Careers = () => {
       />
 
       <div className="flex flex-col gap-2 pt-[80px] md:container justify-center mx-auto md:px-[70px]">
-        <div className="flex justify-center items-center flex-col gap-2 ">
-          <h2 className="Careers-title"> Careers Opprtunities</h2>
-          <p className="!text-gray-400 px-2 text-center">
+        <div className="flex justify-center items-center flex-col gap-2 text-left-mobile-container">
+          <h2 className="Careers-title">Careers Opprtunities</h2>
+          <p className="!text-gray-400 px-2 text-center text-left-mobile">
             We have a variety of career opportunities available{" "}
           </p>
         </div>
