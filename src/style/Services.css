@@ -23,8 +23,21 @@
     
 }
 
-@media (max-width: 992px) {
-  
+@media (max-width: 1026px) {
+    .secvices-Banner{
+        margin-top: 0;
+    }
+    .secvices-Banner h1{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .secvices-Banner .bg-service-mobile{
+        background: url('/Image serves mobile.svg') !important;
+        background-repeat: no-repeat !important;
+        background-size:contain !important;
+        background-position: center center !important;
+
+    }
 }
 
 @media (max-width: 767px) {
