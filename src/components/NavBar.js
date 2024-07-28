@@ -7,6 +7,8 @@ import "./style/NavBar.css";
 const NavBar = () => {
   const [modal, setModal] = useState(false);
   const [isMegaDropdownOpen, setIsMegaDropdownOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const toggleServicesDropdown = () => setIsServicesDropdownOpen(!isServicesDropdownOpen);
 
   const toggleModal = () => setModal(!modal);
 
@@ -123,7 +125,31 @@ const NavBar = () => {
           </ModalHeader>
           <ModalBody>
             <div className="navBar-hamburger">
-              <Link to="/services">Services</Link>
+            <button onClick={toggleServicesDropdown} className="services-dropdown-toggle">
+              <h4>Services</h4>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={`dropdown-arrow ${isServicesDropdownOpen ? 'open' : ''}`}
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div className={`services-dropdown-menu ${isServicesDropdownOpen ? 'open' : ''}`}>
+              <Link to="/services">All Services</Link>
+              <Link to="/detail-web-dev">Software and web development</Link>
+              <Link to="/detail-mobile">Mobile development</Link>
+              <Link to="/detail-seo">SEO page services</Link>
+              <Link to="/detail-digital-marketing">Digital marketing</Link>
+              <Link to="/detail-smm">Social media management</Link>
+            </div>
               <Link to="/clients">Clients</Link>
               <Link to="/about">About Us</Link>
               <Link to="/projects">Projects</Link>

@@ -2,7 +2,7 @@ import React from "react";
 import { Disclosure, Transition } from "@headlessui/react";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
-
+import "../../style/Careers.css"
 import CustomModal from "../modal/CustomModal";
 import ApplyForm from "../apply-form/ApplyForm";
 import AccData from "../../sources/accordian.json";
@@ -20,7 +20,7 @@ function SingleAccordion({ question, answer }) {
                 ) : (
                   <CiCirclePlus className="text-3xl text-white" />
                 )}
-                <h2 className="text-2xl">{question}</h2>
+                <h2 className="text-2xl accordian-title-Careers">{question}</h2>
               </div>
               <div>
                 <CustomModal btnText="Apply Now" classes="hidden md:flex">
@@ -58,7 +58,7 @@ function SingleAccordion({ question, answer }) {
 
 function CareersAccordion() {
   return (
-    <div className="w-full px-4 pt-16 relative">
+    <div className="w-full px-4 pt-16 relative accordian-Careers">
       <img
         className="circle !top-[-50%] !bottom-[unset] !left-[-22%] z-[-1] "
         id="circle1"

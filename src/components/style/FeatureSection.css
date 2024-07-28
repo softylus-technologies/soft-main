@@ -92,6 +92,9 @@ section.sec-width{
     z-index: -1;
 }
 @media (max-width:1024px) {
+    .circle-sec{
+        width: 20px;
+    }
     .sec{
         width:1300px;
     }

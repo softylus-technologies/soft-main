@@ -104,7 +104,7 @@ function ContactForm() {
         />
       </div>
       <div className="md:px-[70px] mx-auto mt-10">
-        <div className="relative bg-[#130C0C]">
+        <div className="relative bg-[#130C0C] max-w-max">
           <div className="mx-auto grid grid-cols-1 lg:grid-cols-2">
             <div className="relative px-4 pb-10 pt-10 sm:pt-10 lg:static lg:py-20">
               <div className="mx-auto lg:mx-0 lg:max-w-lg flex flex-col justify-between gap-20">

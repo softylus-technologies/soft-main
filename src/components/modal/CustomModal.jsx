@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-
+import "../apply-form/ApplyForm.css"
 export default function CustomModal({ btnText, title, children, ...rest }) {
   let [isOpen, setIsOpen] = useState(false);
 
@@ -42,7 +42,7 @@ export default function CustomModal({ btnText, title, children, ...rest }) {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center relative">
+            <div className="flex min-h-full items-center justify-center p-4 text-center relative ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -52,7 +52,7 @@ export default function CustomModal({ btnText, title, children, ...rest }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-dark p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-dark p-6 text-left align-middle shadow-xl transition-all ApplyForm">
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900 flex justify-between"

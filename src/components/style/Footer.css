@@ -160,6 +160,8 @@ ul.footer-links-list {
   display: flex;
   flex-direction: column;
   row-gap: 25px;
+  position: relative;
+  z-index: 2;
 }
 
 ul.footer-links-list li {

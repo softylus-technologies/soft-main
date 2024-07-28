@@ -139,6 +139,9 @@ a {
   .single-card {
     width: 100%;
   }
+  .full-hight{
+    height: 100% !important;
+  }
 }
 
 /* Improvements */

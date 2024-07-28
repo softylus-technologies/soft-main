@@ -55,6 +55,7 @@
     }
     .Industries-singel-card{
         width: 100%;
+        height: 100%;
     }
     .Industries-container p{
         text-align: left;
@@ -73,6 +74,7 @@
     }
     .Industries-singel-card{
         width: 100%;
+
     }
     .Industries-container h1,.Industries-container p{
         text-align: left;
