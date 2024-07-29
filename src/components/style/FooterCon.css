@@ -21,9 +21,9 @@
 }
 .content-FooterCon h2 {
   color: #f5f5f5;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 50px;
   text-align: center;
   width: 60%;
 }
@@ -40,7 +40,7 @@
 .content-FooterCon > a {
   padding: 1rem 2rem;
   width: fit-content;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
   transition: 0.3s ease;
   font-weight: 700;
 }
@@ -80,9 +80,9 @@
     text-align: left;
   }
   .content-FooterCon h2 {
-    font-size: 32px;
+    font-size: 40px;
     width: 90%;
-    line-height: 40px;
+    line-height: 50px;
     }
   .content-FooterCon p {
     width: 90%;

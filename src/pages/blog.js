@@ -4,6 +4,7 @@ import axios from "axios";
 import FooterCon from "../components/FooterCon";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import "../style/index.css"
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -48,13 +49,13 @@ const Blog = () => {
   return (<>
   <NavBar/>
     <section className="mx-2 md:mx-auto py-10 relative h-full flex flex-col items-center">
-       <h1 className="text-center mt-20 margin-zero">Our blog</h1>
+       <h1 className="text-center mt-20 margin-zero font-bold">Our blog</h1>
         <p className="text-center max-w-4xl mb-20 mt-6">
           Dive into the digital frontier: Unraveling the latest trends, expert insights, and in-depth analyses in software development – your go-to resource for navigating the ever-evolving landscape of technology.
         </p>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 blog-card-group">
         {blogs.map((item) => (
-          <BlogCard item={item} key={item.id} className=" h-full"/>
+          <BlogCard item={item} key={item.id} className=" h-full "/>
         ))}
       </div>
     </section>

@@ -16,7 +16,7 @@ const FAQ = () => {
   return (
     <section className="md:container mx-auto w-full">
       <div className="flex flex-col items-center justify-center w-100%">
-        <h1 className="text-4xl my-20">FAQs</h1>
+        <h1 className="text-4xl my-20 font-bold">FAQs</h1>
         <div className="">
           {faqs.map((faq) => (
             <Accordion key={faq.id} sx={{ background: "transparent" }}>

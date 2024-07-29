@@ -49,7 +49,12 @@ body.active-modal {
     max-width: fit-content;
     min-width: 30px;
 }
-
+.accordian-title-Careers{
+    font-weight: 700;
+}
+.Careers-title{
+    font-weight: 700;
+}
 @media (max-width: 1028px) {
     .Careers-title{
         font-weight: 700;
@@ -64,7 +69,6 @@ body.active-modal {
         margin-bottom: 0;
     }
     .accordian-Careers{
-        padding: 0px 0 !important;
     }
     .accordian-title-Careers{
         font-size: 20px;

@@ -91,6 +91,11 @@ section.sec-width{
     left: -35%;
     z-index: -1;
 }
+.featured-on-section-content h1,.latest-insights-section-content h1{
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
 @media (max-width:1024px) {
     .circle-sec{
         width: 20px;

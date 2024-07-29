@@ -61,7 +61,7 @@ const About = () => {
           <h1 className=" text-4x1 mb-3 font-semibold md:mt-0">
             Make bold business statements, and We’ll deliver brilliant results
           </h1>
-          <p className=" mt-5 md:mt-0">
+          <p className=" mt-2 md:mt-0">
             To bring the world closer through technology, and enhance our
             optimal solutions’ reach around the globe, so that, geographical
             barriers no longer hinder anyone from advancing
@@ -75,7 +75,7 @@ const About = () => {
           <div className="my-4">
             <Link
               to="/contact-us"
-              className="no-underline mt-16 inline-flex items-center justify-center px-3 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
+              className="no-underline mt-7 inline-flex items-center justify-center px-3 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
             >
               Get free consultation
             </Link>

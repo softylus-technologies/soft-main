@@ -1,6 +1,6 @@
 .card-customer{
     background: #1D1313;
-    padding: 10px 15px;
+    padding: 20px 25px;
     border-radius: 20px;
     /* transition: 10s all ease  !important; */
     width: 100%;
@@ -33,6 +33,10 @@
     color: #f5f5f5;
     font-weight: 300;
     font-size: 15px;
+}
+.card-customer .text-xs{
+    font-weight: 700;
+    font-size: 14px;
 }
 @media (max-width:1024px){
     .card-customer{

@@ -62,7 +62,7 @@ section.OurDevelopment-sec {
 .OurDevelopment-sec-right h1{
     color: #f5f5f5;
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 700;
 }
 .OurDevelopment-sec-right p{
     font-size: 16px;
@@ -106,7 +106,7 @@ section.OurDevelopment-sec {
         margin-top: 0px;
     }
     .OurDevelopment-sec-right h1{
-        font-size: 32px;
+        font-size: 40px;
     }
     
 }
@@ -116,5 +116,8 @@ section.OurDevelopment-sec {
     }
     .OurDevelopment-sec-left , .OurDevelopment-sec-right{
         width: 85% !important;
+    }
+    .OurDevelopment-sec-right h1{
+        font-size: 32px;
     }
 }

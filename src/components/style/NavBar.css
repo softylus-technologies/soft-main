@@ -134,7 +134,7 @@ button#dropdown-basic {
   left: -18vw;
   width: auto;
   padding:  35px;
-  background-color: #000000;
+  background-color: #0f0202;
   border: 1px solid #1b1b1b;
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
   z-index: 1000;
@@ -329,13 +329,24 @@ grid-template-columns: repeat(3,1fr);
 }
 
 .services-dropdown-toggle h4 {
-  font-size: 24px !important;
+  font-size: 20px !important;
 }
 
 .services-dropdown-toggle svg {
   fill: white;
 }
+.mobile-navbar{
+  display: block;
+}
+.mobile-navbar .modal-content,.modal-fullscreen .modal-content{
+  display: block;
+  width: 100%;
 
+  z-index: 9999;
+}
+.mobile-navbar-modal .modal-content .modal-body .navBar-hamburger{
+  margin-top: 100px;
+}
 .services-dropdown-menu a {
   font-size: 20px;
   transform: translateX(-100%);
@@ -384,7 +395,7 @@ grid-template-columns: repeat(3,1fr);
   }
 
   .services-dropdown-toggle h4 {
-    font-size: 24px;
+    font-size: 20px;
     color: #fff; /* Adjust text color as needed */
   }
 
@@ -423,6 +434,8 @@ grid-template-columns: repeat(3,1fr);
   background: #0f0202 !important;
   height: 100vh; /* Set the height to 100% of the viewport height */
   overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+  z-index: 9999999;
 }
 
 .mobile-navbar-modal .modal-content .modal-header {

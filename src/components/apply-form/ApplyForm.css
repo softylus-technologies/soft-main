@@ -3,6 +3,11 @@
 }
 @media (max-width:1024px){
     .CustomModal-button{
+        padding:15px 30px !important;
+    }
+}
+@media (max-width:767px){
+    .CustomModal-button{
         padding:20px 40px !important;
     }
 }

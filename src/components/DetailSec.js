@@ -13,7 +13,7 @@ const DetailSec = ({
   return (
     <div key={index} className="md:px-[70px] mx-auto mt-5">
       <TowSmallSide reverse={index % 2} imgUrl={imageSrc}>
-        <h1 className="text-4xl md:text-4xl lg:text-5xl">{Title}</h1>
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold">{Title}</h1>
         <p className="text-md lg:text-lg">{SubHeading}</p>
       </TowSmallSide>
     </div>

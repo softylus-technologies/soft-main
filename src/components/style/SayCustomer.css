@@ -15,6 +15,9 @@ h1.Say-Coustmer-title{
     color: #f5f5f5;
     text-align: center;
 }
+.Say-Customer-title{
+    font-weight: 700;
+}
 .swiper-wrapper{
     margin-bottom: 20px;
     align-items: center;

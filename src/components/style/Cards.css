@@ -155,6 +155,7 @@ a {
 
 .services-container.container-cards .heading-container h1 {
   margin: 0 !important;
+  font-weight: 700;
   
 }
 
@@ -193,7 +194,7 @@ a {
 
 .service-icon-container svg {
   position: relative;
-  z-index: 99999;
+  z-index: 99;
 }
 
 .service-icon-container::before,
@@ -235,7 +236,10 @@ a {
   margin: 0 0 3rem 0 !important;
 }
 @media (max-width:1024px){
-  .heading-container h1{
+  .heading-container h1,.content-section h1,.featured-on-section-content h1, .latest-insights-section-content h1{
     font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
   }
 }
+

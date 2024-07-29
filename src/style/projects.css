@@ -73,6 +73,11 @@
     align-items: center;
     gap: 20px;
   }
+  .project-detail-title p:nth-child(3){
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 20px;
+  }
   .project-detail-someDetail{
     display: flex;
     justify-content: center;
@@ -171,7 +176,7 @@ span.swiper-pagination-bullet {
   opacity: 30%;
 }
 .btn-slide img{
-  width: 40px !important;
+  width: 34px !important;
 }
 .btn-sliider{
   margin-top: 50px;
