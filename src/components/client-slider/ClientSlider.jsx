@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import SwiperComponent from "../swiper/SwiperComponent";
 import { Autoplay } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 import ClientCard from "../client-cards/ClientCard";
 
-const clients = [
-  { src: "/Itqanlogo.svg", alt: "" },
-  { src: "/Lingonuts.svg", alt: "" },
-  { src: "/Aljadd.svg", alt: "" },
-  { src: "/Mansa logo.svg", alt: "" },
-  { src: "/Hostylus.svg", alt: "" },
-  { src: "/Vend logo.svg", alt: "" },
-  { src: "/salis logo.svg", alt: "" },
-  { src: "/Decorationone.svg", alt: "" },
-];
 function ClientSlider() {
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    const fetchClientLogos = async () => {
+      try {
+        const response = await axios.get('https://strapi.softylus.com/api/clients?populate=Client_logo', {
+          headers: {
+            Authorization: 'Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd'
+          }
+        });
+        setClients(response.data.data);
+      } catch (error) {
+        console.error('Error fetching client logos:', error);
+      }
+    };
+
+    fetchClientLogos();
+  }, []);
+
   return (
     <div className="md:mx-auto overflow-hidden mt-4 mb-4">
       <SwiperComponent
@@ -50,9 +60,13 @@ function ClientSlider() {
           },
         }}
       >
-        {clients.map((item) => (
-          <SwiperSlide className="h-100 xs:h-100" key={item.src}>
-            <ClientCard src={item.src} alt={item.alt} />
+        {clients.map((client) => (
+          <SwiperSlide className="h-100 xs:h-100" key={client.id}>
+            <ClientCard 
+            
+              src={`https://strapi.softylus.com${client.attributes.Client_logo.data.attributes.url}`}
+              alt={client.attributes.Client_logo.data.attributes.name || "Client Logo"}
+            />
           </SwiperSlide>
         ))}
       </SwiperComponent>
