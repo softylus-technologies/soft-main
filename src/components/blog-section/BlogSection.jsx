@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import BlogCard from "../blog-card/BlogCard";
 import axios from "axios";
-
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import "../apply-form/ApplyForm.css"
 const BlogSection = () => {
   const [blogs, setBlogs] = useState([]);
 
@@ -56,6 +62,43 @@ const BlogSection = () => {
           <BlogCard item={item} key={item.id} heightType={blogs.length > 2 ? 'custom' : 'standard'} />
         ))}
       </div>
+      <Swiper
+                className="articles-container-card"
+                breakpoints={{
+                  375: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 40,
+                  },
+                  900: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 40,
+                  },
+                  1070: {
+                    slidesPerView: 1,
+                    spaceBetween: 50,
+                  },
+                  1300: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 50,
+                  },
+                  1640: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                pagination={{ clickable: true }}
+                spaceBetween={30}
+                direction="horizontal"
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={(swiper) => console.log('slide change')}
+              >
+                   {blogs.map((item) => (
+         <SwiperSlide> <BlogCard item={item} key={item.id} heightType={blogs.length > 2 ? 'custom' : 'standard'} /></SwiperSlide>
+        ))}
+
+              </Swiper>
     </section>
   );
 };

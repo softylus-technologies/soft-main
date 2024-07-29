@@ -1,9 +1,42 @@
 .ApplyForm{
     background: #212529 !important;
 }
+.articles-container-card{
+    display: none;
+}
 @media (max-width:1024px){
     .CustomModal-button{
         padding:15px 30px !important;
+    }
+    .articles-container-card{
+        display: block;
+    }
+    .articles-container{
+        display: none !important;
+    }
+    .featured-on-section-slider{
+        max-width: 100%;
+    }
+    .featured-on-section-slider .swiper-wrapper{
+        width: 90%;
+        max-height: 100px;
+    }
+    .featured-on-section-slider .swiper-slide{
+        /* width: 45% !important; */
+        display: flex;
+
+    }
+    .featured-on-section-slider .swiper-slide img{
+        width: 100%;
+    }
+    .articles-container-card .p-6{
+        padding: 15px;
+    }
+    .articles-container-card .blog-card h2{
+        font-size: 16px !important;
+    }
+    .articles-container-card .blog-card .h-48{
+        height: 8rem;
     }
 }
 @media (max-width:767px){

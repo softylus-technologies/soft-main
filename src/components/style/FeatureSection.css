@@ -113,8 +113,8 @@ section.sec-width{
         font-size: 26px;
         text-align: left !important;
         font-weight: 700;
-        width: 90%;
         margin-bottom: 20px;
+        width: 100% !important;
     }
     .featured-on-section-content {
         display: flex;

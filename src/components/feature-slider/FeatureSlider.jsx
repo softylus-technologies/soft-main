@@ -1,7 +1,12 @@
 import React from "react";
 import SwiperComponent from "../swiper/SwiperComponent";
-import { Autoplay } from "swiper/modules";
-import { SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import "../apply-form/ApplyForm.css"
 
 const featurres = [
   { id: 1, image: "/image 16.svg" },
@@ -16,50 +21,61 @@ function FeatureSlider() {
     <div className="featured-on-section md:container md:mx-auto overflow-hidden my-10">
       <div className="featured-on-section-content">
       <h1 className="text-3xl md:text-5xl text-center">
-        We featured on
+        We Are featured on
       </h1>
-      </div>
-      <SwiperComponent
-        className="pb-0"
-        slidesPerView={5}
-        loop={true}
-        spaceBetween={20}
-        // modules={[Autoplay]}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 50,
-          },
-          360: {
-            slidesPerView: 2,
-            spaceBetween: 100,
-          },
-          576: {
-            slidesPerView: 3,
-            spaceBetween: 100,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 40,
-          },
-        }}
-      >
+      
+      <Swiper
+                className="featured-on-section-slider"
+                breakpoints={{
+                  375:{
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  400:{
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  768:{
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  900: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1070: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                  },
+                  1300: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                  1640: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                // pagination={{ clickable: true }}
+                spaceBetween={30}
+                // slidesPerView={2}
+                direction="horizontal"
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                onSlideChange={(swiper) => console.log('slide change')}
+              >
         {featurres.map((item) => (
           <SwiperSlide key={item.id}>
-            <center>
-              <img src={item.image} className="w-fit h-fit object-cover" />
-            </center>
+              <img src={item.image}  />
           </SwiperSlide>
         ))}
-      </SwiperComponent>
+      </Swiper>
+      </div>
     </div>
   );
 }
