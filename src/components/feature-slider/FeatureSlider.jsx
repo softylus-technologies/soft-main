@@ -21,7 +21,7 @@ function FeatureSlider() {
     <div className="featured-on-section md:container md:mx-auto overflow-hidden my-10">
       <div className="featured-on-section-content">
       <h1 className="text-3xl md:text-5xl text-center">
-        We Are featured on
+      featured on
       </h1>
       
       <Swiper
