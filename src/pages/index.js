@@ -87,7 +87,7 @@ const IndexPage = () => {
         <Cards />
 
         <SecTwo />
-        <FeatureSlider />
+        {/* <FeatureSlider /> */}
         <BlogSection />
         {/* <Wefeaturedon /> */}
       </div>

@@ -121,7 +121,7 @@ const About = () => {
       </div>
     </section>
         {/* <Wefeaturedon /> */}
-        <FeatureSlider />
+        {/* <FeatureSlider /> */}
       </div>
       <FooterCon
         Title="See if"

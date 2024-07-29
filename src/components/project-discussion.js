@@ -8,8 +8,12 @@ const projectDiscussion = () => {
          <div className='blur-circle'></div>
         <div className='projectDiscussion-container'>
             <div className='projectDiscussion-content'>
-                <img src='/Mask group.png'/>
+                <img className='projectDiscussion-content-circle' src='/Mask group.png'/>
                 <h1>Let's talk about your website project!</h1>
+                <div className='projectDiscussion-img project-detail-image-mobile'>
+                    <img src='/aseel-call.svg'/>
+                    <img src='/base.svg' className='projectDiscussion-img-base'/>
+                </div>
                 <p>Unlocking the Power of Communication: Strategizing for Successful Software Development</p>
                 <Link
                 to="/contact-us"

@@ -59,7 +59,6 @@ const SayCustomer = () => {
                 <CardCustomer
                  SubHeading={testimonial.attributes.description}
                  Title={testimonial.attributes.Name}
-                 SubProfile={testimonial.attributes.position}
                   imageSrc={
                     testimonial.attributes.imageSrc?.data?.attributes?.url
                       ? `https://strapi.softylus.com${testimonial.attributes.imageSrc.data.attributes.url}`

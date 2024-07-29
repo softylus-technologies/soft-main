@@ -167,7 +167,7 @@ const industries = () => {
         </div>
       </div>
       <SayCustomer/>
-      <Wefeaturedon/>
+      {/* <Wefeaturedon/> */}
       <FooterCon
        Title="See if"
        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
