@@ -62,7 +62,6 @@ function FeatureSlider() {
                 // slidesPerView={2}
                 direction="horizontal"
                 scrollbar={{ draggable: true }}
-                onSwiper={(swiper) => console.log(swiper)}
                 autoplay={{
                   delay: 3000,
                   disableOnInteraction: false,

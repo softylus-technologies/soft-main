@@ -44,6 +44,9 @@
     .ServicesExplain-img-sec{
         width: 100%;
     }
+    .ServicesExplain-img-sec.mobile{
+        margin-bottom: 20px;
+    }
     .ServicesExplain-container{
         flex-direction: column;
         gap: 50px;

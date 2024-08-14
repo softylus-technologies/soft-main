@@ -163,6 +163,9 @@ span.swiper-pagination-bullet {
 .projectDiscussion-content {
   flex: 1;
 }
+html[lang="ar"] .projectDiscussion-content a img{
+  rotate: 180deg;
+}
 .projectDiscussion-img {
   flex: 1;
 }

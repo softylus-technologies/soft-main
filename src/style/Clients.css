@@ -34,6 +34,9 @@
     grid-template-columns: repeat(4, 1fr); /* 4 columns grid */
     grid-template-rows: auto; /* Row height as per content */
   }
+  html[lang="ar"] .clients-logo-sec{
+    direction: ltr;
+  }
   .client-image-border{
     border-bottom: 1px solid #F5F5F580; /* White border at the bottom */
     border-right: 1px solid #F5F5F580; /* White border to the right */

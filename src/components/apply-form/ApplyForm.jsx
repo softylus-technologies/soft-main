@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl";
 import "./ApplyForm.css";
 
 function ApplyForm() {
+  const intl = useIntl();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,13 +50,13 @@ function ApplyForm() {
   };
 
   return (
-    <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
-      <div className="mb-3">
+    <form className="max-w-sm mx-auto ApplyForm-form" onSubmit={handleSubmit}>
+      <div className="mb-3 ">
         <label
           htmlFor="name"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-          Name
+          <FormattedMessage id="applyForm.name" />
         </label>
         <input
           type="text"
@@ -63,7 +65,7 @@ function ApplyForm() {
           onChange={handleInputChange}
           value={formData.name}
           className="shadow-sm bg-transparent border border-gray-200 text-white text-sm rounded-lg block w-full p-2.5"
-          placeholder="Name"
+          placeholder={intl.formatMessage({ id: "applyForm.namePlaceholder" })}
           required
         />
       </div>
@@ -72,14 +74,14 @@ function ApplyForm() {
           htmlFor="phone"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-          Phone Number
+          <FormattedMessage id="applyForm.phone" />
         </label>
         <input
           type="tel"
           name="phone"
           id="phone"
           className="shadow-sm bg-transparent border border-gray-200 text-white text-sm rounded-lg block w-full p-2.5"
-          placeholder="Phone Number"
+          placeholder={intl.formatMessage({ id: "applyForm.phonePlaceholder" })}
           onChange={handleInputChange}
           value={formData.phone}
           required
@@ -90,14 +92,14 @@ function ApplyForm() {
           htmlFor="email"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-          Email
+          <FormattedMessage id="applyForm.email" />
         </label>
         <input
           type="email"
           id="email"
           name="email"
           className="shadow-sm bg-transparent border border-gray-200 text-white text-sm rounded-lg block w-full p-2.5"
-          placeholder="emailaddress@email.com"
+          placeholder={intl.formatMessage({ id: "applyForm.emailPlaceholder" })}
           onChange={handleInputChange}
           value={formData.email}
           required
@@ -108,7 +110,7 @@ function ApplyForm() {
           htmlFor="message"
           className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
         >
-          Message
+          <FormattedMessage id="applyForm.message" />
         </label>
         <textarea
           id="message"
@@ -117,7 +119,7 @@ function ApplyForm() {
           value={formData.message}
           rows={3}
           className="shadow-sm bg-transparent border border-gray-200 text-white text-sm rounded-lg block w-full p-2.5"
-          placeholder="message"
+          placeholder={intl.formatMessage({ id: "applyForm.messagePlaceholder" })}
           required
         />
       </div>
@@ -127,14 +129,22 @@ function ApplyForm() {
         disabled={isSubmitting}
         className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
       >
-        {isSubmitting ? "Submitting..." : "Submit Application"}
+        {isSubmitting ? (
+          <FormattedMessage id="applyForm.submitting" />
+        ) : (
+          <FormattedMessage id="applyForm.submit" />
+        )}
       </button>
 
       {submitStatus === "success" && (
-        <p className="mt-3 text-green-500">Application submitted successfully!</p>
+        <p className="mt-3 text-green-500">
+          <FormattedMessage id="applyForm.successMessage" />
+        </p>
       )}
       {submitStatus === "error" && (
-        <p className="mt-3 text-red-500">Error submitting application. Please try again.</p>
+        <p className="mt-3 text-red-500">
+          <FormattedMessage id="applyForm.errorMessage" />
+        </p>
       )}
     </form>
   );

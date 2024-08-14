@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import { FormattedMessage, useIntl } from 'react-intl';
+import Layout from "../components/layout";
 import FooterCon from "../components/FooterCon";
 import Seo from '../components/seo';
 import "../style/Clients.css";
 
 const Clients = () => {
   const [clientLogos, setClientLogos] = useState([]);
+  const intl = useIntl();
 
   useEffect(() => {
     const fetchClientLogos = async () => {
@@ -27,39 +28,51 @@ const Clients = () => {
   }, []);
 
   return (
-    <>
+    <Layout>
       <Seo 
-        title="Our Clients | Softylus Success Stories"
-        description="Proudly serving a diverse clientele. Read success stories and testimonials from businesses that have achieved remarkable growth with Softylus's software solutions."
+        title={intl.formatMessage({ id: "clients.seo.title", defaultMessage: "Our Clients | Softylus Success Stories" })}
+        description={intl.formatMessage({ id: "clients.seo.description", defaultMessage: "Proudly serving a diverse clientele. Read success stories and testimonials from businesses that have achieved remarkable growth with Softylus's software solutions." })}
       />
-      <NavBar/>
-      <div className='Clients-sec'>
-        <div className='Clients-container'>
-          <div className='center-clints-title'>
-            <div className='Clients-title'>
-              <h1>Clients trust <span>Softylus</span> as their partner for progress</h1>
-              <p>At Softylus, our clients are at the heart of everything we do. We understand that without your trust and support, our success wouldn't be possible. That's why we've dedicated this page to you, our valued clients.</p>
+
+        <div className='Clients-sec'>
+          <div className='Clients-container'>
+            <div className='center-clints-title'>
+              <div className='Clients-title'>
+                <h1>
+                  <FormattedMessage 
+                    id="clients.title"
+                    defaultMessage="Clients trust <span>Softylus</span> as their partner for progress"
+                    values={{
+                      span: (chunks) => <span>{chunks}</span>
+                    }}
+                  />
+                </h1>
+                <p>
+                  <FormattedMessage 
+                    id="clients.description"
+                    defaultMessage="At Softylus, our clients are at the heart of everything we do. We understand that without your trust and support, our success wouldn't be possible. That's why we've dedicated this page to you, our valued clients."
+                  />
+                </p>
+              </div>
+            </div>
+            <div className='clients-logo-sec'>
+              {clientLogos.map((client, index) => (
+                <div key={client.id} className='client-image-border'>
+                  <img 
+                    src={`https://strapi.softylus.com${client.attributes.Client_logo.data.attributes.url}`} 
+                    alt={intl.formatMessage({ id: "clients.logo.alt", defaultMessage: "Client Logo {number}" }, { number: index + 1 })}
+                  />
+                </div>
+              ))}
             </div>
           </div>
-          <div className='clients-logo-sec'>
-            {clientLogos.map((client, index) => (
-              <div key={client.id} className='client-image-border'>
-                <img 
-                  src={`https://strapi.softylus.com${client.attributes.Client_logo.data.attributes.url}`} 
-                  alt={`Client Logo ${index + 1}`}
-                />
-              </div>
-            ))}
-          </div>
         </div>
-      </div>
-      <FooterCon
-        Title="See if"
-        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
-        SubHeading="Discover if Softylus is the right partner for your next project. Talk to us and get the expert help you need – no extra fees, free consultation."
-      />
-      <Footer/>
-    </>
+        <FooterCon
+          titleId="clients.footer.title"
+          titleOverSpanId="clients.footer.titleOverSpan"
+          subHeadingId="clients.footer.subHeading"
+        />
+      </Layout>
   );
 };
 

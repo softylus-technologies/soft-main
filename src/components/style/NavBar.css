@@ -18,6 +18,9 @@
   width: 100%;
   padding: 40px 0;
 }
+/* html[lang="ar"] .NavBar-sec ,html[lang="ar"] .navBar-page {
+  flex-direction: row-reverse;
+} */
 .hamburger-react {
   display: none;
 }
@@ -38,19 +41,23 @@ button.btn.btn-danger {
 .dropdown-item:hover {
   color: #f5f5f5 !important;
 }
-.navBar-page a {
+.navBar-page a ,.navBar-page button ,.NavBar-sec-3 button{
   color: #f5f5f5;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   font-family: "Faktum-Medium";
 }
-
+.NavBar-sec-3{
+  display: flex;
+  gap: 30px;
+  flex-direction: row-reverse;
+}
 .navBar-page .dropdown button::after {
   margin-left: 1rem;
 }
 .contact-pc {
-  display: none;
+  display: none !important;
 }
 .NavBar-sec-3 a {
   border: 1px solid;
@@ -179,6 +186,14 @@ button#dropdown-basic {
   gap: 24px;
 grid-template-columns: repeat(3,1fr);
 }
+html[lang="ar"] .mega-dropdown-menu ul{
+  direction: rtl;
+
+}
+html[lang="ar"] .mega-dropdown-menu ul li{
+    text-align: right;
+    gap: 10px;
+} 
 .mega-dropdown-menu h4{
   font-family: 'Inter';
  
@@ -224,8 +239,16 @@ grid-template-columns: repeat(3,1fr);
   transform: rotate(180deg);
 
 }
+.switchLanguage-btn{
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+html[lang="en"] .switchLanguage-btn{
+  flex-direction: row;
 
-
+}
 /* إخفاء الروابط في الشاشات الصغيرة */
 @media (max-width: 1024px) {
 

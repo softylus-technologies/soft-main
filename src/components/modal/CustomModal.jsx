@@ -60,7 +60,7 @@ export default function CustomModal({ btnText, title, children, ...rest }) {
                     {title}
                   </Dialog.Title>
                   <IoMdClose
-                    className="text-main absolute top-5 right-5 text-2xl cursor-pointer "
+                    className="text-main absolute top-5 right-5 text-2xl cursor-pointer IoMdClose-arabic"
                     onClick={closeModal}
                   />
                   <div className="mt-2">{children}</div>

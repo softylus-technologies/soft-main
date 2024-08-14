@@ -5,11 +5,28 @@
     display: none;
 }
 .ClientCard-container{
-    max-width: 200px;
-    max-height: 100px;
+    scale: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.ApplyForm-form{
+    text-align: right;
+}
+.ApplyForm-form input + textarea{
+    direction: rtl;
+}
+html[lang="ar"] .IoMdClose-arabic{
+    left: 1.25rem !important;
+    right:auto;
+}
 @media (max-width:1024px){
+    .ClientCard-container{
+        scale: 1;
+    }
+    .ClientCard-container img{
+        aspect-ratio: 14/6;
+    }
     .CustomModal-button{
         padding:15px 30px !important;
     }

@@ -1,21 +1,23 @@
 import React from "react";
 import "./style/FooterCon.css";
-import { Button } from "reactstrap";
 import { Link } from "gatsby";
+import { FormattedMessage } from 'react-intl';
 
-const FooterCon = ({ Title, TitleOverSpan, SubHeading, hideSoftylus,buttonTitle }) => {
+const FooterCon = ({ titleId, titleOverSpanId, subHeadingId, hideSoftylus, buttonTitleId }) => {
   return (
     <footer className="FooterCon-container">
       <div className="content-FooterCon">
         <h2>
-          {Title} {hideSoftylus ? null : <span style={{ display: "inline" }}>Softylus</span>} {TitleOverSpan}
+          <FormattedMessage id={titleId} />
+          {hideSoftylus ? null : <span style={{ display: "inline" }}> Softylus </span>}
+          <FormattedMessage id={titleOverSpanId} />
         </h2>
-        <p>{SubHeading}</p>
+        <p><FormattedMessage id={subHeadingId} /></p>
         <Link
           to="/contact-us/"
           className="no-underline inline-flex items-center justify-center text-base font-bold text-main bg-white hover:opacity-85 border-0 rounded-full focus:ring-10"
         >
-          {buttonTitle ? buttonTitle : "Get free consultation"}
+          <FormattedMessage id={buttonTitleId || "index.FooterCon.buttonTitle"} />
           <svg
             className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
             aria-hidden="true"

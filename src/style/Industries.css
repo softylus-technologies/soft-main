@@ -23,10 +23,15 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 50px;
+    flex-wrap: wrap;
+    row-gap: 50px;
 }
 .Industries-card p{
     text-align: left;
     width: 100%;
+}
+html[lang="ar"] .Industries-card p{
+    text-align: right;
 }
 .Industries-singel-card{
     padding: 15px 30px;

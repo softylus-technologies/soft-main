@@ -1,102 +1,164 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import { useIntl, FormattedMessage } from "react-intl";
 import axios from "axios";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import Layout from "../components/layout";
 import "../components/style/BlogDetail.css";
 import FooterCon from "../components/FooterCon";
+import DOMPurify from 'dompurify';
+import Seo from "../components/seo";
 import { useLocation } from "@reach/router";
 
 const BlogDetail = () => {
-  const location = useLocation(); // Get the location object
-  const params = new URLSearchParams(location.search); // Parse the query parameters
-  const id = params.get("id"); // Get the 'id' parameter
+  const intl = useIntl();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const slug = params.get("slug");
 
-  const [blogs, setBlogs] = useState([]);
-  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [blog, setBlog] = useState(null);
+  const [otherBlogs, setOtherBlogs] = useState([]);
+
+  const fetchBlog = useCallback(async () => {
+    if (!slug) return;
+
+    try {
+      const response = await axios.get(
+        `https://strapi.softylus.com/api/blogs?filters[Slug][$eq]=${slug}&populate=*&locale=${intl.locale}`,
+        {
+          headers: {
+            Authorization: "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd",
+          },
+        }
+      );
+
+      if (response.data.data.length > 0) {
+        const blogData = response.data.data[0];
+        setBlog({
+          id: blogData.id,
+          title: blogData.attributes.Title,
+          slug: blogData.attributes.Slug,
+          description: blogData.attributes.Meta_Description,
+          content: blogData.attributes.Content
+            .map((block) => block.children.map((child) => child.text).join(" "))
+            .join("\n"),
+          featuredImage: {
+            url: blogData.attributes.Featured_Image?.data
+              ? `https://strapi.softylus.com${blogData.attributes.Featured_Image.data.attributes.url}`
+              : "/default-image.jpg",
+            alt: blogData.attributes.Featured_Image?.data?.attributes?.alternativeText || blogData.attributes.Title,
+          },
+          author: blogData.attributes.Author,
+          publicationDate: blogData.attributes.createdAt,
+          updatedDate: blogData.attributes.updatedAt,
+          categories: blogData.attributes.categories?.data.map(category => category.attributes.Category) || [],
+          tags: blogData.attributes.tags?.data.map(tag => tag.attributes.Tag) || [],
+          seoTitle: blogData.attributes.SEO_Title,
+          canonicalUrl: blogData.attributes.Canonical_URL,
+          focusKeyword: blogData.attributes.Focus_Keyword,
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching blog:", error);
+    }
+  }, [slug, intl.locale]);
+
+  const fetchOtherBlogs = useCallback(async () => {
+    try {
+      const response = await axios.get(
+        `https://strapi.softylus.com/api/blogs?populate=*&locale=${intl.locale}&pagination[limit]=3`,
+        {
+          headers: {
+            Authorization: "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd",
+          },
+        }
+      );
+
+      const otherBlogsData = response.data.data
+        .filter(blogData => blogData.attributes.Slug !== slug)
+        .map(blogData => ({
+          id: blogData.id,
+          title: blogData.attributes.Title,
+          slug: blogData.attributes.Slug,
+          content: blogData.attributes.Content
+            .map((block) => block.children.map((child) => child.text).join(" "))
+            .join("\n"),
+          featuredImage: {
+            url: blogData.attributes.Featured_Image?.data
+              ? `https://strapi.softylus.com${blogData.attributes.Featured_Image.data.attributes.url}`
+              : "/default-image.jpg",
+            alt: blogData.attributes.Featured_Image?.data?.attributes?.alternativeText || blogData.attributes.Title,
+          },
+        }));
+
+      setOtherBlogs(otherBlogsData);
+    } catch (error) {
+      console.error("Error fetching other blogs:", error);
+    }
+  }, [intl.locale, slug]);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get(
-          "https://strapi.softylus.com/api/blogs?populate=img&sort=createdAt:desc",
-          {
-            headers: {
-              Authorization: "Bearer e9279a95db02d9220f944a52d6c0288bb38c733eca16bef5ed2e634e7c53b043560a00b4793f333cec78a9f2f63b72b40288a527d1ed8fbe47a7d1a08f66a60d64762c85f43b5eeeeb50f38244490e6fe7f3e338b4263eaf18056e0f2eded7cf6b09542910930be55000e4205e764bea8933db3694e33722520774fb00e422cd",
-            },
-          }
-        );
+    fetchBlog();
+    fetchOtherBlogs();
+  }, [fetchBlog, fetchOtherBlogs]);
 
-        const blogsData = response.data.data.map((blog) => {
-          const description = blog.attributes.description
-            .map((desc) => desc.children.map((child) => child.text).join(" "))
-            .join("\n");
-
-          return {
-            title: blog.attributes.tilte,
-            desc: description,
-            url: blog.attributes.url || "#",
-            id: blog.id,
-            imgUrl: blog.attributes.img.data
-              ? `https://strapi.softylus.com${blog.attributes.img.data.attributes.url}`
-              : "/default-image.jpg",
-          };
-        });
-
-        setBlogs(blogsData);
-
-        // Set the selected blog based on the 'id' parameter
-        if (id) {
-          const selected = blogsData.find((blog) => blog.id === parseInt(id));
-          setSelectedBlog(selected);
-        }
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      }
-    };
-
-    fetchBlogs();
-  }, [id]);
-
-  const handleBlogClick = (id) => {
-    const selected = blogs.find((blog) => blog.id === id);
-    setSelectedBlog(selected);
+  const truncateDescription = (description, charLimit = 100) => {
+    const sanitizedDescription = DOMPurify.sanitize(description);
+    const truncated = sanitizedDescription.slice(0, charLimit);
+    return truncated.length < sanitizedDescription.length ? `${truncated}...` : truncated;
   };
 
+  if (!blog) {
+    return <div><FormattedMessage id="blogDetail.loading" /></div>;
+  }
+
   return (
-    <>
-      <NavBar />
+    <Layout>
+      <Seo 
+        title={blog.seoTitle || blog.title}
+        description={blog.description}
+      />
       <section className="md:px-[70px] mx-auto flex justify-center flex-col items-center pl-4 pr-4 mt-20">
-       
         <div className="blog-container">
-          <div className="blog-list  pl-4 pr-4 pb-6">
-            {blogs.map((blog) => (
-              <div key={blog.id} className="blog-card-list " onClick={() => handleBlogClick(blog.id)}>
-                <img src={blog.imgUrl} alt={blog.title} />
-                <div className="blog-card-list-content">
-                  <h6 className="clamp-3-lines md:font-normal font-normal-css ">{blog.title}</h6>
-                  <p className="clamp-2-lines line-height-p">{blog.desc}</p>
+          <div className="show-post pl-4 pr-4">
+            <div className="blog-metadata">
+              <p><FormattedMessage id="blogDetail.categories" />: {blog.categories.join(", ")}</p>
+              <p><FormattedMessage id="blogDetail.tags" />: {blog.tags.join(", ")}</p>
+            </div>
+            <img src={blog.featuredImage.url} alt={blog.featuredImage.alt} className="desktop"/>
+            <div className="blog-card-big-content">
+              <h1 className="mt-4 md:mt-0">{blog.title}</h1>
+              <img src={blog.featuredImage.url} alt={blog.featuredImage.alt} className="mobile"/>
+              <div 
+                className="mt-4 line-height-p dangerouslySetInnerHTML"
+                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(blog.content) }}
+              />
+            </div>
+          </div>
+          <div className="blog-list pl-4 pr-4 pb-6">
+          {otherBlogs.map(blog => (
+            <div key={blog.id} className="blog-card-list" onClick={() => window.location.href = `/blog-detail/?slug=${blog.slug}`}>
+              <img src={blog.featuredImage.url} alt={blog.featuredImage.alt} />
+              <div className="blog-card-list-content">
+                <h2 className="clamp-3-lines md:font-normal font-normal-css">{blog.title}</h2>
+                <div className="blog-description dangerouslySetInnerHTML">
+                  {truncateDescription(blog.content)}
                 </div>
               </div>
-            ))}
-          </div>
-          {selectedBlog && (
-            <div className="show-post  pl-4 pr-4">
-              <img src={selectedBlog.imgUrl} alt={selectedBlog.title} />
-              <div className="blog-card-big-content">
-                <h1 className="mt-4  md:mt-0">{selectedBlog.title}</h1>
-                <p className="mt-4 line-height-p">{selectedBlog.desc}</p>
-              </div>
             </div>
-          )}
+          ))}
+        </div>
         </div>
       </section>
+
+     
+        
+    
+
       <FooterCon
-        Title="See if"
-        TitleOverSpan="is right for you.Let's Create Something Exceptional Together"
-        SubHeading="is right for you.Let's Create Something Exceptional Together"
+        titleId="blogDetail.footerCon.title"
+        titleOverSpanId="blogDetail.footerCon.titleOverSpan"
+        subHeadingId="blogDetail.footerCon.subHeading"
       />
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

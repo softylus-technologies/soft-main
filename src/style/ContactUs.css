@@ -62,7 +62,20 @@
     display: none;
 }
     
-
+.ContactForm-container{
+    display: flex !important;
+    width: 90% !important;
+    justify-content: space-between;
+}
+.ContactForm-section{
+    display: flex;
+    justify-content: center;
+}
+.ContactForm-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .label-sec textarea{
     background: none;
     border-radius: 8px;
@@ -84,7 +97,12 @@
 .border-white{
     --bs-border-opacity:0.6;
 }
-
+html[lang="ar"] .contact-us-form input{
+    direction: rtl;
+}
+html[lang="ar"] .contact-us-form button{
+    width: 19rem;
+}
 @media (max-width: 1200px) {
     
 }
@@ -95,6 +113,12 @@
         align-items: center;
         width: 100%;
         gap: 100px;
+    }
+    .ContactForm-content{
+        flex-direction: column;
+    }
+    .ContactForm-content > div,.ContactForm-content > form{
+        width: 100%;
     }
 }
 

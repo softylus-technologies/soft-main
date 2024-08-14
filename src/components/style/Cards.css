@@ -177,7 +177,18 @@ a {
   padding: 40px 30px !important;
   row-gap: 1rem;
 }
-
+html[lang="ar"] .services-cards-container > a > div{
+  align-items: start;
+}
+html[lang="ar"] .services-cards-container > a > div > h2,html[lang="ar"] .services-cards-container > a > div > p{
+  text-align: right;
+}
+html[lang="ar"] .BlogCard-button-card{
+  text-align: right;
+}
+html[lang="ar"] .BlogCard-button-card svg{
+  rotate: 180deg;
+}
 .services-cards-container > a > div > * {
   margin: 0 !important;
 }
@@ -241,6 +252,13 @@ a {
 }
 .featured-on-section-content{
   width: 90%;
+}
+.heading-container{
+  width: 100%;
+}
+html[lang="ar"] .heading-container{
+  padding-left:0 ;
+  padding-right: 70px;
 }
 @media (max-width:1024px){
   .heading-container h1,.content-section h1,.featured-on-section-content h1, .latest-insights-section-content h1{

@@ -1,10 +1,11 @@
 import React from "react";
 import "./style/Footer.css";
-import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-solid-svg-icons";
+import { FormattedMessage, useIntl } from 'react-intl';
+
 const Footer = () => {
+  const intl = useIntl();
+
   return (
     <>
       <footer className="footer-bottom bg-transparent py-20 relative">
@@ -13,194 +14,101 @@ const Footer = () => {
             <div className="company-info">
               <img
                 src="/Logo_Softylus.svg"
-                alt="Softylus Logo"
+                alt={intl.formatMessage({ id: "footer.logoAlt" })}
                 className="logo"
               />
               <address>
-                <p>Riyadh, Saudi Arabia</p>
-                <p>Zarqa, Jordan</p>
+                <p><FormattedMessage id="footer.addressSaudi" /></p>
+                <p><FormattedMessage id="footer.addressJordan" /></p>
               </address>
               <div className="social-icon">
                 <Link
                   href="https://www.linkedin.com/company/softylus"
-                  aria-label="Visit Instagram page"
+                  aria-label={intl.formatMessage({ id: "footer.linkedinAriaLabel" })}
                 >
-                  <img src="/linkedin-icon.svg" />
+                  <img src="/linkedin-icon.svg" alt={intl.formatMessage({ id: "footer.linkedinAlt" })} />
                 </Link>
                 <Link
                   href="https://web.facebook.com/softylus?_rdc=1&_rdr"
-                  aria-label="Visit Facebook page"
+                  aria-label={intl.formatMessage({ id: "footer.facebookAriaLabel" })}
                 >
-                  <img src="/facebook-icon.svg" alt="Facebook" />
+                  <img src="/facebook-icon.svg" alt={intl.formatMessage({ id: "footer.facebookAlt" })} />
                 </Link>
               </div>
             </div>
             <div className="company-links">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Company
+                <FormattedMessage id="footer.companyTitle" />
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
                   <Link to="/about" className="no-underline">
-                    About Softylus
+                    <FormattedMessage id="footer.aboutLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/industries">
-                    Industries
+                    <FormattedMessage id="footer.industriesLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/careers">
-                    Careers
+                    <FormattedMessage id="footer.careersLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/clients">
-                    Clients
+                    <FormattedMessage id="footer.clientsLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/contact-us">
-                    Contact us
+                    <FormattedMessage id="footer.contactLink" />
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="company-links">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Services
+                <FormattedMessage id="footer.servicesTitle" />
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
                   <Link className="no-underline" to="/detail-web-dev">
-                    Software and web development
+                    <FormattedMessage id="footer.webDevLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/detail-mobile">
-                    Mobile development
+                    <FormattedMessage id="footer.mobileDevLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/detail-seo">
-                    SEO page services
+                    <FormattedMessage id="footer.seoLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="no-underline"
-                    to="/detail-digital-marketing"
-                  >
-                    Detail digital marketing
+                  <Link className="no-underline" to="/detail-digital-marketing">
+                    <FormattedMessage id="footer.digitalMarketingLink" />
                   </Link>
                 </li>
                 <li>
                   <Link className="no-underline" to="/detail-smm">
-                    Social media management
+                    <FormattedMessage id="footer.smmLink" />
                   </Link>
                 </li>
               </ul>
             </div>
-            {/* <div>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium p-0">
-                <li>
-                  <Link className="no-underline" to="/detail-web-dev">
-                    UI/UX
-                  </Link>
-                </li>
-                <li>
-                  <Link className="no-underline" to="/about">
-                    Hosting Services
-                  </Link>
-                </li>
-                <li>
-                  <Link className="no-underline" to="/about">
-                    Follow-Up and maintenance
-                  </Link>
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
-
         <img
           className="circle bottom-0 !left-0"
           id="circle1"
           src="/Vector (7).svg"
+          alt={intl.formatMessage({ id: "footer.decorativeImageAlt" })}
         />
       </footer>
-      {/* 
-      <footer className="Footer-container">
-        <div className="Footer-sec">
-          <div className="Footer-sec-1">
-            <img
-              src="/logo_Softylus.svg"
-              alt="Softylus Logo"
-              className="logo"
-            />
-            <address>
-              <p>Riyadh, Saudi Arabia</p>
-              <p>Zarqa, Jordan</p>
-            </address>
-            <div className="social-icon">
-              <Link
-                href="https://www.linkedin.com/company/softylus"
-                aria-label="Visit Instagram page"
-              >
-                <img src="/linkedin-icon.svg" />
-              </Link>
-              <Link
-                href="https://web.facebook.com/softylus?_rdc=1&_rdr"
-                aria-label="Visit Facebook page"
-              >
-                <img src="/facebook-icon.svg" alt="Facebook" />
-              </Link>
-            </div>
-          </div>
-          <nav className="Footer-sec-2">
-            <ul>
-              <li>
-                <Link to="/About">About Softylus</Link>
-              </li>
-              <li>
-                <Link to="/Industries">Industries</Link>
-              </li>
-              <li>
-                <Link to="/Careers">Careers</Link>
-              </li>
-              <li>
-                <Link to="/Clients">Clients</Link>
-              </li>
-              <li>
-                <Link to="/ContactUs">Contact us</Link>
-              </li>
-            </ul>
-          </nav>
-          <nav className="Footer-sec-2">
-            <ul>
-              <li>
-                <Link to="/DetailWebDev">Software and web development</Link>
-              </li>
-              <li>
-                <Link to="/DetailMobile">Mobile development</Link>
-              </li>
-              <li>
-                <Link to="/DetailSeo">SEO page services</Link>
-              </li>
-              <li>
-                <Link to="/DetailDigitalMarketing">
-                  Detail digital marketing
-                </Link>
-              </li>
-              <li>
-                <Link to="/DetailSMM">Social media management</Link>
-              </li>
-            </ul>
-          </nav>
-
-        </div>
-      </footer> */}
     </>
   );
 };

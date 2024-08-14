@@ -31,7 +31,7 @@ function ClientSlider() {
         className="pb-0"
         slidesPerView={7}
         loop={true}
-        spaceBetween={20}
+        spaceBetween={40}
         modules={[Autoplay]}
         autoplay={{
           delay: 2500,
@@ -44,11 +44,11 @@ function ClientSlider() {
           },
           360: {
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 30,
           },
           576: {
             slidesPerView: 4,
-            spaceBetween: 10,
+            spaceBetween: 30,
           },
           768: {
             slidesPerView: 5,

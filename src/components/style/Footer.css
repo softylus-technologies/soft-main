@@ -88,6 +88,7 @@ ul {
   position: absolute;
   left: -23%;
   bottom: -27%;
+  display: none;
 }
 .social-icon img {
   width: 20px;
@@ -180,4 +181,15 @@ ul.footer-links-list li {
 
 ul.footer-links-list li a {
   color: rgba(255, 255, 255, 0.8);
+}
+html[lang="ar"] ul.footer-links-list li{
+  text-align: right;
+}
+html[lang="ar"] .company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+html[lang="ar"] .footer-bottom .grid.grid-cols-2.gap-8.px-4.py-6.lg\:py-8.md\:grid-cols-3{
+  direction: rtl;
 }

@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { useIntl, FormattedMessage } from 'react-intl';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Ensure you are importing the bundle CSS
+import 'swiper/swiper-bundle.css';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 import {CardCustomer} from './CardCustomer';
 import './style/SayCustomer.css';
 
-// Install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const SayCustomer = () => {
   const [testimonials, setTestimonials] = useState([]);
+  const intl = useIntl();
 
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await axios.get("https://strapi.softylus.com/api/customer-says?populate=imageSrc", {
+        const response = await axios.get(`https://strapi.softylus.com/api/testimonials?populate=picture&locale=${intl.locale}`, {
           headers: {
             "Accept": "*/*",
             "Content-Type": "application/json",
@@ -30,15 +31,17 @@ const SayCustomer = () => {
     };
 
     fetchTestimonials();
-  }, []);
+  }, [intl.locale]);
 
   return (
     <section className="Say-Customer-sec">
       <div className="Say-Customer-container">
-        <h1 className="Say-Customer-title">See what our customers say about us</h1>
+        <h1 className="Say-Customer-title">
+          <FormattedMessage id="sayCustomer.title" defaultMessage="See what our customers say about us" />
+        </h1>
         <div className="slider-sec relative">
           <Swiper
-          className='Say-Customer-swiper'
+            className='Say-Customer-swiper'
             breakpoints={{
               640: { slidesPerView: 1.5, spaceBetween: 30 },
               768: { slidesPerView: 2, spaceBetween: 10 },
@@ -57,11 +60,11 @@ const SayCustomer = () => {
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id} className="max-w-md">
                 <CardCustomer
-                 SubHeading={testimonial.attributes.description}
-                 Title={testimonial.attributes.Name}
+                  SubHeading={testimonial.attributes.opinion}
+                  Title={testimonial.attributes.Name}
                   imageSrc={
-                    testimonial.attributes.imageSrc?.data?.attributes?.url
-                      ? `https://strapi.softylus.com${testimonial.attributes.imageSrc.data.attributes.url}`
+                    testimonial.attributes.picture?.data?.attributes?.url
+                      ? `https://strapi.softylus.com${testimonial.attributes.picture.data.attributes.url}`
                       : '/default-image.jpg'
                   }
                 />

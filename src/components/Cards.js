@@ -4,8 +4,11 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Button } from "reactstrap";
 import { Link } from "gatsby";
 import SvgIcon from "./SvgIcon";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const Cards = () => {
+  const intl = useIntl();
+
   const l1 = (
     <svg
       width="50"
@@ -51,9 +54,9 @@ const Cards = () => {
 
   const services_info = [
     {
-      title: "Software and web development",
-      description:
-        "Developing websites, web applications, custom software requirements, and complex system integrations.",
+      titleId: "cards.service1.title",
+      descriptionId:
+        "cards.service1.description",
       link: "/detail-web-dev",
       icon: `<svg
           width="50"
@@ -97,9 +100,9 @@ const Cards = () => {
         </svg>`,
     },
     {
-      title: "Maintenance and update",
-      description:
-        "After the product is delivered, we offer a 3-month-free follow-up because if we can spoil our customers, then why not?",
+      titleId: "cards.service2.title",
+      descriptionId:
+        "cards.service2.description",
       link: "#",
       icon: `<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.9">
@@ -114,9 +117,9 @@ const Cards = () => {
         </svg>`,
     },
     {
-      title: "Mobile development",
-      description:
-        "Looking to join the mobile revolutionary era and have your own app launched? Your search ends here.",
+      titleId: "cards.service3.title",
+      descriptionId:
+        "cards.service3.description",
       link: "/detail-mobile",
       icon: `<svg
           width="50"
@@ -196,9 +199,9 @@ const Cards = () => {
         </svg>`,
     },
     {
-      title: "Analysis and planning",
-      description:
-        "At this stage, you’ll have the chance to share your thoughts and requirements with the teams responsible to assist you with that.",
+      titleId: "cards.service4.title",
+      descriptionId:
+        "cards.service4.description",
       link: "#",
       icon: `<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.9">
@@ -209,9 +212,9 @@ const Cards = () => {
         </svg>`,
     },
     {
-      title: "UI/UX design",
-      description:
-        "Designing user interfaces and user experiences for engaging and intuitive digital products.",
+      titleId: "cards.service5.title",
+      descriptionId:
+        "cards.service5.description",
       link: "#",
       icon: `<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.9">
@@ -227,9 +230,9 @@ const Cards = () => {
         </svg>`,
     },
     {
-      title: "SEO services",
-      description:
-        "At Softylus Technologies, we understand the importance of SEO in today's digital landscape.",
+      titleId: "cards.service6.title",
+      descriptionId:
+        "cards.service6.description",
       link: "/detail-seo",
       icon: `<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.0628 29.1667H8.33366C6.04199 29.1667 4.16699 31.0417 4.16699 33.3334V45.8334H18.0628V29.1667Z" stroke="#F5F5F5" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -240,37 +243,45 @@ const Cards = () => {
     },
   ];
 
-  // console.log("CARDSSS: ", services_info[1].icon.props.length);
-  console.log("CARDSSS: ", services_info[1].icon);
+  // //console.log("CARDSSS: ", services_info[1].icon.props.length);
+  //console.log("CARDSSS: ", services_info[1].icon);
 
   return (
     <section className="services-container container-cards">
-      <header className="heading-container">
-        <h1 className="text-4xl md:text-5xl">Name any, we got many</h1>
-        <p className="max-w-100 md:max-w-[80%] text-center mx-auto">
-          We are committed to maintaining the quality of our service for you.
-          Customer-Focused, Results-Oriented, and Standards-Driven.
-        </p>
-      </header>
-      <article className="services-cards-container pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col md:grid-cols-1 md:grid-rows-6 lg:grid-rows-2 lg:grid-cols-3 ">
-        {services_info.map((card) => (
-          <Link to={card.link}>
-            <div className="bg-mainDark flex flex-col px-4 py-3 items-start text-left rounded-[20px] card-hover">
-              <SvgIcon svgContent={card.icon} />
-              <h2 className="service-name text-2xl m-0">{card.title}</h2>
-              <p className="service-description">{card.description}</p>
-            </div>
-          </Link>
-        ))}
-      </article>
-      <Button
-        className="see-more-services-btn btn-card"
-        aria-label="See more services"
-        href="/services"
-      >
-        See more services
-      </Button>
-    </section>
+    <header className="heading-container">
+      <h1 className="text-4xl md:text-5xl">
+        <FormattedMessage id="cards.mainHeading" defaultMessage="Name any, we got many" />
+      </h1>
+      <p className="max-w-100 md:max-w-[80%] text-center mx-auto">
+        <FormattedMessage 
+          id="cards.subHeading" 
+          defaultMessage="We are committed to maintaining the quality of our service for you. Customer-Focused, Results-Oriented, and Standards-Driven." 
+        />
+      </p>
+    </header>
+    <article className="services-cards-container pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col md:grid-cols-1 md:grid-rows-6 lg:grid-rows-2 lg:grid-cols-3 ">
+      {services_info.map((card, index) => (
+        <Link to={card.link} key={index}>
+          <div className="bg-mainDark flex flex-col px-4 py-3 items-start text-left rounded-[20px] card-hover">
+            <SvgIcon svgContent={card.icon} />
+            <h2 className="service-name text-2xl m-0">
+              <FormattedMessage id={card.titleId} defaultMessage={`Service ${index + 1}`} />
+            </h2>
+            <p className="service-description">
+              <FormattedMessage id={card.descriptionId} defaultMessage={`Description for service ${index + 1}`} />
+            </p>
+          </div>
+        </Link>
+      ))}
+    </article>
+    <Button
+      className="see-more-services-btn btn-card"
+      aria-label={intl.formatMessage({ id: "cards.seeMoreButtonAriaLabel", defaultMessage: "See more services" })}
+      href="/services"
+    >
+      <FormattedMessage id="cards.seeMoreButton" defaultMessage="See more services" />
+    </Button>
+  </section>
   );
 };
 

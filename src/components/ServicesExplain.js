@@ -13,13 +13,16 @@ const ServicesExplain = ({
   return (
     <section className="ServicesExplain-sec">
       <div className="ServicesExplain-container">
-        <div className="ServicesExplain-img-sec">
+        <div className="ServicesExplain-img-sec desktop">
           <img src={imageSrc} alt="Description of the main image" />
         </div>
         <div className="ServicesExplain-title-sec">
           <img src={logo} alt="Description of the main image" />
           <div className="ServicesExplain-title-content">
             <h1 className="h1-text">{Title}</h1>{" "}
+            <div className="ServicesExplain-img-sec mobile">
+              <img src={imageSrc} alt="Description of the main image" />
+            </div>
             {/* Ensure that <h1> is used once per page for the main title */}
             <p className="p-text">{SubHeading}</p>
           </div>

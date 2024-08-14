@@ -22,6 +22,9 @@ h1.Say-Coustmer-title{
     margin-bottom: 20px;
     align-items: center;
 }
+html[lang="ar"] .Say-Customer-container .swiper-wrapper{
+    justify-content: flex-end;
+}
 span.swiper-pagination-bullet {
     background: white !important;
     width: 16px;

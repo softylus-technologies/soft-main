@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Footer.css"
-function TowSmallSide({ children, imgUrl, reverse }) {
+function TowSmallSide({ children, imgUrl, reverse ,classNameres}) {
   return (
     <section className="md:mx-auto py-10 pl-4 pr-4 md:pl-0 md:pr-0 flex justify-center ">
       <div
@@ -18,7 +18,7 @@ function TowSmallSide({ children, imgUrl, reverse }) {
         <div
           className={`${
             reverse ? "lg:order-1" : ""
-          }flex mx-auto items-start justify-start w-100 h-60 relative `}
+          }flex mx-auto items-start justify-start w-100 h-60 relative  ${classNameres}`}
         >
           <img className="w-full h-full  " src={imgUrl} />
         </div>

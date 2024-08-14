@@ -1,6 +1,5 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style//IndustryTabs.css";
 import "react-tabs/style/react-tabs.css";
@@ -8,8 +7,10 @@ import TowSideLayout from "./tow-side-layout/TowSideLayout";
 import { Link } from "gatsby";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { graphql, useStaticQuery } from "gatsby";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const SecTwo = () => {
+  const intl = useIntl();
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -22,71 +23,74 @@ const SecTwo = () => {
 
   const industries = [
     {
-      title: "Blockchain",
-      description:
-        "Revolutionize your business with our blockchain expertise. We develop secure, transparent, and decentralized solutions for supply chain management, financial services, and data integrity.",
-      keywords: [
-        "Decentralized applications (DApps)",
-        "Smart contracts",
-        "Cryptocurrency integration",
-        "Blockchain security",
-        "Enterprise blockchain solutions",
+      titleId: "industries.blockchain.title",
+      descriptionId: "industries.blockchain.description",
+      keywordsIds: [
+        "industries.blockchain.keyword1",
+        "industries.blockchain.keyword2",
+        "industries.blockchain.keyword3",
+        "industries.blockchain.keyword4",
+        "industries.blockchain.keyword5",
       ],
     },
     {
-      title: "Crowdfunding",
-      description:
-        "Empower your fundraising efforts with our state-of-the-art crowdfunding platforms. We create user-friendly, secure, and scalable solutions that connect innovators with backers.",
-      keywords: [
-        "Peer-to-peer lending",
-        "Equity crowdfunding",
-        "Reward-based platforms",
-        "Donor management",
-        "Campaign analytics",
+      titleId: "industries.crowdfunding.title",
+      descriptionId: "industries.crowdfunding.description",
+      keywordsIds: [
+        "industries.crowdfunding.keyword1",
+        "industries.crowdfunding.keyword2",
+        "industries.crowdfunding.keyword3",
+        "industries.crowdfunding.keyword4",
+        "industries.crowdfunding.keyword5",
       ],
     },
     {
-      title: "Fin-Tech",
-      description:
-        "Transform the financial landscape with our innovative FinTech solutions. We develop advanced platforms for digital banking, payment processing, and financial management.",
-      keywords: [
-        "Mobile banking",
-        "Payment gateways",
-        "Robo-advisors",
-        "Blockchain in finance",
-        "RegTech solutions",
+      titleId: "industries.fintech.title",
+      descriptionId: "industries.fintech.description",
+      keywordsIds: [
+        "industries.fintech.keyword1",
+        "industries.fintech.keyword2",
+        "industries.fintech.keyword3",
+        "industries.fintech.keyword4",
+        "industries.fintech.keyword5",
       ],
     },
     {
-      title: "E-commerce",
-      description:
-        "Boost your online retail presence with our powerful e-commerce solutions. We create scalable, feature-rich platforms that offer seamless shopping experiences across devices.",
-      keywords: [
-        "Mobile commerce",
-        "Omnichannel retail",
-        "Personalized shopping experiences",
-        "Inventory management",
-        "Secure payment integration",
+      titleId: "industries.ecommerce.title",
+      descriptionId: "industries.ecommerce.description",
+      keywordsIds: [
+        "industries.ecommerce.keyword1",
+        "industries.ecommerce.keyword2",
+        "industries.ecommerce.keyword3",
+        "industries.ecommerce.keyword4",
+        "industries.ecommerce.keyword5",
       ],
     },
   ];
 
   return (
-    <TowSideLayout reverse={true} imgUrl={"/Frame 1000003299.svg"}>
+    <TowSideLayout reverse={true} imgUrl={"/Frame 1000003299.svg"} classNameres={"desktop"}>
       <h1 className="text-3xl md:text-5xl mb-3">
-        We work across many industries – find yours!
+        <FormattedMessage id="industries.heading" defaultMessage="We work across many industries – find yours!" />
       </h1>
+      <div className="gif-container flex mx-auto items-start justify-start w-100 h-100 relative mobile">
+        <img className="w-full h-full object-cover border-radius30" src="/Frame 1000003299.svg" alt={intl.formatMessage({ id: "industries.imageAlt", defaultMessage: "Industries illustration" })} />
+      </div>
       <div>
         <Tabs>
           <TabList>
             {industries.map((industry, index) => (
-              <Tab key={index}>{industry.title}</Tab>
+              <Tab key={index}>
+                <FormattedMessage id={industry.titleId} />
+              </Tab>
             ))}
           </TabList>
 
           {industries.map((industry, index) => (
             <TabPanel key={index} className="w-100">
-              <p className="p-tab">{industry.description}</p>
+              <p className="p-tab">
+                <FormattedMessage id={industry.descriptionId} />
+              </p>
             </TabPanel>
           ))}
         </Tabs>
@@ -95,7 +99,7 @@ const SecTwo = () => {
         to="/contact-us"
         className="primary-cta no-underline inline-flex items-center justify-center text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
       >
-        See more industries
+        <FormattedMessage id="industries.seeMoreButton" defaultMessage="See more industries" />
       </Link>
     </TowSideLayout>
   );

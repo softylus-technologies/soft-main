@@ -9,7 +9,7 @@ import Button from '@mui/material/Button'; // Assuming you're using Material-UI
 import PopupBody from '../components/PopupBody'; // Make sure to define this component
 import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 
-console.log(AccData);
+//console.log(AccData);
 
 const AccordionSection = styled.div`
   display: flex;
@@ -102,7 +102,7 @@ const AccordianCarrer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can add your logic here to handle the form submission, e.g., send data to a server.
-    console.log(formData);
+    //console.log(formData);
   };
   return (
     <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>

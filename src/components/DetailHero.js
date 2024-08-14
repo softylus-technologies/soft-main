@@ -5,8 +5,11 @@ import TowSideLayout from "./tow-side-layout/TowSideLayout";
 const DetailHero = ({ Title, SubHeading, buttonText, imageSrc, className }) => {
   return (
     <div className="md:px-[70px] mx-auto mt-5">
-      <TowSideLayout reverse imgUrl={imageSrc}>
+      <TowSideLayout reverse imgUrl={imageSrc} classNameres={"desktop"}>
         <h1 className="text-4xl md:text-5xl">{Title}</h1>
+        <div class="gif-container flex mx-auto items-start justify-start w-100 h-100 relative mobile">
+            <img class="w-full h-full object-cover border-radius30" src={imageSrc}/>
+          </div>
         <p className="p-text">{SubHeading}</p>
       </TowSideLayout>
     </div>

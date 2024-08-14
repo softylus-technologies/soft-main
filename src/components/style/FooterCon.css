@@ -62,6 +62,9 @@
   background-color: #f5f5f5 !important;
   color: #ec2227 !important;
 }
+/* html[lang="ar"] .content-FooterCon a svg{
+  rotate: 180deg;
+} */
 @media (min-width: 1024px) {
   .sec-card {
     width: 1300px;

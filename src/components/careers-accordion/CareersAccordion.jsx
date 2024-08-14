@@ -1,13 +1,17 @@
 import React from "react";
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl";
 import { Disclosure, Transition } from "@headlessui/react";
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import "../../style/Careers.css"
 import CustomModal from "../modal/CustomModal";
 import ApplyForm from "../apply-form/ApplyForm";
-import AccData from "../../sources/accordian.json";
+import AccDataEn from "../../sources/accordian-en.json";
+import AccDataAr from "../../sources/accordian-ar.json";
 
 function SingleAccordion({ question, answer }) {
+  const intl = useIntl();
+
   return (
     <div className="mx-auto w-full rounded-2xl bg-transparent my-10">
       <Disclosure>
@@ -23,7 +27,7 @@ function SingleAccordion({ question, answer }) {
                 <h2 className="text-2xl accordian-title-Careers">{question}</h2>
               </div>
               <div>
-                <CustomModal btnText="Apply Now" classes="hidden md:flex">
+                <CustomModal btnText={intl.formatMessage({ id: "careers.accordion.applyNow" })} classes="hidden md:flex">
                   <ApplyForm />
                 </CustomModal>
               </div>
@@ -42,7 +46,7 @@ function SingleAccordion({ question, answer }) {
                     {answer}
                   </p>
                   <div>
-                    <CustomModal btnText="Apply Now" classes="md:hidden flex">
+                    <CustomModal btnText={intl.formatMessage({ id: "careers.accordion.applyNow" })} classes="md:hidden flex">
                       <ApplyForm />
                     </CustomModal>
                   </div>
@@ -57,12 +61,16 @@ function SingleAccordion({ question, answer }) {
 }
 
 function CareersAccordion() {
+  const intl = useIntl();
+  const AccData = intl.locale === 'ar' ? AccDataAr : AccDataEn;
+
   return (
     <div className="w-full px-4 pt-16 relative accordian-Careers">
       <img
         className="circle !top-[-50%] !bottom-[unset] !left-[-22%] z-[-1] "
         id="circle1"
         src="/Frame 1000003358.svg"
+        alt={intl.formatMessage({ id: "careers.accordion.circleAlt" })}
       />
       {AccData.map((item, idx) => (
         <SingleAccordion
