@@ -119,7 +119,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.dangerouslySetInnerHTML {
+.dangerouslySetInnerHTML,.dangerouslySetInnerHTML ol li {
     color: white;
 }
 .blog-metadata p{

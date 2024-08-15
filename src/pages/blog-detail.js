@@ -37,9 +37,7 @@ const BlogDetail = () => {
           title: blogData.attributes.Title,
           slug: blogData.attributes.Slug,
           description: blogData.attributes.Meta_Description,
-          content: blogData.attributes.Content
-            .map((block) => block.children.map((child) => child.text).join(" "))
-            .join("\n"),
+          content: blogData.attributes.Content,
           featuredImage: {
             url: blogData.attributes.Featured_Image?.data
               ? `https://strapi.softylus.com${blogData.attributes.Featured_Image.data.attributes.url}`
@@ -78,9 +76,7 @@ const BlogDetail = () => {
           id: blogData.id,
           title: blogData.attributes.Title,
           slug: blogData.attributes.Slug,
-          content: blogData.attributes.Content
-            .map((block) => block.children.map((child) => child.text).join(" "))
-            .join("\n"),
+          content: blogData.attributes.Content,
           featuredImage: {
             url: blogData.attributes.Featured_Image?.data
               ? `https://strapi.softylus.com${blogData.attributes.Featured_Image.data.attributes.url}`
@@ -100,15 +96,60 @@ const BlogDetail = () => {
     fetchOtherBlogs();
   }, [fetchBlog, fetchOtherBlogs]);
 
-  const truncateDescription = (description, charLimit = 100) => {
-    const sanitizedDescription = DOMPurify.sanitize(description);
-    const truncated = sanitizedDescription.slice(0, charLimit);
-    return truncated.length < sanitizedDescription.length ? `${truncated}...` : truncated;
+  const convertContentToHtml = (content) => {
+    return content.map((item, index) => {
+      switch (item.type) {
+        case 'heading':
+          return React.createElement(
+            `h${item.level}`, 
+            { key: index }, 
+            item.children.map(child => child.text).join('')
+          );
+        case 'paragraph':
+          return (
+            <p key={index}>
+              {item.children.map((child, childIndex) => {
+                if (child.type === 'text') {
+                  let text = child.text;
+                  return child.bold ? <strong key={childIndex}>{text}</strong> : text;
+                } else if (child.type === 'link') {
+                  return (
+                    <a key={child.url} href={child.url}>
+                      {child.children.map(linkChild => linkChild.text).join('')}
+                    </a>
+                  );
+                }
+                return null; // Handle any unexpected child types
+              })}
+            </p>
+          );
+        case 'list':
+          const ListTag = item.format === 'ordered' ? 'ol' : 'ul';
+          return (
+            <ListTag key={index}>
+              {item.children.map((li, liIndex) => (
+                <li key={liIndex}>
+                  {li.children.map((child, childIndex) => {
+                    if (child.type === 'text') {
+                      let text = child.text;
+                      return child.bold ? <strong key={childIndex}>{text}</strong> : text;
+                    }
+                    return null; // Ignore non-text children
+                  }).reduce((prev, curr) => [prev, ' ', curr])}
+                </li>
+              ))}
+            </ListTag>
+          );
+        default:
+          return null; // Return null for unhandled types
+      }
+    });
   };
-
   if (!blog) {
     return <div><FormattedMessage id="blogDetail.loading" /></div>;
   }
+
+  const htmlContent = convertContentToHtml(blog.content);
 
   return (
     <Layout>
@@ -127,32 +168,26 @@ const BlogDetail = () => {
             <div className="blog-card-big-content">
               <h1 className="mt-4 md:mt-0">{blog.title}</h1>
               <img src={blog.featuredImage.url} alt={blog.featuredImage.alt} className="mobile"/>
-              <div 
-                className="mt-4 line-height-p dangerouslySetInnerHTML"
-                dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(blog.content) }}
-              />
+              <div className="mt-4 line-height-p dangerouslySetInnerHTML">
+                {htmlContent}
+              </div>
             </div>
           </div>
           <div className="blog-list pl-4 pr-4 pb-6">
-          {otherBlogs.map(blog => (
-            <div key={blog.id} className="blog-card-list" onClick={() => window.location.href = `/blog-detail/?slug=${blog.slug}`}>
-              <img src={blog.featuredImage.url} alt={blog.featuredImage.alt} />
-              <div className="blog-card-list-content">
-                <h2 className="clamp-3-lines md:font-normal font-normal-css">{blog.title}</h2>
-                <div className="blog-description dangerouslySetInnerHTML">
-                  {truncateDescription(blog.content)}
+            {otherBlogs.map(blog => (
+              <div key={blog.id} className="blog-card-list" onClick={() => window.location.href = `/blog-detail/?slug=${blog.slug}`}>
+                <img src={blog.featuredImage.url} alt={blog.featuredImage.alt} />
+                <div className="blog-card-list-content">
+                  <h2 className="clamp-3-lines md:font-normal font-normal-css">{blog.title}</h2>
+                  <div className="blog-description">
+                    {/* Truncate description logic here */}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </section>
-
-     
-        
-    
-
       <FooterCon
         titleId="blogDetail.footerCon.title"
         titleOverSpanId="blogDetail.footerCon.titleOverSpan"
