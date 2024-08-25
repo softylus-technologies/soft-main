@@ -5,13 +5,15 @@ module.exports = {
   siteMetadata: {
     title: `Softylus Technologies`,
     watch: true,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `http://localhost:9000`,
   },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {

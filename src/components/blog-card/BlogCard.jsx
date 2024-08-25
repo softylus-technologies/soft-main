@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { Link } from 'gatsby';
+import { LanguageContext } from '../../context/LanguageContext';
 
 const BlogCard = ({ item }) => {
   const intl = useIntl();
+  const { locale } = useContext(LanguageContext);
 
   return (
     <div className="blog-card bg-[#1c1c1c] rounded-lg overflow-hidden group transition-all duration-300 ease-in-out">
@@ -21,8 +23,8 @@ const BlogCard = ({ item }) => {
         </p>
         <div className="absolute bottom-0 left-0 right-0 bg-[#1c1c1c] p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out BlogCard-button-card">
           <Link 
-to={`../blog-detail/?slug=${item.url}`}
-className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-full text-sm font-medium hover:bg-red-700 transition-colors duration-300 ease-in-out"
+          to={`/${locale}/blog-detail/?slug=${item.url}`}
+          className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-full text-sm font-medium hover:bg-red-700 transition-colors duration-300 ease-in-out"
             aria-label={intl.formatMessage(
               { id: 'blogCard.readMoreAriaLabel', defaultMessage: 'Read more about {title}' },
               { title: item.title }

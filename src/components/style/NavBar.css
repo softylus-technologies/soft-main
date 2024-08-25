@@ -527,5 +527,7 @@ html[lang="en"] .switchLanguage-btn{
   .mobile-navbar-modal .modal-content .modal-header button.btn-close:focus {
     box-shadow: unset;
   }
-
+  .navBar-hamburger{
+    gap: 1rem !important;
+  }
 }

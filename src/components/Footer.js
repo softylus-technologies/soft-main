@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./style/Footer.css";
 import { Link } from "gatsby";
 import { FormattedMessage, useIntl } from 'react-intl';
+import { LanguageContext } from '../context/LanguageContext';
 
 const Footer = () => {
   const intl = useIntl();
+  const { locale } = useContext(LanguageContext);
 
   return (
     <>
@@ -42,27 +44,27 @@ const Footer = () => {
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
-                  <Link to="/about" className="no-underline">
+                  <Link to={`/${locale}/about`} className="no-underline">
                     <FormattedMessage id="footer.aboutLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/industries">
+                  <Link className="no-underline" to={`/${locale}/industries`}>
                     <FormattedMessage id="footer.industriesLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/careers">
+                  <Link className="no-underline" to={`/${locale}/careers`}>
                     <FormattedMessage id="footer.careersLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/clients">
+                  <Link className="no-underline" to={`/${locale}/clients`}>
                     <FormattedMessage id="footer.clientsLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/contact-us">
+                  <Link className="no-underline" to={`/${locale}/contact-us`}>
                     <FormattedMessage id="footer.contactLink" />
                   </Link>
                 </li>
@@ -74,27 +76,27 @@ const Footer = () => {
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
-                  <Link className="no-underline" to="/detail-web-dev">
+                  <Link className="no-underline" to={`/${locale}/seo-responsive-web-design`}>
                     <FormattedMessage id="footer.webDevLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/detail-mobile">
+                  <Link className="no-underline" to={`/${locale}/best-mobile-app-developers`}>
                     <FormattedMessage id="footer.mobileDevLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/detail-seo">
+                  <Link className="no-underline" to={`/${locale}/professional-seo-services`}>
                     <FormattedMessage id="footer.seoLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/detail-digital-marketing">
+                  <Link className="no-underline" to={`/${locale}/digital-marketing-strategy-consultancy`}>
                     <FormattedMessage id="footer.digitalMarketingLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to="/detail-smm">
+                  <Link className="no-underline" to={`/${locale}/social-media-management-services`}>
                     <FormattedMessage id="footer.smmLink" />
                   </Link>
                 </li>

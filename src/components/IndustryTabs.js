@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style//IndustryTabs.css";
@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { graphql, useStaticQuery } from "gatsby";
 import { FormattedMessage, useIntl } from "react-intl";
+import { LanguageContext } from '../context/LanguageContext';
 
 const SecTwo = () => {
   const intl = useIntl();
@@ -67,6 +68,7 @@ const SecTwo = () => {
       ],
     },
   ];
+  const { locale } = useContext(LanguageContext);
 
   return (
     <TowSideLayout reverse={true} imgUrl={"/Frame 1000003299.svg"} classNameres={"desktop"}>
@@ -96,7 +98,7 @@ const SecTwo = () => {
         </Tabs>
       </div>
       <Link
-        to="/contact-us"
+        to={`/${locale}/contact-us`}
         className="primary-cta no-underline inline-flex items-center justify-center text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
       >
         <FormattedMessage id="industries.seeMoreButton" defaultMessage="See more industries" />

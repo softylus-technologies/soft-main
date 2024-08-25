@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef,useContext } from "react";
 import "./style/Header.css";
 import { Link } from "gatsby";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FormattedMessage, useIntl } from "react-intl";
+import { LanguageContext } from '../context/LanguageContext';
 
 const Header = ({
   Title,
@@ -76,9 +77,10 @@ const Header = ({
   const overSpanContent = overSpanId 
     ? intl.formatMessage({ id: overSpanId, defaultMessage: overSpan })
     : overSpan;
-    const imageSrc = intl.locale === 'ar' ? '/hero ar.svg' : '/softylusHero.png';
+    const imageSrc = intl.locale === 'ar' ? '/hero ar.pmg' : '/softylusHero.png';
 
   const isEmpty = !overSpanContent || (Array.isArray(overSpanContent) && overSpanContent.length === 0);
+  const { locale } = useContext(LanguageContext);
 
   return (
     <header className="main-header bg-hero-pattern bg-cover bg-right-center bg-no-repeat min-h-screen flex bg-ps-buttom">
@@ -107,7 +109,7 @@ const Header = ({
             {renderText(SubHeading, subHeadingId)}
           </p>
           <Link
-            to="/contact-us"
+            to={`/${locale}/contact-us`}
             className="primary-cta no-underline inline-flex items-center justify-center text-base font-extrabold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
           >
             {renderText(buttonText, buttonTextId)} <img src="/Arrow 1 (1).svg" className="mx-2" alt={intl.formatMessage({ id: "header.arrowAlt", defaultMessage: "Arrow" })} />

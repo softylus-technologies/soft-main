@@ -271,7 +271,7 @@
   "detailMobile.footerCon.buttonTitle": "ابدأ الآن",
 
   "detailSeo.seoTitle": "خدمات تحسين محركات البحث | تكنولوجيا Softylus ",
-  "detailSeo.seoDescription": "اكتشف خدمات تحسين محركات البحث الخبيرة من Softylus Technologies. نساعد الشركات على تحقيق أهدافها عبر الإنترنت من خلال استراتيجيات قائمة على البيانات وتكتيكات مثبتة.",
+  "detailSeo.seoDescription": "c.",
   "detailSeo.header.title": "خدمات تحسين محركات البحث في",
   "detailSeo.header.titleOverSpan": "تكنولوجيز",
   "detailSeo.hero.title": "من نحن: وكالة رائدة في تحسين محركات البحث",
@@ -443,5 +443,6 @@
   "sayCustomer": {
     "title": "انظر ماذا يقول عملاؤنا عنا",
     "defaultImageAlt": "صورة الملف الشخصي للعميل"
-  }
+  },
+  "app.switchLanguageArabic":"EN"
 }

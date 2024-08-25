@@ -366,6 +366,9 @@ html[lang="ar"] .projectDiscussion-content a img{
       font-size: 40px;
       text-align: left;
     }
+    html[lang="ar"] .project-detail-title h1,html[lang="ar"]  .project-detail-title p{
+      text-align: right;
+    }
     .title-project h1{
       font-size: 32px;
     }
@@ -404,6 +407,9 @@ html[lang="ar"] .projectDiscussion-content a img{
     .title-project{
       width: 85%;
       text-align: left;
+    }
+    html[lang="ar"] .title-project{
+      text-align: right;
     }
     .project-detail-title{
       gap: 20px;

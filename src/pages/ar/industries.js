@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import { FormattedMessage, useIntl } from 'react-intl';
-import SayCustomer from '../components/SayCustomer';
-import FooterCon from "../components/FooterCon"
-import Layout from "../components/layout";
-import Header from "../components/Header"
-import Wefeaturedon from "../components/feature-slider/FeatureSlider"
-import "../style/Industries.css"
+import React, { useState, useEffect, useContext } from 'react'
+import { FormattedMessage } from 'react-intl';
+import SayCustomer from '../../components/SayCustomer';
+import FooterCon from "../../components/FooterCon"
+import Layout from "../../components/layout";
+import Header from "../../components/Header"
+import Wefeaturedon from "../../components/feature-slider/FeatureSlider"
+import "../../style/Industries.css"
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import Seo from '../../components/seo';
+import { Helmet } from "react-helmet"; // Import Helmet
+import { LanguageContext } from '../../context/LanguageContext'; 
 
 const SliderButtons = () => {
   const swiper = useSwiper();
@@ -29,10 +32,11 @@ const SliderButtons = () => {
     return () => {
       swiper.off('slideChange', updateSlideStatus);
     };
-  }, [swiper]);};
+  }, [swiper]);
+};
 
 const Industries = () => {
-  const intl = useIntl();
+  const { locale } = useContext(LanguageContext);
 
   const industriesData = [
     { id: 'blockchainn', icon: '/Blockchain.svg' },
@@ -45,10 +49,20 @@ const Industries = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>شركة Softylus | حلول مبتكرة لنجاح مؤسستك </title>
+        <meta name="description" content=" اكتشف كيف يمكن لفريق Softylus المتخصص تقديم حلول مخصصة تعزز نجاح مؤسستك. نحن نتحدث لغة صناعتك، ونلتزم بتقديم نتائج تفوق التوقعات من خلال خدماتنا المتطورة في تطوير البرمجيات، التطبيقات، والتسويق الرقمي. احصل على استشارة مجانية الآن!" />
+        <meta name="keywords" content="تطوير البرمجيات, حلول البرمجيات, تطوير المواقع, تطبيقات الجوال, تصميم UX, Softylus, خدمات تكنولوجيا المعلومات,  blockchain, crowdfunding, fintech, ecommerce, augmented reality, hosting, حلول الصناعة" />
+      </Helmet>
+
+      <Seo
+        title="شركة Softylus | حلول مبتكرة لنجاح مؤسستك "
+        description=" اكتشف كيف يمكن لفريق Softylus المتخصص تقديم حلول مخصصة تعزز نجاح مؤسستك. نحن نتحدث لغة صناعتك، ونلتزم بتقديم نتائج تفوق التوقعات من خلال خدماتنا المتطورة في تطوير البرمجيات، التطبيقات، والتسويق الرقمي. احصل على استشارة مجانية الآن!"
+      />
       <Header 
-        Title={intl.formatMessage({ id: "industries.header.title" })}
-        SubHeading={intl.formatMessage({ id: "industries.header.subheading" })}
-        buttonText={intl.formatMessage({ id: "industries.header.buttonText" })}
+        Title="نتحدث لغة صناعتك"
+        SubHeading="تغوص فرقنا في عالمك لتتحدث بطلاقة لغة صناعتك. نستفيد من هذه الخبرة العميقة لتقديم حلول مخصصة تمنحك ميزة تنافسية. دع معرفتنا المتخصصة تدفع نجاحك"
+        buttonText="احصل على استشارة مجانية"
       />
       <div className='Industries-sec'>
         <div className='Industries-container'>
@@ -57,7 +71,7 @@ const Industries = () => {
           <div className='Industries-card'>
             {industriesData.map((industry, index) => (
               <div key={index} className='Industries-singel-card card-hover'>
-                <img src={industry.icon} alt={intl.formatMessage({ id: `industries.${industry.id}.title` })} />
+                <img src={industry.icon}  />
                 <h2><FormattedMessage id={`industries.${industry.id}.title`} /></h2>
                 <p><FormattedMessage id={`industries.${industry.id}.description`} /></p>
               </div>
@@ -80,7 +94,7 @@ const Industries = () => {
             {industriesData.map((industry, index) => (
               <SwiperSlide key={index}>
                 <div className='Industries-singel-card card-hover'>
-                  <img src={industry.icon} alt={intl.formatMessage({ id: `industries.${industry.id}.title` })} />
+                  <img src={industry.icon}  />
                   <h2><FormattedMessage id={`industries.${industry.id}.title`} /></h2>
                   <p><FormattedMessage id={`industries.${industry.id}.description`} /></p>
                 </div>

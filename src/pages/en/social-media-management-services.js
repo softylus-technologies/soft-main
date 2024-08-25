@@ -1,31 +1,40 @@
-import React, { useState, useEffect } from "react";
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../components/layout";
-import DetailHeader from "../components/DetailHeader";
-import DetailHero from "../components/DetailHero";
-import FooterCon from "../components/FooterCon";
-import DetailSec from "../components/DetailSec";
-import "../style/DetailSeo.css";
-import detailDataEn from "../sources/DetailSMM-en.json";
-import detailDataAr from "../sources/DetailSMM-ar.json";
-import ServicesExplain from "../components/ServicesExplain";
-import Seo from "../components/seo";
+import React, { useState, useEffect, useContext } from "react";
+import { FormattedMessage } from "gatsby-plugin-intl";
+import Layout from "../../components/layout";
+import DetailHeader from "../../components/DetailHeader";
+import DetailHero from "../../components/DetailHero";
+import FooterCon from "../../components/FooterCon";
+import DetailSec from "../../components/DetailSec";
+import "../../style/DetailSeo.css";
+import detailDataEn from "../../sources/DetailSMM-en.json";
+import detailDataAr from "../../sources/DetailSMM-ar.json";
+import ServicesExplain from "../../components/ServicesExplain";
+import { Helmet } from "react-helmet"; // Import Helmet
+import Seo from '../../components/seo';
+import { LanguageContext } from '../../context/LanguageContext'; 
 
 const DetailSMM = () => {
   const [details, setDetails] = useState([]);
-  const intl = useIntl();
+  const { locale } = useContext(LanguageContext);
 
   useEffect(() => {
-    const detailData = intl.locale === 'ar' ? detailDataAr : detailDataEn;
-    setDetails(detailData);
-  }, [intl.locale]);
+    setDetails(locale === "en" ? detailDataEn : detailDataAr);
+  }, [locale]);
 
   return (
     <Layout>
+      <Helmet>
+        <title>Top Social Media Management Services | Softylus Technologies</title>
+        <meta name="description" content="Explore Softylus Technologies' premier social media management services. From content creation to community management, we drive engagement and online success for businesses." />
+        <meta name="keywords" content="social media marketing, SMM, social media management, social media strategy, content creation, community management, social media advertising, influencer marketing, social media analytics, Softylus, social media services" />
+      </Helmet>
+
       <Seo
-        title={intl.formatMessage({ id: "detailSMM.seoTitle" })}
-        description={intl.formatMessage({ id: "detailSMM.seoDescription" })}
+        // Use Seo component for other meta tags
+        title="Top Social Media Management Services | Softylus Technologies"
+        description="Explore Softylus Technologies' premier social media management services. From content creation to community management, we drive engagement and online success for businesses."
       />
+
       <DetailHeader
         Title={<FormattedMessage id="detailSMM.header.title" />}
         TitleOverSpan={<FormattedMessage id="detailSMM.header.titleOverSpan" />}

@@ -88,6 +88,9 @@ html[lang="ar"] .Industries-card p{
         text-align: left;
         width: 85%;
     }
+    html[lang="ar"] .Industries-container h1, html[lang="ar"] .Industries-container p{
+        text-align: right;
+    }
    .Industries-singel-card  p{
         width: 100% !important;
     }

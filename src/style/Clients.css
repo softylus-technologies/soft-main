@@ -82,6 +82,9 @@
       font-size: 32px;
       text-align: left;
     }
+    html[lang="ar"] .Clients-title h1,html[lang="ar"] .Clients-title p{
+      text-align: right;
+    }
     .Clients-title p{
       text-align: left;
     }

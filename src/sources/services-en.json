@@ -4,14 +4,14 @@
       "subHeading": "From small business websites to complex web applications, our expert team has built, modified, and upgraded numerous digital platforms. We serve individuals, startups, SMEs, and large enterprises. Boost user engagement with a website tailored to your needs.",
       "buttonText": "Discover Web Solutions",
       "imageSrc": "/website develop.svg",
-      "path":"/detail-web-dev"
+      "path":"/seo-responsive-web-design"
     },
     {
       "title": "Mobile App Development",
       "subHeading": "Turn your app vision into reality with our skilled mobile developers. Whether it's Android, iOS, or cross-platform, we ensure smooth functionality across all devices. Not sure what's best for you? Our free consultation will guide you towards the ideal solution.",
       "buttonText": "Explore Mobile Options",
       "imageSrc": "/mobile app deve.svg",
-      "path":"../detail-mobile"
+      "path":"../best-mobile-app-developers"
     },
     {
         "title": "UI/UX Design",
@@ -44,7 +44,7 @@
         "subHeading": "Empower your brand with our dynamic social media management services. We craft platform-specific strategies for Facebook, Instagram, Twitter, LinkedIn, and more, ensuring an impactful online presence that drives engagement and tangible results.",
         "buttonText": "Elevate Your Social Media",
         "imageSrc": "/Image right Social Media Management.svg",
-        "path":"../detail-digital-marketing"
+        "path":"../digital-marketing-strategy-consultancy"
       }
   ]
   

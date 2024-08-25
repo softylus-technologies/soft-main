@@ -445,5 +445,6 @@
 "sayCustomer": {
   "title": "See what our customers say about us",
   "defaultImageAlt": "Customer profile picture"
-}
+},
+"app.switchLanguageEnglish":"AR"
 }

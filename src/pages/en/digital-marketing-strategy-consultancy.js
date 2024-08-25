@@ -1,31 +1,40 @@
-import React, { useState, useEffect } from "react";
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../components/layout";
-import DetailHeader from "../components/DetailHeader";
-import DetailHero from "../components/DetailHero";
-import FooterCon from "../components/FooterCon";
-import DetailSec from "../components/DetailSec";
-import "../style/DetailDigitalMarketing.css";
-import detailDataEn from "../sources/DetailDigitalMarketing-en.json";
-import detailDataAr from "../sources/DetailDigitalMarketing-ar.json";
-import ServicesExplain from "../components/ServicesExplain";
-import Seo from "../components/seo";
+import React, { useState, useEffect, useContext } from "react";
+import { FormattedMessage } from "gatsby-plugin-intl";
+import Layout from "../../components/layout";
+import DetailHeader from "../../components/DetailHeader";
+import DetailHero from "../../components/DetailHero";
+import FooterCon from "../../components/FooterCon";
+import DetailSec from "../../components/DetailSec";
+import "../../style/DetailDigitalMarketing.css";
+import detailDataEn from "../../sources/DetailDigitalMarketing-en.json";
+import detailDataAr from "../../sources/DetailDigitalMarketing-ar.json";
+import ServicesExplain from "../../components/ServicesExplain";
+import { Helmet } from "react-helmet"; // Import Helmet
+import Seo from '../../components/seo';
+import { LanguageContext } from '../../context/LanguageContext'; 
 
 const DetailDigitalMarketing = () => {
   const [details, setDetails] = useState([]);
-  const intl = useIntl();
+  const { locale } = useContext(LanguageContext); // Access locale from context
 
   useEffect(() => {
-    const detailData = intl.locale === 'ar' ? detailDataAr : detailDataEn;
-    setDetails(detailData);
-  }, [intl.locale]);
+    setDetails(locale === "en" ? detailDataEn : detailDataAr);
+  }, [locale]);
 
   return (
     <Layout>
+      <Helmet>
+        <title>Top Digital Marketing Services | Softylus Technologies</title>
+        <meta name="description" content="Explore Softylus Technologies' premier digital marketing services. From SEO to PPC, we drive growth and online success for businesses." />
+        <meta name="keywords" content="digital marketing, SEO, PPC, social media marketing, content marketing, email marketing, digital strategy, online marketing, marketing agency, Softylus, digital marketing services" />
+      </Helmet>
+
       <Seo
-        title={intl.formatMessage({ id: "detailDigitalMarketing.seoTitle" })}
-        description={intl.formatMessage({ id: "detailDigitalMarketing.seoDescription" })}
+        // Use Seo component for other meta tags
+        title="Top Digital Marketing Services | Softylus Technologies"
+        description="Explore Softylus Technologies' premier digital marketing services. From SEO to PPC, we drive growth and online success for businesses."
       />
+
       <DetailHeader
         Title={<FormattedMessage id="detailDigitalMarketing.header.title" />}
         TitleOverSpan={<FormattedMessage id="detailDigitalMarketing.header.titleOverSpan" />}

@@ -87,6 +87,9 @@
     width: 90%;
     line-height: 50px;
     }
+    html[lang="ar"] .content-FooterCon h2,html[lang="ar"] .content-FooterCon p{
+      text-align: right;
+    }
   .content-FooterCon p {
     width: 90%;
     text-align: left;
@@ -94,6 +97,9 @@
   .content-FooterCon{
     width: 90%;
     align-items: flex-start;
+  }
+  html[lang="ar"] .company-links h2{
+    font-size: 20px;
   }
 }
 

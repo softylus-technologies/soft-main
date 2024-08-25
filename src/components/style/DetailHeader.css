@@ -26,6 +26,9 @@
         font-size: 40px;
         text-align: left;
     }
+    html[lang="ar"] .DetailHeader-container h1{
+        text-align: right;
+    }
 }
 
 @media (max-width: 992px) {

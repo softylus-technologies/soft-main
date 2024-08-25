@@ -64,6 +64,9 @@ padding-bottom: 30px;
     .Say-Customer-container {
         width: 90%;
     }
+    html[lang="ar"] .Say-Customer-container .swiper-wrapper{
+        direction: rtl  ;
+    }
     .Say-Customer-title{
         font-weight: 700;
         font-size: 24px;

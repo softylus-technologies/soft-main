@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./style/ServicesExplain.css";
 import { Button } from "reactstrap";
 import { Link } from "gatsby";
+import { LanguageContext } from '../context/LanguageContext';
+
 const ServicesExplain = ({
   Title,
   SubHeading,
@@ -10,6 +12,8 @@ const ServicesExplain = ({
   className,
   logo,
 }) => {
+  const { locale } = useContext(LanguageContext);
+
   return (
     <section className="ServicesExplain-sec">
       <div className="ServicesExplain-container">
@@ -27,7 +31,7 @@ const ServicesExplain = ({
             <p className="p-text">{SubHeading}</p>
           </div>
           <Link
-            to="/contact-us/"
+            to={`/${locale}/contact-us`}
             className="no-underline font-bold inline-flex items-center justify-center px-4 py-3 text-base  text-main bg-white  hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
           >
             {buttonText}

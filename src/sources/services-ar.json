@@ -5,7 +5,7 @@
       "subHeading": "من مواقع الأعمال الصغيرة إلى تطبيقات الويب المعقدة، قام فريقنا الخبير ببناء وتعديل وترقية العديد من المنصات الرقمية. نخدم الأفراد والشركات الناشئة والشركات الصغيرة والمتوسطة والمؤسسات الكبيرة. عزز مشاركة المستخدم بموقع ويب مصمم خصيصًا لاحتياجاتك.",
       "buttonText": "اكتشف حلول الويب",
       "imageSrc": "/website develop.svg",
-      "path": "/detail-web-dev"
+      "path": "/seo-responsive-web-design"
     },
     {
       "id": "mobile App Development",
@@ -13,7 +13,7 @@
       "subHeading": "حول رؤيتك للتطبيق إلى واقع مع مطورينا المهرة للجوال. سواء كان ذلك لنظام Android أو iOS أو عبر المنصات، نضمن وظائف سلسة عبر جميع الأجهزة. غير متأكد مما هو الأفضل لك؟ ستوجهك استشارتنا المجانية نحو الحل الأمثل.",
       "buttonText": "استكشف خيارات الجوال",
       "imageSrc": "/mobile app deve.svg",
-      "path": "../detail-mobile"
+      "path": "../best-mobile-app-developers"
     },
     {
       "id": "ui Ux Design",
@@ -45,7 +45,7 @@
       "subHeading": "تتوافق استراتيجيات التسويق الرقمي المخصصة لدينا مع أهداف عملك الفريدة. من زيادة الوعي بالعلامة التجارية إلى دفع المبيعات وتعزيز مشاركة العملاء، نحن نقدم نتائج قابلة للقياس ومستدامة في المشهد الرقمي الديناميكي.",
       "buttonText": "عزز وجودك على الإنترنت",
       "imageSrc": "/Image right Digital Marketing.svg",
-      "path": "../detail-digital-marketing"
+      "path": "../digital-marketing-strategy-consultancy"
     },
     {
       "id": "social Media Management",

@@ -48,7 +48,10 @@ body {
  html[lang="ar"] a,
  html[lang="ar"] li,
  html[lang="ar"] p,
+ html[lang="ar"] input,
+ html[lang="ar"] textarea,
  html[lang="ar"] span,
+ html[lang="ar"] label,
  html[lang="ar"] button {
   font-family: "Noto Kufi Arabic", sans-serif !important;
   line-height: normal !important;
@@ -559,7 +562,10 @@ html[lang="ar"] .heading-container{
   .services-container.container-cards .heading-container > p {
     text-align: left !important;
   }
-
+  html[lang="ar"]  .services-container.container-cards .heading-container,html[lang="ar"] 
+  .services-container.container-cards .heading-container > p {
+    text-align: right !important;
+  }
   .services-cards-container {
     padding: 0;
     gap: 20px !important;

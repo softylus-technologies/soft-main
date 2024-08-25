@@ -1,25 +1,22 @@
-import React from 'react';
+// src/components/Layout.js
+import React, { useContext } from 'react';
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import { useIntl } from 'react-intl';
 import AppWrapper from './AppWrapper';
+import { LanguageContext } from '../context/LanguageContext';
 
-const Layout = ({ children, pageContext, toggleLocale }) => {
-  const intl = useIntl();
+const Layout = ({ children, pageContext }) => {
+  const { locale } = useContext(LanguageContext);
 
   return (
-    <div className={`layout ${intl.locale === 'ar' ? 'rtl' : 'ltr'}`}>
-      <NavBar toggleLocale={toggleLocale} />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <AppWrapper pageContext={pageContext}>
+      <div className={`layout ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
+        <NavBar />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </AppWrapper>
   );
 };
 
-const WrappedLayout = ({ children, pageContext }) => (
-  <AppWrapper pageContext={pageContext}>
-    <Layout pageContext={pageContext}>{children}</Layout>
-  </AppWrapper>
-);
-
-export default WrappedLayout;
+export default Layout;

@@ -1,13 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./style/Cards.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Button } from "reactstrap";
 import { Link } from "gatsby";
 import SvgIcon from "./SvgIcon";
 import { FormattedMessage, useIntl } from "react-intl";
+import { LanguageContext } from '../context/LanguageContext';
 
 const Cards = () => {
   const intl = useIntl();
+  const { locale } = useContext(LanguageContext);
 
   const l1 = (
     <svg
@@ -57,7 +59,7 @@ const Cards = () => {
       titleId: "cards.service1.title",
       descriptionId:
         "cards.service1.description",
-      link: "/detail-web-dev",
+      link: "/seo-responsive-web-design",
       icon: `<svg
           width="50"
           height="50"
@@ -120,7 +122,7 @@ const Cards = () => {
       titleId: "cards.service3.title",
       descriptionId:
         "cards.service3.description",
-      link: "/detail-mobile",
+      link: "/best-mobile-app-developers",
       icon: `<svg
           width="50"
           height="50"
@@ -233,7 +235,7 @@ const Cards = () => {
       titleId: "cards.service6.title",
       descriptionId:
         "cards.service6.description",
-      link: "/detail-seo",
+      link: "/professional-seo-services",
       icon: `<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.0628 29.1667H8.33366C6.04199 29.1667 4.16699 31.0417 4.16699 33.3334V45.8334H18.0628V29.1667Z" stroke="#F5F5F5" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M27.7712 20.8333H22.2087C19.917 20.8333 18.042 22.7083 18.042 25V45.8333H31.9378V25C31.9378 22.7083 30.0837 20.8333 27.7712 20.8333Z" stroke="#F5F5F5" stroke-width="3.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -261,7 +263,7 @@ const Cards = () => {
     </header>
     <article className="services-cards-container pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col md:grid-cols-1 md:grid-rows-6 lg:grid-rows-2 lg:grid-cols-3 ">
       {services_info.map((card, index) => (
-        <Link to={card.link} key={index}>
+        <Link to={`/${locale}${card.link}`} key={index}>
           <div className="bg-mainDark flex flex-col px-4 py-3 items-start text-left rounded-[20px] card-hover">
             <SvgIcon svgContent={card.icon} />
             <h2 className="service-name text-2xl m-0">
@@ -277,7 +279,7 @@ const Cards = () => {
     <Button
       className="see-more-services-btn btn-card"
       aria-label={intl.formatMessage({ id: "cards.seeMoreButtonAriaLabel", defaultMessage: "See more services" })}
-      href="/services"
+      href={`/${locale}/services`}
     >
       <FormattedMessage id="cards.seeMoreButton" defaultMessage="See more services" />
     </Button>
