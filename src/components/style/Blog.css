@@ -1,0 +1,15 @@
+.blog-cover > .heading {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin: 80px 0;
+}
+
+.blog-cover > .heading > * {
+  margin: 0;
+}
+
+.blog-cover .blog-heading {
+  font-size: 50px;
+  text-transform: capitalize;
+}
