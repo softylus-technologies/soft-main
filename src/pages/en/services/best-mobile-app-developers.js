@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../../components/layout";
-import DetailHeader from "../../components/DetailHeader";
-import DetailHero from "../../components/DetailHero";
-import FooterCon from "../../components/FooterCon";
-import DetailSec from "../../components/DetailSec";
-import "../../style/DetailMobile.css";
-import detailDataEn from "../../sources/DetailMobile-en.json";
-import detailDataAr from "../../sources/DetailMobile-ar.json";
-import ServicesExplain from "../../components/ServicesExplain";
+import Layout from "../../../components/layout";
+import DetailHeader from "../../../components/DetailHeader";
+import DetailHero from "../../../components/DetailHero";
+import FooterCon from "../../../components/FooterCon";
+import DetailSec from "../../../components/DetailSec";
+import "../../../style/DetailMobile.css";
+import detailDataEn from "../../../sources/DetailMobile-en.json";
+import detailDataAr from "../../../sources/DetailMobile-ar.json";
+import ServicesExplain from "../../../components/ServicesExplain";
 import { Helmet } from "react-helmet"; // Import Helmet
-import Seo from '../../components/seo'; // Keep Seo component for other meta tags
+import Seo from '../../../components/seo'; // Keep Seo component for other meta tags
 
 const DetailMobile = () => {
   const [details, setDetails] = useState([]);
@@ -52,8 +52,8 @@ const DetailMobile = () => {
             return (
               <ServicesExplain
                 key={index}
-                imageSrc="/CASE STUDY IMG.svg"
-                logo="/Vend.svg"
+                imageSrc="https://strapi.softylus.com/uploads/Softylus_4_1_167f26d1ac.svg"
+                logo="https://strapi.softylus.com/uploads/Frame_4_9a5982067f.svg"
                 Title={<FormattedMessage id="detailMobile.caseStudy.title" />}
                 SubHeading={<FormattedMessage id="detailMobile.caseStudy.subHeading" />}
                 buttonText={<FormattedMessage id="detailMobile.caseStudy.buttonText" />}

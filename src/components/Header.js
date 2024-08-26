@@ -77,7 +77,7 @@ const Header = ({
   const overSpanContent = overSpanId 
     ? intl.formatMessage({ id: overSpanId, defaultMessage: overSpan })
     : overSpan;
-    const imageSrc = intl.locale === 'ar' ? '/hero ar.pmg' : '/softylusHero.png';
+    const imageSrc = intl.locale === 'ar' ? '/hero ar.png' : '/softylusHero.png';
 
   const isEmpty = !overSpanContent || (Array.isArray(overSpanContent) && overSpanContent.length === 0);
   const { locale } = useContext(LanguageContext);

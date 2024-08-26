@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../../components/layout";
-import DetailHeader from "../../components/DetailHeader";
-import DetailHero from "../../components/DetailHero";
-import FooterCon from "../../components/FooterCon";
-import DetailSec from "../../components/DetailSec";
-import "../../style/DetailSeo.css";
-import detailDataEn from "../../sources/DetailSeo-en.json";
-import ServicesExplain from "../../components/ServicesExplain";
-import Seo from "../../components/seo";
+import Layout from "../../../components/layout";
+import DetailHeader from "../../../components/DetailHeader";
+import DetailHero from "../../../components/DetailHero";
+import FooterCon from "../../../components/FooterCon";
+import DetailSec from "../../../components/DetailSec";
+import "../../../style/DetailSeo.css";
+import detailDataEn from "../../../sources/DetailSeo-en.json";
+import ServicesExplain from "../../../components/ServicesExplain";
+import Seo from "../../../components/seo";
 import { Helmet } from "react-helmet";
 
 const DetailSeo = () => {
@@ -44,8 +44,8 @@ const DetailSeo = () => {
             return (
               <ServicesExplain
                 key={index}
-                imageSrc="/CASE STUDY IMG.svg"
-                logo="/Vend.svg"
+               imageSrc="https://strapi.softylus.com/uploads/Frame_1000003381_ea2f26280c.svg"
+                logo="/salislogo.png"
                 Title={<FormattedMessage id="detailSeo.caseStudy.title" />}
                 SubHeading={<FormattedMessage id="detailSeo.caseStudy.subHeading" />}
                 buttonText={<FormattedMessage id="detailSeo.caseStudy.buttonText" />}

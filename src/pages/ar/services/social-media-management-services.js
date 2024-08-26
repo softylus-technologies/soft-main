@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../../components/layout";
-import DetailHeader from "../../components/DetailHeader";
-import DetailHero from "../../components/DetailHero";
-import FooterCon from "../../components/FooterCon";
-import DetailSec from "../../components/DetailSec";
-import "../../style/DetailSeo.css";
-import detailDataEn from "../../sources/DetailSMM-en.json";
-import detailDataAr from "../../sources/DetailSMM-ar.json";
-import ServicesExplain from "../../components/ServicesExplain";
-import Seo from "../../components/seo";
+import Layout from "../../../components/layout";
+import DetailHeader from "../../../components/DetailHeader";
+import DetailHero from "../../../components/DetailHero";
+import FooterCon from "../../../components/FooterCon";
+import DetailSec from "../../../components/DetailSec";
+import "../../../style/DetailSeo.css";
+import detailDataEn from "../../../sources/DetailSMM-en.json";
+import detailDataAr from "../../../sources/DetailSMM-ar.json";
+import ServicesExplain from "../../../components/ServicesExplain";
+import Seo from "../../../components/seo";
 import { Helmet } from "react-helmet"; // Import Helmet
-import { LanguageContext } from '../../context/LanguageContext'; 
+import { LanguageContext } from '../../../context/LanguageContext'; 
 
 const DetailSMM = () => {
   const [details, setDetails] = useState([]);
@@ -53,8 +53,8 @@ const DetailSMM = () => {
             return (
               <ServicesExplain
                 key={index}
-                imageSrc="/CASE STUDY IMG.svg"
-                logo="/Vend.svg"
+                imageSrc="https://strapi.softylus.com/uploads/Frame_1000003378_2_028f6e7808.svg"
+                logo="https://strapi.softylus.com/uploads/MZM_logo_transformed_2_ba18383981.svg"
                 Title={<FormattedMessage id="detailSMM.caseStudy.title" />}
                 SubHeading={<FormattedMessage id="detailSMM.caseStudy.subHeading" />}
                 buttonText={<FormattedMessage id="detailSMM.caseStudy.buttonText" />}

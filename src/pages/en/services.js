@@ -22,8 +22,8 @@ const Services = () => {
 
   return ( <Layout>
       <Seo 
-        title={<FormattedMessage id="services.seo.title" defaultMessage="Comprehensive Software Solutions | Softylus Services" />}
-        description={<FormattedMessage id="services.seo.description" defaultMessage="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs." />}
+        title="Comprehensive Software Solutions | Softylus Services"
+        description="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs."
       />
        <Helmet>
         <meta name="keywords" content="software development, web development, mobile app development, UI/UX design, software solutions, IT solutions, technology consulting, Softylus, services" />

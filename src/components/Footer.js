@@ -76,27 +76,27 @@ const Footer = () => {
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
-                  <Link className="no-underline" to={`/${locale}/seo-responsive-web-design`}>
+                  <Link className="no-underline" to={`/${locale}/services/seo-responsive-web-design`}>
                     <FormattedMessage id="footer.webDevLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/best-mobile-app-developers`}>
+                  <Link className="no-underline" to={`/${locale}/services/best-mobile-app-developers`}>
                     <FormattedMessage id="footer.mobileDevLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/professional-seo-services`}>
+                  <Link className="no-underline" to={`/${locale}/services/professional-seo-services`}>
                     <FormattedMessage id="footer.seoLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/digital-marketing-strategy-consultancy`}>
+                  <Link className="no-underline" to={`/${locale}/services/digital-marketing-strategy-consultancy`}>
                     <FormattedMessage id="footer.digitalMarketingLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/social-media-management-services`}>
+                  <Link className="no-underline" to={`/${locale}/services/social-media-management-services`}>
                     <FormattedMessage id="footer.smmLink" />
                   </Link>
                 </li>

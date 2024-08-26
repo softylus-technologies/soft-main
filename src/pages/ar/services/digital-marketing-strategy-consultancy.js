@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../../components/layout";
-import DetailHeader from "../../components/DetailHeader";
-import DetailHero from "../../components/DetailHero";
-import FooterCon from "../../components/FooterCon";
-import DetailSec from "../../components/DetailSec";
-import "../../style/DetailDigitalMarketing.css";
-import detailDataEn from "../../sources/DetailDigitalMarketing-en.json";
-import detailDataAr from "../../sources/DetailDigitalMarketing-ar.json";
-import ServicesExplain from "../../components/ServicesExplain";
+import Layout from "../../../components/layout";
+import DetailHeader from "../../../components/DetailHeader";
+import DetailHero from "../../../components/DetailHero";
+import FooterCon from "../../../components/FooterCon";
+import DetailSec from "../../../components/DetailSec";
+import "../../../style/DetailDigitalMarketing.css";
+import detailDataEn from "../../../sources/DetailDigitalMarketing-en.json";
+import detailDataAr from "../../../sources/DetailDigitalMarketing-ar.json";
+import ServicesExplain from "../../../components/ServicesExplain";
+import Seo from "../../../components/seo";
 import { Helmet } from "react-helmet"; // Import Helmet
-import Seo from '../../components/seo';
-import { LanguageContext } from '../../context/LanguageContext'; 
+import { LanguageContext } from '../../../context/LanguageContext'; 
 
 const DetailDigitalMarketing = () => {
   const [details, setDetails] = useState([]);
-  const { locale } = useContext(LanguageContext); // Access locale from context
+  const { locale } = useContext(LanguageContext);
 
   useEffect(() => {
     setDetails(locale === "en" ? detailDataEn : detailDataAr);
@@ -24,15 +24,15 @@ const DetailDigitalMarketing = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Top Digital Marketing Services | Softylus Technologies</title>
-        <meta name="description" content="Explore Softylus Technologies' premier digital marketing services. From SEO to PPC, we drive growth and online success for businesses." />
-        <meta name="keywords" content="digital marketing, SEO, PPC, social media marketing, content marketing, email marketing, digital strategy, online marketing, marketing agency, Softylus, digital marketing services" />
+        <title>أفضل خدمات التسويق الرقمي | Softylus Technologies</title>
+        <meta name="description" content="اكتشف خدمات التسويق الرقمي المتميزة من Softylus Technologies. من تحسين محركات البحث إلى الإعلانات المدفوعة، نحن ندفع النمو والنجاح عبر الإنترنت للشركات" />
+        <meta name="keywords" content="التسويق الرقمي, SEO, PPC, التسويق عبر وسائل التواصل الاجتماعي, التسويق بالمحتوى, التسويق عبر البريد الإلكتروني, استراتيجية رقمية, التسويق عبر الإنترنت, وكالة التسويق, Softylus, خدمات التسويق الرقمي" />
       </Helmet>
 
       <Seo
         // Use Seo component for other meta tags
-        title="Top Digital Marketing Services | Softylus Technologies"
-        description="Explore Softylus Technologies' premier digital marketing services. From SEO to PPC, we drive growth and online success for businesses."
+        title="أفضل خدمات التسويق الرقمي | Softylus Technologies"
+        description="اكتشف خدمات التسويق الرقمي المتميزة من Softylus Technologies. من تحسين محركات البحث إلى الإعلانات المدفوعة، نحن ندفع النمو والنجاح عبر الإنترنت للشركات"
       />
 
       <DetailHeader
@@ -53,8 +53,8 @@ const DetailDigitalMarketing = () => {
             return (
               <ServicesExplain
                 key={index}
-                imageSrc="/CASE STUDY IMG.svg"
-                logo="/Vend.svg"
+                imageSrc="https://strapi.softylus.com/uploads/Frame_1000003375_13f4e9742b.svg"
+                logo="https://strapi.softylus.com/uploads/logo_1_36394ff078.svg"
                 Title={<FormattedMessage id="detailDigitalMarketing.caseStudy.title" />}
                 SubHeading={<FormattedMessage id="detailDigitalMarketing.caseStudy.subHeading" />}
                 buttonText={<FormattedMessage id="detailDigitalMarketing.caseStudy.buttonText" />}

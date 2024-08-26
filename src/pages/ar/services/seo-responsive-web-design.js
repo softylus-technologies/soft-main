@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FormattedMessage } from "gatsby-plugin-intl";
-import Layout from "../../components/layout";
-import DetailHeader from "../../components/DetailHeader";
-import DetailHero from "../../components/DetailHero";
-import FooterCon from "../../components/FooterCon";
-import DetailSec from "../../components/DetailSec";
-import "../../style/DetailWebDev.css";
-import detailDataEn from "../../sources/DetailWebDev-en.json";
-import detailDataAr from "../../sources/DetailWebDev-ar.json";
-import ServicesExplain from "../../components/ServicesExplain";
+import Layout from "../../../components/layout";
+import DetailHeader from "../../../components/DetailHeader";
+import DetailHero from "../../../components/DetailHero";
+import FooterCon from "../../../components/FooterCon";
+import DetailSec from "../../../components/DetailSec";
+import "../../../style/DetailWebDev.css";
+import detailDataEn from "../../../sources/DetailWebDev-en.json";
+import detailDataAr from "../../../sources/DetailWebDev-ar.json";
+import ServicesExplain from "../../../components/ServicesExplain";
+import Seo from "../../../components/seo";
 import { Helmet } from "react-helmet"; // Import Helmet
-import Seo from '../../components/seo'; 
-import { LanguageContext } from '../../context/LanguageContext'; 
+import { LanguageContext } from '../../../context/LanguageContext'; 
 
 const DetailWebDev = () => {
   const [details, setDetails] = useState([]);
-  const { locale } = useContext(LanguageContext); // Access locale from context
+  const { locale } = useContext(LanguageContext);
 
   useEffect(() => {
     setDetails(locale === "en" ? detailDataEn : detailDataAr);
@@ -24,15 +24,15 @@ const DetailWebDev = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Web Development Services | Softylus Technologies</title>
-        <meta name="description" content="Explore our comprehensive web development services. From dynamic websites to e-commerce platforms, we deliver user-centric solutions that engage and convert." />
-        <meta name="keywords" content="web development, website development, web design, web app development, e-commerce development, web services, front-end development, back-end development, Softylus, web developers" />
+        <title>خدمات تطوير الويب | تكنولوجيا Softylus</title>
+        <meta name="description" content="استكشف خدماتنا الشاملة لتطوير الويب. من المواقع الديناميكية إلى منصات التجارة الإلكترونية، نقدم حلولًا تركز على المستخدم تجذب وتحول" />
+        <meta name="keywords" content="تطوير الويب, تطوير المواقع, تصميم الويب, تطوير تطبيقات الويب, تطوير التجارة الإلكترونية, خدمات الويب, تطوير الواجهة الأمامية, تطوير الواجهة الخلفية, Softylus, مطورو الويب" />
       </Helmet>
 
       <Seo
         // Use Seo component for other meta tags
-        title="Web Development Services | Softylus Technologies"
-        description="Explore our comprehensive web development services. From dynamic websites to e-commerce platforms, we deliver user-centric solutions that engage and convert."
+        title="خدمات تطوير الويب | تكنولوجيا Softylus"
+        description="استكشف خدماتنا الشاملة لتطوير الويب. من المواقع الديناميكية إلى منصات التجارة الإلكترونية، نقدم حلولًا تركز على المستخدم تجذب وتحول"
       />
 
       <DetailHeader

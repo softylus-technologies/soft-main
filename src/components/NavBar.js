@@ -36,31 +36,31 @@ const NavBar = () => {
           </h4>          
             <ul>
             <li>
-              <Link to={`/${locale}/seo-responsive-web-design`}>
+              <Link to={`/${locale}/services/seo-responsive-web-design`}>
                 <img src="/Software Development.svg" alt="All Access" />
                 <FormattedMessage id="nav.webDev" defaultMessage="Software and web development" />
               </Link>
             </li>
             <li>
-              <Link to={`/${locale}/best-mobile-app-developers`}>
+              <Link to={`/${locale}/services/best-mobile-app-developers`}>
                 <img src="/Software Product Deployment.svg" alt="All Access" />
                 <FormattedMessage id="nav.mobileDev" defaultMessage="Mobile development" />
               </Link>
             </li>              
             <li>
-              <Link to={`/${locale}/professional-seo-services`}>
+              <Link to={`/${locale}/services/professional-seo-services`}>
                 <img src="/SEO page services.svg" alt="All Access" />
                 <FormattedMessage id="nav.seo" defaultMessage="SEO page services" />
               </Link>
             </li>              
             <li>
-              <Link to={`/${locale}/digital-marketing-strategy-consultancy`}>
+              <Link to={`/${locale}/services/digital-marketing-strategy-consultancy`}>
                 <img src="/Detail digital marketing.svg" alt="All Access" />
                 <FormattedMessage id="nav.digitalMarketing" defaultMessage="Digital marketing" />
               </Link>
             </li>              
             <li>
-              <Link to={`/${locale}/social-media-management-services`}>
+              <Link to={`/${locale}/services/social-media-management-services`}>
                 <img src="/Productivity 1.svg" alt="All Access" />
                 <FormattedMessage id="nav.socialMedia" defaultMessage="Social media management" />
               </Link>
@@ -139,11 +139,11 @@ const NavBar = () => {
               </button>
               <div className={`services-dropdown-menu ${isServicesDropdownOpen ? 'open' : ''}`}>
                 <Link to={`/${locale}/services`}><FormattedMessage id="nav.allServices" defaultMessage="All Services" /></Link>
-                <Link to={`/${locale}/seo-responsive-web-design`}><FormattedMessage id="nav.webDev" defaultMessage="Software and web development" /></Link>
-                <Link to={`/${locale}/best-mobile-app-developers`}><FormattedMessage id="nav.mobileDev" defaultMessage="Mobile development" /></Link>
-                <Link to={`/${locale}/professional-seo-services`}><FormattedMessage id="nav.seo" defaultMessage="SEO page services" /></Link>
-                <Link to={`/${locale}/digital-marketing-strategy-consultancy`}><FormattedMessage id="nav.digitalMarketing" defaultMessage="Digital marketing" /></Link>
-                <Link to={`/${locale}/social-media-management-services`}><FormattedMessage id="nav.socialMedia" defaultMessage="Social media management" /></Link>
+                <Link to={`/${locale}/services/seo-responsive-web-design`}><FormattedMessage id="nav.webDev" defaultMessage="Software and web development" /></Link>
+                <Link to={`/${locale}/services/best-mobile-app-developers`}><FormattedMessage id="nav.mobileDev" defaultMessage="Mobile development" /></Link>
+                <Link to={`/${locale}/services/professional-seo-services`}><FormattedMessage id="nav.seo" defaultMessage="SEO page services" /></Link>
+                <Link to={`/${locale}/services/digital-marketing-strategy-consultancy`}><FormattedMessage id="nav.digitalMarketing" defaultMessage="Digital marketing" /></Link>
+                <Link to={`/${locale}/services/social-media-management-services`}><FormattedMessage id="nav.socialMedia" defaultMessage="Social media management" /></Link>
               </div>
               <Link to={`/${locale}/clients`}><FormattedMessage id="nav.clients" defaultMessage="Clients" /></Link>
               <Link to={`/${locale}/about`}><FormattedMessage id="nav.about" defaultMessage="About Us" /></Link>
