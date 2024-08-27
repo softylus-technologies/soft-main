@@ -1,0 +1,116 @@
+.AIExpertise-sec{
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    background: #FFFFFF08;
+}
+.AIExpertise-container{
+    max-width: 1280px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.AIExpertise-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AIExpertise-head h1{
+    font-family: "Faktum Test";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.AIExpertise-head p{
+    font-family: "Faktum Test";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 620px;
+    width: 90%;
+}
+.AIExpertise-cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.expertise-section{
+    display: flex;
+}
+.expertise-container{
+    width: 75%;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.expertise-title{
+    width: 25%;
+    padding-right: 20px;
+}
+html[lang=ar] .expertise-title{
+    padding-right: 0;
+    padding-left: 20px;
+   
+}
+html[lang=ar] .expertise-title h6{
+    text-align: right;
+}
+.icon-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border-radius: calc(infinity * 1px);
+}
+.icon-item p{
+    margin: 0;
+    font-family: "Faktum Test";
+    font-size: 14.4px;
+    font-weight: 700;
+    line-height: 22.32px;
+    text-align: center;
+    color: #000000 !important;
+}
+.expertise-title h6{
+    font-family: "Faktum Test";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: left;
+    color: #FFFFFF;
+}
+@media (max-width: 1024px){
+    .AIExpertise-head h1{
+        font-size: 32px;
+    }
+    .AIExpertise-head p{
+        font-size: 16px;
+    }
+    .expertise-title h6{
+        font-size: 18px;
+    }
+    
+}
+@media (max-width: 767px){
+    .expertise-section{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .expertise-title{
+        width: 100%;
+    }
+    .expertise-container{
+        width: 100%;
+    }
+    .AIExpertise-cards-container{
+        gap: 40px;
+    }
+}

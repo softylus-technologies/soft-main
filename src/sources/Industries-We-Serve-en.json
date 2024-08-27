@@ -1,0 +1,46 @@
+[
+    {
+        "icon":"/Healthcare.png",
+        "title":"Healthcare"
+    },
+    {
+        "icon":"/Education.png",
+        "title":"Education"
+    },
+    {
+        "icon":"/Banking & Finance.png",
+        "title":"Banking & Finance"
+    },
+    {
+        "icon":"/eCommerce.png",
+        "title":"eCommerce"
+    },
+    {
+        "icon":"/Supply.png",
+        "title":"Supply Chain Management"
+    },
+    {
+        "icon":"/Travel & Tourism.png",
+        "title":"Travel & Tourism"
+    },
+    {
+        "icon":"/Social Networking.png",
+        "title":"Social Networking"
+    },
+    {
+        "icon":"/Agriculture.png",
+        "title":"Agriculture"
+    },{
+        "icon":"/Government.png",
+        "title":"Government"
+    },{
+        "icon":"/Manufacturing.png",
+        "title":"Manufacturing"
+    },{
+        "icon":"/Food & Restaurant.png",
+        "title":"Food & Restaurant"
+    },{
+        "icon":"/Insurance.png",
+        "title":"Insurance"
+    }
+]

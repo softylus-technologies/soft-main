@@ -1,0 +1,64 @@
+.IndustriesWeServe-sec{
+    padding: 80px 0;
+    background: url("/Industries-We-Serve bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.IndustriesWeServe-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    width: 90%;
+    gap: 40px;
+}
+.IndustriesWeServe-head h1{
+    font-family: "Faktum Test";
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 61.6px;
+    letter-spacing: -2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.IndustriesWeServe-cards-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    row-gap: 20px;
+}
+.IndustriesWeServe-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #0F0202;
+    border: 1px solid #FFFFFF33;
+    border-radius: 40px;
+    gap: 10px;
+    transition: background-color 0.3s ease; /* Added delay */
+
+}
+.IndustriesWeServe-card:hover{
+    background-color: #EC2227;
+}
+.IndustriesWeServe-card h3{
+    font-family: "Faktum Test";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29.7px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 180px;
+}
+@media (max-width: 1024px){
+    .IndustriesWeServe-head h1{
+        font-size: 32px;
+    }
+    .IndustriesWeServe-cards-container{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+}

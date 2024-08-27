@@ -1,0 +1,94 @@
+.WhyDevelopai-sec{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    background: #FFFFFF08;
+}
+.WhyDevelopai-container{
+    max-width: 1280px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.WhyDevelopai-head h1{
+    font-family: "Faktum Test";
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 61.6px;
+    letter-spacing: -2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.WhyDevelopai-cards-container{
+    display: flex;
+}
+.WhyDevelopai-card{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid  #EC22271A;
+    padding: 2%;
+    gap: 15px;
+}
+.WhyDevelopai-card:last-child{
+    border-right: none;
+
+}
+.WhyDevelopai-card h3{
+    font-family: "Faktum Test";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29.7px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.WhyDevelopai-card p{
+    font-family: "Faktum Test";
+    font-size: 18.1px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+@media (max-width: 1024px){
+    .WhyDevelopai-cards-container{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .WhyDevelopai-card{
+        width: 50%;
+    }
+    .WhyDevelopai-head h1{
+        font-size: 32px;
+    }
+    .WhyDevelopai-card:nth-child(2){
+        border: none;
+    }
+    html[lang="ar"] .WhyDevelopai-card:nth-child(2){
+        border-right: 1px solid  #EC22271A;
+    }
+    html[lang="ar"] .WhyDevelopai-card:nth-child(1){
+        border-right: none;
+    }
+    html[lang="ar"] .WhyDevelopai-card:nth-child(3){
+        border-right: none;
+    }
+    html[lang="ar"] .WhyDevelopai-card:last-child{
+        border-right: 1px solid  #EC22271A;
+    }
+    .IndustriesWeServe-cards-container{
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+@media (max-width: 767px){
+    .WhyDevelopai-card{
+        width: 100%;
+        border: none;
+    }
+    
+}

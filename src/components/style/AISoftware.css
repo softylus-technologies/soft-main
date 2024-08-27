@@ -1,0 +1,88 @@
+.AISoftware-sec{
+    margin-top: 120px;   
+    display: flex;
+    justify-content: center;
+}
+.AISoftware-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+.AISoftware-title h1{
+    font-family: "Faktum Test";
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 55.22px;
+    text-align: center;
+    color: #F5F5F5 !important;
+}
+.AISoftware-cards-container{
+    width: 90%;
+    max-width: 1350px;
+
+}
+.AISoftware-cards-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 100%;
+
+}
+.AISoftware-card{
+    width: 30%;
+    padding: 50px 33px;
+    background-color: #1D1313;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.AISoftware-card h3{
+    font-family: "Faktum Test";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.7px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.AISoftware-card p{
+    font-family: "Faktum Test";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+@media (max-width: 1024px){
+    .AISoftware-sec{
+        margin-top: 50px;
+    }
+    .AISoftware-title h1{
+        font-size: 32px;
+    }
+    .AISoftware-container{
+        gap: 40px;
+    }
+    .AISoftware-card{
+        width: 45%;
+        padding: 30px 15px;
+    }
+    .AISoftware-card h3{
+        font-size: 20px;
+    }
+    .AISoftware-card p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 767px){
+    .AISoftware-cards-container{
+        width: 90%;
+    }
+    .AISoftware-card{
+        width: 100%;
+    }
+}

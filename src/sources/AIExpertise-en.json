@@ -1,0 +1,220 @@
+[
+    {
+        "title":"Programming languages",
+        "data":[
+            {
+                "icon":"/Python.png",
+                "title":"Python"
+            },
+            {
+                "icon":"/R.png",
+                "title":"R"
+            },
+            {
+                "icon":"/JAVA.png",
+                "title":"JAVA"
+            },
+            {
+                "icon":"/C++.png",
+                "title":"C++"
+            },
+            {
+                "icon":"/Swift.png",
+                "title":"Swift"
+            },
+            {
+                "icon":"/Kotlin.png",
+                "title":"Kotlin"
+            },
+            {
+                "icon":"/Scala.png",
+                "title":"Scala"
+            }
+        ]
+    },
+    {
+        "title":"AI Models",
+        "data":[
+            {
+                "icon":"/GPT 4.png",
+                "title":"GPT 4"
+            },
+            {
+                "icon":"/Claude 3.png",
+                "title":"Claude 3"
+            },
+            {
+                "icon":"/Google Gemini.png",
+                "title":"Google Gemini"
+            },
+            {
+                "icon":"/Phi-2.png",
+                "title":"Phi-2"
+            },
+            {
+                "icon":"/Llama-2.png",
+                "title":"Llama-2"
+            },
+            {
+                "icon":"/Whisper.png",
+                "title":"Whisper"
+            }
+        ]
+    },
+    {
+        "title":"Machine Learning and NLP",
+        "data":[
+            {
+                "icon":"/YOLO.png",
+                "title":"YOLO"
+            },
+            {
+                "icon":"/BERT.png",
+                "title":"BERT"
+            },
+            {
+                "icon":"/Eliza.png",
+                "title":"Eliza"
+            }
+        ]
+    },
+    {
+        "title":"Frameworks and Libraries",
+        "data":[
+            {
+                "icon":"/Pytorch.png",
+                "title":"Pytorch"
+            },
+            {
+                "icon":"/MXNet.png",
+                "title":"MXNet"
+            },
+            {
+                "icon":"/Chainer.png",
+                "title":"Chainer"
+            },
+            {
+                "icon":"/NvidiaCaffe.png",
+                "title":"NvidiaCaffe"
+            },
+            {
+                "icon":"/spaCy.png",
+                "title":"spaCy"
+            },
+            {
+                "icon":"/Sonnet.png",
+                "title":"Sonnet"
+            }, {
+                "icon":"/Tensorflow Probability.png",
+                "title":"Tensorflow Probability"
+            },
+            {
+                "icon":"/Tensor2Tensor.png",
+                "title":"Tensor2Tensor"
+            },
+            {
+                "icon":"/Neuroph.png",
+                "title":"Neuroph"
+            },
+            {
+                "icon":"/Keras.png",
+                "title":"Keras"
+            }
+        ]
+    },
+    {
+        "title":"Open-source AI and ML Platform",
+        "data":[
+            {
+                "icon":"/Hugging Face.png",
+                "title":"Hugging Face"
+            },
+            {
+                "icon":"/Kaggle.png",
+                "title":"Kaggle"
+            },
+            {
+                "icon":"/Wandb.png",
+                "title":"Wandb.ai"
+            },
+            {
+                "icon":"/Replicate.png",
+                "title":"Replicate"
+            }
+        ]
+    },
+    {
+        "title":"Toolkits",
+        "data":[
+            {
+                "icon":"/Core ML.png",
+                "title":"Core ML"
+            },
+            {
+                "icon":"/Microsoft Cognitive Toolkit.png",
+                "title":"Microsoft Cognitive Toolkit"
+            }
+        ]
+    },
+    {
+        "title":"Neural Networks",
+        "data":[
+            {
+                "icon":"/CNN.png",
+                "title":"CNN"
+            },
+            {
+                "icon":"/RNN.png",
+                "title":"RNN"
+            },
+            {
+                "icon":"/Manifold Learning.png",
+                "title":"Manifold Learning"
+            }
+        ]
+    },
+    {
+        "title":"Vector Database Management",
+        "data":[
+            {
+                "icon":"/Apache Cassandra.png",
+                "title":"Apache Cassandra"
+            },
+            {
+                "icon":"/Azure Cosmos DB Integrated Vector Database.png",
+                "title":"Azure Cosmos DB Integrated Vector Database"
+            },
+            {
+                "icon":"/Chroma.png",
+                "title":"Chroma"
+            },
+            {
+                "icon":"/Pinecone.png",
+                "title":"Pinecone"
+            }
+        ]
+    },
+    {
+        "title":"Databases",
+        "data":[
+            {
+                "icon":"/MySQL.png",
+                "title":"MySQL"
+            },
+            {
+                "icon":"/PostgreSQL.png",
+                "title":"PostgreSQL"
+            },
+            {
+                "icon":"/MongoDB.png",
+                "title":"MongoDB"
+            },
+            {
+                "icon":"/OracleSQL.png",
+                "title":"OracleSQL"
+            }
+        ]
+    }
+    
+    
+]

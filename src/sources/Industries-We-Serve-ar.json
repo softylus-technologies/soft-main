@@ -1,0 +1,50 @@
+[
+    {
+        "icon": "/Healthcare.png",
+        "title": "الرعاية الصحية"
+    },
+    {
+        "icon": "/Education.png",
+        "title": "التعليم"
+    },
+    {
+        "icon": "/Banking & Finance.png",
+        "title": "البنوك والمالية"
+    },
+    {
+        "icon": "/eCommerce.png",
+        "title": "التجارة الإلكترونية"
+    },
+    {
+        "icon": "/Supply.png",
+        "title": "إدارة سلسلة التوريد"
+    },
+    {
+        "icon": "/Travel & Tourism.png",
+        "title": "السياحة والسفر"
+    },
+    {
+        "icon": "/Social Networking.png",
+        "title": "شبكات التواصل الاجتماعي"
+    },
+    {
+        "icon": "/Agriculture.png",
+        "title": "الزراعة"
+    },
+    {
+        "icon": "/Government.png",
+        "title": "الحكومة"
+    },
+    {
+        "icon": "/Manufacturing.png",
+        "title": "التصنيع"
+    },
+    {
+        "icon": "/Food & Restaurant.png",
+        "title": "المطاعم والطعام"
+    },
+    {
+        "icon": "/Insurance.png",
+        "title": "التأمين"
+    }
+]

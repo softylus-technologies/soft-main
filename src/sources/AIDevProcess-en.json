@@ -1,0 +1,27 @@
+[
+    {
+        "number":"/1.svg",
+        "title":"Identify the Core Problems",
+        "subtitle":"Help our team gain insights on your business’s problems, challenges, and strategic objectives. We use these insights to curate AI development objectives."
+    },
+    {
+        "number":"/2.svg",
+        "title":"Collect and Refine the Data",
+        "subtitle":"Our team collects and refines the data that represents solving your problems/challenges. This data is pre-refined by our team for the highest accuracy."
+    },
+    {
+        "number":"/3.svg",
+        "title":"Choose and Train the AI Model",
+        "subtitle":"After preparing the data, we choose an artificial intelligence model to train for your problem. We then feed, readjust, and retrain the model to achieve accurate results."
+    },
+    {
+        "number":"/4.svg",
+        "title":"Model Testing and Validation",
+        "subtitle":"We then test the accuracy of the developed AI software through a different set of data.  This unused data helps us validate your model’s capabilities."
+    },
+    {
+        "number":"/5.svg",
+        "title":"AI System Deployment and Maintenance",
+        "subtitle":"The last step is to deploy the developed AI system and integrate it with other systems. We also continuously monitor and maintain the system for consistent results." 
+    }
+]

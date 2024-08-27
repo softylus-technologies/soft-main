@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Softylus Technologies`,
     watch: true,
-    siteUrl: `http://localhost:9000`,
+    siteUrl: `https://softylus.com`,
   },
   plugins: [
     "gatsby-plugin-postcss",

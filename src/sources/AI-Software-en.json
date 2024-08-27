@@ -1,0 +1,28 @@
+[
+    {
+        "title":"AI Consulting",
+        "subtitle":"We offer strategic AI consulting services that include idea validation, development roadmap creation, and implementation solutions. Consult your artificial intelligence software idea and get a custom AI development strategy from our consultant.",
+        "icon":"/AI Consulting.png"
+    },
+    {
+        "title":"Custom AI Development",
+        "subtitle":"Being a seasoned AI development company, we are experts in crafting business-specific AI solutions integrated with advanced AI algorithms, NLP models, and machine learning capabilities. If you are looking to develop your AI-based software, let’s talk.",
+        "icon":"/Custom AI Development.png"
+    },{
+        "title":"Custom AI Integrations",
+        "subtitle":"Integrate AI models like GPT, Claude, Google Gemini, Phi-2, and Llama into your existing systems with our custom AI integration services. Space-O helps you embed AI technology into your programs and business framework for a smooth AI transition.",
+        "icon":"/Custom AI Integrations.png"
+    },{
+        "title":"ML and DL Development",
+        "subtitle":"Convert unstructured data into insightful information and leverage AI’s prediction ability with our machine learning and deep learning development services. Our AI experts help you use data science and ML models like NLP to train and utilize AI algorithms.",
+        "icon":"/ML and DL Development.png"
+    },{
+        "title":"Fine-tuning LLM",
+        "subtitle":"Improve your Large Language Models (LLMs) and enhance AI’s accuracy with our LLM fine-tuning services. With domain-specific dataset availability and unparalleled LLM engineering prowess, Space-O is your partner for enhancing LLM models to fit your parameters.",
+        "icon":"/Fine-tuning LLM.png"
+    },{
+        "title":"Computer Vision/OCR",
+        "subtitle":"Leverage our advanced computer vision to mimic the capabilities of human vision. This solution is excellent for recognizing, analyzing, processing, and recording visual information for AI-driven security, personnel authentication, and access control in critical areas.",
+        "icon":"/Computer Vision.png"
+    }
+]

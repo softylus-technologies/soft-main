@@ -46,3 +46,28 @@
     text-align: center;
     color: #F5F5F5;
 }
+@media (max-width: 1024px) {
+    .newheader-container h1{
+        font-size: 32px;
+        text-align: left;
+    }
+    .newheader-container h6{
+        font-size: 16px;
+    }
+    .newheader-container p{
+        font-size: 14px ;
+        text-align: left;
+    }
+    html[lang="ar"] .newheader-container p{
+        text-align: right;
+    }
+    .newheader-sec{
+        padding: 100px 0;
+    }
+    .newheader-container{
+        align-items: flex-start;
+    }
+    .newheader-container > *{
+        text-align: left;
+    }
+}

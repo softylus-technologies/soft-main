@@ -64,7 +64,13 @@ const NavBar = () => {
                 <img src="/Productivity 1.svg" alt="All Access" />
                 <FormattedMessage id="nav.socialMedia" defaultMessage="Social media management" />
               </Link>
-            </li>            
+            </li>         
+            <li>
+              <Link to={`/${locale}/services/ai-software-development-services`}>
+                <img src="/Productivity 1.svg" alt="All Access" />
+                <FormattedMessage id="nav.AI" defaultMessage="Social media management" />
+              </Link>
+            </li>         
             </ul>
           </div>
         </div>
@@ -144,6 +150,9 @@ const NavBar = () => {
                 <Link to={`/${locale}/services/professional-seo-services`}><FormattedMessage id="nav.seo" defaultMessage="SEO page services" /></Link>
                 <Link to={`/${locale}/services/digital-marketing-strategy-consultancy`}><FormattedMessage id="nav.digitalMarketing" defaultMessage="Digital marketing" /></Link>
                 <Link to={`/${locale}/services/social-media-management-services`}><FormattedMessage id="nav.socialMedia" defaultMessage="Social media management" /></Link>
+                <Link to={`/${locale}/services/ai-software-development-services`}>
+                <FormattedMessage id="nav.AI" defaultMessage="Social media management" />
+              </Link>
               </div>
               <Link to={`/${locale}/clients`}><FormattedMessage id="nav.clients" defaultMessage="Clients" /></Link>
               <Link to={`/${locale}/about`}><FormattedMessage id="nav.about" defaultMessage="About Us" /></Link>

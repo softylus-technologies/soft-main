@@ -446,5 +446,28 @@
   "title": "See what our customers say about us",
   "defaultImageAlt": "Customer profile picture"
 },
-"app.switchLanguageEnglish":"AR"
+"app.switchLanguageEnglish":"AR",
+"nav.AI":"Artificial Intelligence",
+"aiExpertise": {
+  "header": {
+    "title": "Expertise in AI Development Technologies",
+    "description": "As a market-leading AI software development company, we have expertise in working with the latest AI engineering technologies. We use this expertise to custom-develop game-changing AI software solutions for your business."
+  }
+},
+"aiSoftware": {
+    "title": "AI Software Development Services"
+  },
+  "whyDevelopai": {
+    "title": "Why Develop an AI Software for Your Business?"
+  },
+  "industriesWeServe": {
+    "title": "Industries We Serve"},
+    "softylusAILaunchpad": {
+      "title": "Get Started with Softylus AI Software Development.",
+      "description": "Softylus is widely recognized for its excellence in developing AI software solutions. Let’s talk to develop custom AI-powered solutions.",
+      "button": "Book A Free Consultation" 
+    },
+    "aiDevProcess": {
+      "title": "Our AI Software Development Process",
+      "description": "We have a curated process to help you build your AI system from scratch with maximum efficiency."}
 }

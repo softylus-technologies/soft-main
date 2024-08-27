@@ -1,0 +1,127 @@
+.AIDevProcess-sec{
+    display: flex;
+    justify-content: center;
+    background: #1D1313;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+.AIDevProcess-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px ;
+    width: 90%;
+    gap: 60px;
+}
+.AIDevProcess-head{
+    max-width: 600px;
+    width: 90%;
+}
+.AIDevProcess-head h1{
+    font-family: "Faktum Test";
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 42.05px;
+    letter-spacing: -2px;
+    text-align: center;
+}
+.AIDevProcess-head p{
+    font-family: "Faktum Test";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+}
+.AIDevProcess-cards-container{
+    display: flex;
+}
+.AIDevProcess-card {
+    width: 20%;
+    padding: 0 15px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: fadeInUp 0.5s ease forwards;
+    animation-play-state: paused;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.AIDevProcess-card:nth-child(1) { animation-delay: 0.4s; }
+.AIDevProcess-card:nth-child(2) { animation-delay: 0.6s; }
+.AIDevProcess-card:nth-child(3) { animation-delay: 0.8s; }
+.AIDevProcess-card:nth-child(4) { animation-delay: 1s; }
+.AIDevProcess-card:nth-child(5) { animation-delay: 1.2s; }
+.AIDevProcess-card h3{
+    font-family: "Faktum Test";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.AIDevProcess-card p{
+    font-family: "Faktum Test";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27.9px;
+    text-align: center;
+}
+.AIDevProcess-head-card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AIDevProcess-head-card svg{
+    position: absolute;
+    right: -100px;
+}
+.AIDevProcess-card:last-child svg  {
+    display: none;
+}
+html[lang="ar"] .AIDevProcess-head-card svg{
+    rotate: 180deg;
+    right: auto;
+    left: -100px;
+}
+@media (max-width: 1024px){
+    .AIDevProcess-head h1{
+        font-size: 32px;
+    }
+    .AIDevProcess-head p{
+        font-size: 16px;
+    }
+    .AIDevProcess-cards-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .AIDevProcess-card{
+        width: 100%;
+    }
+    .AIDevProcess-head-card{
+        justify-content: flex-start;
+    }
+    .AIDevProcess-head-card svg{
+        display: none;
+    }
+    .AIDevProcess-card{
+        animation-play-state: running;
+    }
+    .AIDevProcess-card h3{
+        text-align: left;
+        font-size: 18px;
+    }
+    .AIDevProcess-card p {
+        text-align: left;
+        font-size: 16px;
+    }
+    html[lang="ar"] .AIDevProcess-card h3,html[lang="ar"] .AIDevProcess-card p{
+        text-align: right;
+    }
+}

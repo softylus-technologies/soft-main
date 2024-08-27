@@ -1,0 +1,37 @@
+.label-sec{
+    background-color: #1D1313;
+    padding: 30px 0;
+    margin-top: -1.2%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    flex-wrap: wrap;
+    max-width: 90%;
+}
+.label-item{
+display: flex;
+gap: 5px;
+align-items: center;
+}
+.label-item p{
+    margin: 0 !important;
+    font-family: "Faktum Test";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.08px;
+    color: #FFFFFF;
+}
+@media (max-width: 1024px){
+    .label-container{
+        gap: 30px;
+    }
+}
