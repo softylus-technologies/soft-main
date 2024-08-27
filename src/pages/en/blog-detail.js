@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useContext } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import axios from "axios";
 import Layout from "../../components/layout";
@@ -7,6 +7,10 @@ import FooterCon from "../../components/FooterCon";
 import DOMPurify from "dompurify";
 import Seo from "../../components/seo";
 import { useLocation } from "@reach/router";
+import { navigate } from "gatsby";
+import { LanguageContext } from "../../context/LanguageContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 
 const BlogDetail = () => {
   const location = useLocation();
@@ -15,6 +19,7 @@ const BlogDetail = () => {
 
   const [blog, setBlog] = useState(null);
   const [otherBlogs, setOtherBlogs] = useState([]);
+  const { locale } = useContext(LanguageContext);
 
   const fetchBlog = useCallback(async () => {
     if (!slug) return;
@@ -78,6 +83,8 @@ const BlogDetail = () => {
         }
       );
 
+      console.log("ORIGINALLO: ", response.data.data);
+
       const otherBlogsData = response.data.data
         .filter((blogData) => blogData.attributes.Slug !== slug)
         .map((blogData) => ({
@@ -93,6 +100,8 @@ const BlogDetail = () => {
               blogData.attributes.Featured_Image?.data?.attributes
                 ?.alternativeText || blogData.attributes.Title,
           },
+          categories: blogData.attributes.category,
+          publicationDate: blogData.attributes.publishedAt,
         }));
 
       setOtherBlogs(otherBlogsData);
@@ -173,6 +182,14 @@ const BlogDetail = () => {
 
   const htmlContent = convertContentToHtml(blog.content);
 
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  };
+
   console.log("Others", otherBlogs);
 
   return (
@@ -209,35 +226,67 @@ const BlogDetail = () => {
             <hr />
           </div>
           <div className="blog-posts-container">
-            {otherBlogs?.map((otherPost) => (
-              <div
-                key={otherPost.id}
-                className="blog-card-list"
-                onClick={() =>
-                  (window.location.href = `/blog-detail/?slug=${otherPost.slug}`)
-                }
-              >
-                <img
-                  src={otherPost.featuredImage.url}
-                  alt={otherPost.featuredImage.alt}
-                />
-                <div className="blog-card-list-content">
-                  <div className="post-info">
-                    <div className="post-categories">
-                      <p>{otherPost.categories?.[0] || "Category"}</p>
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={3.1}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                375: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 20,
+                },
+                900: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 20,
+                },
+                1070: {
+                  slidesPerView: 1.1,
+                  spaceBetween: 20,
+                },
+                1300: {
+                  slidesPerView: 3.1,
+                  spaceBetween: 20,
+                },
+                1640: {
+                  slidesPerView: 3.1,
+                  spaceBetween: 20,
+                },
+              }}
+            >
+              {otherBlogs?.map((otherPost) => (
+                <SwiperSlide key={otherPost.id}>
+                  <div
+                    className="blog-card-list"
+                    onClick={() =>
+                      navigate(`/${locale}/blog-detail/?slug=${otherPost.slug}`)
+                    }
+                  >
+                    <img
+                      src={otherPost.featuredImage.url}
+                      alt={otherPost.featuredImage.alt}
+                    />
+                    <div className="blog-card-list-content">
+                      <div className="post-info">
+                        <div className="post-categories">
+                          <p>
+                            {otherPost?.categories?.data?.attributes.Category ||
+                              "Category"}
+                          </p>
+                        </div>
+                        <span>—</span>
+                        <p className="post-date">
+                          {formatDate(otherPost.publicationDate)}
+                        </p>
+                      </div>
+                      <p className="post-title">{otherPost?.title}</p>
+                      <div className="blog-description">
+                        {convertContentToHtml(otherPost.content)}
+                      </div>
                     </div>
-                    <span>—</span>
-                    <p className="post-date">
-                      {otherPost.publicationDate || "November, 6 2023"}
-                    </p>
                   </div>
-                  <p className="post-title">{otherPost?.title}</p>
-                  <div className="blog-description">
-                    {convertContentToHtml(otherPost.content)}
-                  </div>
-                </div>
-              </div>
-            ))}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </section>
