@@ -47,7 +47,9 @@ const IndexPage = () => {
       />
       {/* <Clients /> */}
       <div className="md:px-[70px] mx-auto">
-        <ClientSlider />
+        <React.Suspense fallback={<div>Loading...</div>}>
+                <ClientSlider />
+            </React.Suspense>
 
         <div className="container">
           {/* <img

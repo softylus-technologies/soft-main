@@ -190,7 +190,7 @@ function ContactForm() {
                               SubHeading={testimonial.attributes.opinion}
                               Title={testimonial.attributes.Name}
                               SubProfile={testimonial.attributes.position}
-                              imageSrc={`https://strapi.softylus.com/${testimonial.attributes.picture?.data?.attributes?.url}` || '/default-image.jpg'}
+                              imageSrc={`https://strapi.softylus.com${testimonial.attributes.picture?.data?.attributes?.url}` || '/default-image.jpg'}
                             />
                           </SwiperSlide>
                         ))}
