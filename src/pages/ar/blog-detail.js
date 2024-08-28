@@ -14,10 +14,10 @@ const BlogDetail = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const slug = params.get("slug");
+  const { locale } = useContext(LanguageContext);
 
   const [blog, setBlog] = useState(null);
   const [otherBlogs, setOtherBlogs] = useState([]);
-  const { locale } = useContext(LanguageContext);
 
   const fetchBlog = useCallback(async () => {
     if (!slug) return;
@@ -239,7 +239,7 @@ const BlogDetail = () => {
       <Seo title={blog.seoTitle || blog.title} description={blog.description} />
       <section className="blog-details-section md:px-[70px] mx-auto flex justify-center flex-col items-center pl-4 pr-4 mt-20">
         <div className="blog-container">
-          <div className="show-post pl-4 pr-4">
+          <div className="show-post">
             <header>
               <h1 className="single-post-title">{blog.title}</h1>
               <div className="post-info-header">

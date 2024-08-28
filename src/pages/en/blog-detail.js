@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useContext } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import axios from "axios";
 import Layout from "../../components/layout";
@@ -7,11 +7,16 @@ import FooterCon from "../../components/FooterCon";
 import DOMPurify from "dompurify";
 import Seo from "../../components/seo";
 import { useLocation } from "@reach/router";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import { LanguageContext } from "../../context/LanguageContext";
+import { navigate } from "gatsby";
 
 const BlogDetail = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const slug = params.get("slug");
+  const { locale } = useContext(LanguageContext);
 
   const [blog, setBlog] = useState(null);
   const [otherBlogs, setOtherBlogs] = useState([]);
@@ -69,7 +74,7 @@ const BlogDetail = () => {
   const fetchOtherBlogs = useCallback(async () => {
     try {
       const response = await axios.get(
-        `https://strapi.softylus.com/api/blogs?populate=*&locale=en&pagination[limit]=3`,
+        `https://strapi.softylus.com/api/blogs?populate=*&locale=en&pagination`,
         {
           headers: {
             Authorization:
@@ -93,6 +98,8 @@ const BlogDetail = () => {
               blogData.attributes.Featured_Image?.data?.attributes
                 ?.alternativeText || blogData.attributes.Title,
           },
+          categories: blogData.attributes.category,
+          publicationDate: blogData.attributes.publishedAt,
         }));
 
       setOtherBlogs(otherBlogsData);
@@ -200,7 +207,7 @@ const BlogDetail = () => {
     const readingTimeMinutes = Math.ceil(wordCount / wordsPerMinute);
     return {
       duration: readingTimeMinutes,
-      humanizedDuration: `${readingTimeMinutes} min. read`,
+      humanizedDuration: `${readingTimeMinutes} min read`,
     };
   }
 
@@ -289,15 +296,20 @@ const BlogDetail = () => {
                     <div className="blog-card-list-content">
                       <div className="post-info">
                         <div className="post-categories">
-                          <p>
-                            {otherPost?.categories?.data?.attributes.Category ||
-                              "Category"}
-                          </p>
+                          {otherPost?.categories?.data !== null && (
+                            <p>
+                              {otherPost?.categories?.data?.attributes
+                                .Category || "Category"}
+                            </p>
+                          )}
                         </div>
-                        <span>—</span>
-                        <p className="post-date">
-                          {formatDate(otherPost.publicationDate)}
-                        </p>
+                        {otherPost?.categories?.data !== null &&
+                          otherPost.publicationDate !== null && <span>—</span>}
+                        {otherPost.publicationDate !== null && (
+                          <p className="post-date">
+                            {formatDate(otherPost.publicationDate)}
+                          </p>
+                        )}
                       </div>
                       <p className="post-title">{otherPost?.title}</p>
                       <div className="blog-description">
