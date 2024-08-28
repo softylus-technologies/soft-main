@@ -4,39 +4,46 @@
       "subHeading": "From small business websites to complex web applications, our expert team has built, modified, and upgraded numerous digital platforms. We serve individuals, startups, SMEs, and large enterprises. Boost user engagement with a website tailored to your needs.",
       "buttonText": "Discover Web Solutions",
       "imageSrc": "/website develop.svg",
-      "path":"/seo-responsive-web-design"
+      "path":"seo-responsive-web-design"
     },
     {
       "title": "Mobile App Development",
       "subHeading": "Turn your app vision into reality with our skilled mobile developers. Whether it's Android, iOS, or cross-platform, we ensure smooth functionality across all devices. Not sure what's best for you? Our free consultation will guide you towards the ideal solution.",
       "buttonText": "Explore Mobile Options",
       "imageSrc": "/mobile app deve.svg",
-      "path":"../best-mobile-app-developers"
+      "path":"best-mobile-app-developers"
     },
     {
         "title": "UI/UX Design",
         "subHeading": "Elevate user experience beyond aesthetics. Our designs represent your brand voice while optimizing user journeys. We specialize in web design, wireframing, prototyping, product visualization, user testing, and content integration. Say goodbye to high bounce rates and lost users.",
         "buttonText": "Transform Your UX",
-        "imageSrc": "/UI UX.svg"
+        "imageSrc": "/UI UX.svg",
+        "path": "#"
+
       },
       {
         "title": "Full Stack Custom Software Development",
         "subHeading": "Seeking qualified full-stack developers? Look no further. We offer expertise in frontend, backend, and system integrations, implementing cutting-edge technologies for optimal performance. Let's discuss your project requirements – consultation is free!",
         "buttonText": "Start Your Project",
-        "imageSrc": "/full stack.svg"
+        "imageSrc": "/full stack.svg",
+        "path": "#"
+
+        
       },
       {
         "title": "Hosting Services",
         "subHeading": "WChoose from our range of hosting plans, including WordPress hosting, personal use, small business, and enterprise solutions. Enjoy super-fast loading times, robust security, and budget-friendly options that don't compromise on quality.",
         "buttonText": "Secure Your Hosting",
-        "imageSrc": "/hosting service.svg"
+        "imageSrc": "/hosting service.svg",
+        "path": "#"
+
       },
       {
         "title": "Digital Marketing",
         "subHeading": "Our tailored digital marketing strategies align with your unique business goals. From increasing brand awareness to driving sales and enhancing customer engagement, we deliver measurable and sustainable results in the dynamic online landscape.",
         "buttonText": "Boost Your Online Presence",
         "imageSrc": "/Image right Digital Marketing.svg",
-        "path":"../detail-smm"
+        "path": "digital-marketing-strategy-consultancy"
       }
       ,
       {
@@ -44,7 +51,7 @@
         "subHeading": "Empower your brand with our dynamic social media management services. We craft platform-specific strategies for Facebook, Instagram, Twitter, LinkedIn, and more, ensuring an impactful online presence that drives engagement and tangible results.",
         "buttonText": "Elevate Your Social Media",
         "imageSrc": "/Image right Social Media Management.svg",
-        "path":"../digital-marketing-strategy-consultancy"
+        "path": "social-media-management-services"
       }
   ]
   

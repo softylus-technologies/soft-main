@@ -50,6 +50,7 @@ const About = () => {
       
       <Layout>
         <Seo 
+        url="https://softylus.com/en/about/"
         title="About Softylus | Your Software Solution Experts"
         description="Learn more about Softylus, a leader in software development. Our mission is to bridge technological gaps through innovative, user-centric solutions."
         keywords="software development, custom software, web development, mobile app development, software solutions, IT solutions, technology consulting, software engineering, agile development, Softylus" // Added keywords here
@@ -65,7 +66,7 @@ const About = () => {
               <FormattedMessage id="about.section1.title" defaultMessage="Make bold business statements, and We'll deliver brilliant results" />
             </h1>
             <div class="gif-container flex mx-auto items-start justify-start w-100 h-100 relative mobile">
-              <img class="w-full h-full object-cover border-radius30" src="/Imageright.png"  />
+              <img class="w-full h-full object-cover border-radius30" src="/Imageright.png" alt="Feature illustration" />
             </div>
             <p className="mt-2 md:mt-0">
               <FormattedMessage id="about.section1.description" defaultMessage="To bring the world closer through technology, and enhance our optimal solutions' reach around the globe, so that, geographical barriers no longer hinder anyone from advancing" />
@@ -77,7 +78,7 @@ const About = () => {
               <IconCard imageUrl="/icon4.svg" text="Security Vigilance" />
             </div>
             <div className="my-4">
-              <Link
+              <Link rel="canonical" 
                 to={`/${locale}/contact-us`}
                 className="no-underline mt-7 inline-flex items-center justify-center px-3 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
               >

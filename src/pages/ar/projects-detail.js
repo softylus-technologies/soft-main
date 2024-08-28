@@ -206,7 +206,7 @@ const ProjectDetail = ({ params, location }) => {
                 ))}
               </div>
               <div className="mb-14 project-detail-someDetail-button">
-                <Link
+                <Link rel="canonical" 
                   to={`/${locale}/contact-us`}
                   className="no-underline inline-flex items-center justify-center px-5 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
                 >

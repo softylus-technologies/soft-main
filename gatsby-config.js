@@ -14,6 +14,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-robots-txt",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -32,6 +33,22 @@ module.exports = {
         theme_color: "#EC2227",
         display: "standalone",
         icon: "static/fav Softylus.svg", // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://softylus.com',
+        sitemap: 'https://softylus.com/sitemap-0.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://softylus.com`,
+          stripQueryString: true,
+
       },
     },
   ],

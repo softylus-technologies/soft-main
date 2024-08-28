@@ -24,13 +24,13 @@ const Footer = () => {
                 <p><FormattedMessage id="footer.addressJordan" /></p>
               </address>
               <div className="social-icon">
-                <Link
+                <Link rel="canonical" 
                   href="https://www.linkedin.com/company/softylus"
                   aria-label={intl.formatMessage({ id: "footer.linkedinAriaLabel" })}
                 >
                   <img src="/linkedin-icon.svg" alt={intl.formatMessage({ id: "footer.linkedinAlt" })} />
                 </Link>
-                <Link
+                <Link rel="canonical" 
                   href="https://web.facebook.com/softylus?_rdc=1&_rdr"
                   aria-label={intl.formatMessage({ id: "footer.facebookAriaLabel" })}
                 >
@@ -44,27 +44,27 @@ const Footer = () => {
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
-                  <Link to={`/${locale}/about`} className="no-underline">
+                  <Link rel="canonical"  to={`/${locale}/about`} className="no-underline">
                     <FormattedMessage id="footer.aboutLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/industries`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/industries`}>
                     <FormattedMessage id="footer.industriesLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/careers`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/careers`}>
                     <FormattedMessage id="footer.careersLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/clients`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/clients`}>
                     <FormattedMessage id="footer.clientsLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/contact-us`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/contact-us`}>
                     <FormattedMessage id="footer.contactLink" />
                   </Link>
                 </li>
@@ -76,27 +76,27 @@ const Footer = () => {
               </h2>
               <ul className="footer-links-list text-gray-500 dark:text-gray-400 font-medium p-0">
                 <li>
-                  <Link className="no-underline" to={`/${locale}/services/seo-responsive-web-design`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/services/seo-responsive-web-design`}>
                     <FormattedMessage id="footer.webDevLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/services/best-mobile-app-developers`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/services/best-mobile-app-developers`}>
                     <FormattedMessage id="footer.mobileDevLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/services/professional-seo-services`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/services/professional-seo-services`}>
                     <FormattedMessage id="footer.seoLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/services/digital-marketing-strategy-consultancy`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/services/digital-marketing-strategy-consultancy`}>
                     <FormattedMessage id="footer.digitalMarketingLink" />
                   </Link>
                 </li>
                 <li>
-                  <Link className="no-underline" to={`/${locale}/services/social-media-management-services`}>
+                  <Link rel="canonical"  className="no-underline" to={`/${locale}/services/social-media-management-services`}>
                     <FormattedMessage id="footer.smmLink" />
                   </Link>
                 </li>

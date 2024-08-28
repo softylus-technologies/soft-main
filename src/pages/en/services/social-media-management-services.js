@@ -30,6 +30,7 @@ const DetailSMM = () => {
       </Helmet>
 
       <Seo
+        url="https://softylus.com/en/services/social-media-management-services/"
         // Use Seo component for other meta tags
         title="Top Social Media Management Services | Softylus Technologies"
         description="Explore Softylus Technologies' premier social media management services. From content creation to community management, we drive engagement and online success for businesses."

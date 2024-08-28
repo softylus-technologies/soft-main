@@ -30,6 +30,7 @@ const DetailWebDev = () => {
       </Helmet>
 
       <Seo
+        url="https://softylus.com/en/services/seo-responsive-web-design/"
         // Use Seo component for other meta tags
         title="Web Development Services | Softylus Technologies"
         description="Explore our comprehensive web development services. From dynamic websites to e-commerce platforms, we deliver user-centric solutions that engage and convert."

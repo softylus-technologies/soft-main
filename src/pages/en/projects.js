@@ -13,7 +13,7 @@ const ProjectCard = ({ images, title, link, onClick, isActive, className }) => {
   const { locale } = useContext(LanguageContext);
 
   return (
-    <Link to={`/${locale}/projects-detail${link}`}>
+    <Link rel="canonical"  to={`/${locale}/projects-detail${link}`}>
       <div className={`${className} card ${isActive ? 'active' : ''}`} onClick={onClick}>
         <div className="card-image">
           <img src={`https://strapi.softylus.com${images[0].attributes.url}`} alt={images[0].attributes.name} />
@@ -50,6 +50,7 @@ const Projects = () => {
   return (
     <Layout> 
       <Seo 
+      url="https://softylus.com/en/projects/"
         title="Our Projects | Showcase of Softylus Innovations"
         description="Dive into our portfolio of completed projects. From web applications to mobile platforms, see how our innovative solutions have propelled businesses forward."
       />

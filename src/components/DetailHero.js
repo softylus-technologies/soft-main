@@ -8,7 +8,7 @@ const DetailHero = ({ Title, SubHeading, buttonText, imageSrc, className }) => {
       <TowSideLayout reverse imgUrl={imageSrc} classNameres={"desktop"}>
         <h1 className="text-4xl md:text-5xl">{Title}</h1>
         <div class="gif-container flex mx-auto items-start justify-start w-100 h-100 relative mobile">
-            <img class="w-full h-full object-cover border-radius30" src={imageSrc}/>
+            <img class="w-full h-full object-cover border-radius30" src={imageSrc} alt="Feature illustration"/>
           </div>
         <p className="p-text">{SubHeading}</p>
       </TowSideLayout>

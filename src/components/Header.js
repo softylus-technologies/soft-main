@@ -108,7 +108,7 @@ const Header = ({
           <p className="sub-heading max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 text-lg leading-loose dark:text-gray-400">
             {renderText(SubHeading, subHeadingId)}
           </p>
-          <Link
+          <Link rel="canonical" 
             to={`/${locale}/contact-us`}
             className="primary-cta no-underline inline-flex items-center justify-center text-base font-extrabold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
           >

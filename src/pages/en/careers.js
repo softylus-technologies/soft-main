@@ -29,6 +29,7 @@ const Careers = () => {
   return (
       <Layout>
         <Seo
+        url="https://softylus.com/en/careers/"
           title="Career Opportunities | Softylus Technologies"
           description="Explore exciting career opportunities at Softylus Technologies. Join our team and work on interesting projects in technology and innovation."
         />

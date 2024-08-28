@@ -16,7 +16,8 @@ const ai = () => {
   return (
     <Layout>
       <Seo
-      title="AI Solutions for Business Growth | 5+ Years Experience | Softylus"
+      url="https://softylus.com/en/services/ai-software-development-services/"
+      title="Softylus AI Development | Driving Business Growth"
       description="Softylus delivers custom AI solutions that empower businesses to automate, optimize, and predict for maximum efficiency. 5+ years of experience in machine learning, big data, and more."/>
         <Newheader
             title="AI Solutions for Business Growth"

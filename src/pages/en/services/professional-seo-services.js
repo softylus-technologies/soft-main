@@ -17,6 +17,7 @@ const DetailSeo = () => {
   return (
     <Layout>
       <Seo
+        url="https://softylus.com/en/services/professional-seo-services/"
         title="SEO Services | Softylus Technologies"
         description="Discover Softylus Technologies' expert SEO services. We help businesses achieve their online goals through data-driven strategies and proven tactics."
       />

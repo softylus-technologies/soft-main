@@ -34,6 +34,7 @@ const IndexPage = () => {
       </Helmet>
 
       <Seo
+        url="https://softylus.com/en/"
         title="Pioneering Software Development | Softylus "
         description="Discover Softylus, your premier partner in software development excellence. Specializing in bespoke solutions for businesses globally. Contact us to transform your vision into reality."
       />
@@ -57,12 +58,12 @@ const IndexPage = () => {
         </div>
         <TowSideLayout imgUrl="/coding.gif" img2Url="/Frame ibrahim.svg" classNameres="desktop">
       <div className="heading-container">
-        <h1 className="primary-heading text-3xl md:text-5xl">
+        <h2 className="primary-heading text-3xl md:text-5xl">
           <FormattedMessage 
             id="towSideLayout.heading"
             defaultMessage="Building software solutions with high resolution"
           />
-        </h1>
+        </h2>
         <p className="sub-heading">
           <FormattedMessage 
             id="towSideLayout.subheading"
@@ -76,7 +77,7 @@ const IndexPage = () => {
         <IconCard imageUrl="/icon2.svg" textId="iconCard.developmentalAccuracy" defaultText="Developmental Accuracy" />
         <IconCard imageUrl="/icon4.svg" textId="iconCard.securityVigilance" defaultText="Security Vigilance" />
       </div>
-      <Link
+      <Link rel="canonical" 
         to={`/${locale}/contact-us`}
         className="mt-3 primary-cta no-underline inline-flex items-center justify-center text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
       >

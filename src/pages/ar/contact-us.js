@@ -159,9 +159,9 @@ function ContactForm() {
               <div className="relative px-4 pb-10 pt-10 sm:pt-10 lg:static lg:py-20 w-6/12">
                 <div className="lg:mx-0 flex flex-col justify-between gap-20">
                   <div>
-                    <h2 className="text-3xl font-bold tracking-tight text-white">
+                    <h1 className="text-3xl font-bold tracking-tight text-white">
                       <FormattedMessage id="contactForm.heading" />
-                    </h2>
+                    </h1>
                     <p className="mt-6 text-lg leading-8 text-gray-300">
                       <FormattedMessage id="contactForm.subheading" />
                     </p>

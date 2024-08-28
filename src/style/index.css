@@ -241,7 +241,7 @@ html[lang="ar"]  .main-header .heading-container .primary-cta img{
 .content-section {
   display: flex;
 }
-.content-section h1{
+.content-section h2{
   font-weight: 700;
   line-height: 55px;
   margin-bottom: 20px;
@@ -269,7 +269,7 @@ html[lang="ar"] .heading-container {
   row-gap: 40px;
 }
 
-.services-container + .our-features-section > div .content-section > h1 {
+.services-container + .our-features-section > div .content-section > h2 {
   margin: 0 !important;
   font-weight: 700;
 }
@@ -420,7 +420,7 @@ html[lang="ar"] .heading-container {
   .our-features-section{
     padding: 3rem 0;
   }
-  .content-section h1 {
+  .content-section h2 {
     line-height: 40px;
   }
 }
@@ -725,7 +725,7 @@ html[lang="ar"] .heading-container{
   .services-container + .our-features-section > div .content-section > h1 {
     font-size: 26px;
   }
-  .content-section h1{
+  .content-section h2{
     font-weight: 600;
     font-size: 30px;
   }

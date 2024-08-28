@@ -55,9 +55,9 @@ const BlogSection = () => {
   return (
     <section className="latest-insights-section mx-2 md:mx-auto py-10 relative h-full">
       <div className="latest-insights-section-content">
-      <h1 className="text-3xl md:text-5xl text-center">
+      <h2 className="text-3xl md:text-5xl text-center">
       <FormattedMessage id="blogSection.latestInsights" defaultMessage="Latest Insights" />
-      </h1>
+      </h2>
       </div>
       {/* grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 */}
       <div className="articles-container">

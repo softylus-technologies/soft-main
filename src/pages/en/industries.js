@@ -48,15 +48,15 @@ const Industries = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Softylus Company | Innovative solutions for the success of your organization </title>
-        <meta name="description" content="Discover how Softylus' dedicated team can deliver customized solutions that boost your organization's success. We speak the language of your industry, and are committed to delivering results that exceed expectations through our cutting-edge services in software development, applications, and digital marketing. Get a free consultation now!" />
+        <title>Softylus Industries | Tailored Solutions for Your Sector </title>
+        <meta name="description" content="Learn how Softylus delivers industry-specific solutions that enhance your organization's success. Get a free consultation and experience our commitment to exceeding expectations. " />
         <meta name="keywords" content="software development, web development, mobile app development, software solutions, IT solutions, technology consulting, digital marketing, Softylus, blockchain, crowdfunding, fintech, ecommerce, augmented reality, hosting, industry solutions" />
       </Helmet>
 
       <Seo
-        // Use Seo component for other meta tags
-        title="Softylus Company | Innovative solutions for the success of your organization "
-        description=" Discover how Softylus' dedicated team can deliver customized solutions that boost your organization's success. We speak the language of your industry, and are committed to delivering results that exceed expectations through our cutting-edge services in software development, applications, and digital marketing. Get a free consultation now!"
+        url="https://softylus.com/en/industries/"
+        title="Softylus Industries | Tailored Solutions for Your Sector "
+        description=" Learn how Softylus delivers industry-specific solutions that enhance your organization's success. Get a free consultation and experience our commitment to exceeding expectations. "
       />
       <Header 
         Title="We Speak Your Industry's Language"

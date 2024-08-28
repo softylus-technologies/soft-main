@@ -76,7 +76,7 @@ const IndexPage = () => {
         <IconCard imageUrl="/icon2.svg" textId="iconCard.developmentalAccuracy" defaultText="Developmental Accuracy" />
         <IconCard imageUrl="/icon4.svg" textId="iconCard.securityVigilance" defaultText="Security Vigilance" />
       </div>
-      <Link
+      <Link rel="canonical" 
         to={`/${locale}/contact-us`}
         className="mt-3 primary-cta no-underline inline-flex items-center justify-center text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
       >

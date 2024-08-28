@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import AppWrapper from './AppWrapper';
 import { LanguageContext } from '../context/LanguageContext';
-
+import Whatsapp from './Whatsapp';
 const Layout = ({ children, pageContext }) => {
   const { locale } = useContext(LanguageContext);
 
@@ -12,6 +12,7 @@ const Layout = ({ children, pageContext }) => {
     <AppWrapper pageContext={pageContext}>
       <div className={`layout ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
         <NavBar />
+        <Whatsapp/>
         <main>{children}</main>
         <Footer />
       </div>

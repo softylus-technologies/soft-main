@@ -13,7 +13,7 @@ const ProjectCard = ({ images, title, link, onClick, isActive, className }) => {
   const { locale } = useContext(LanguageContext);
 
   return (
-    <Link to={`/${locale}${link}`}>
+    <Link rel="canonical"  to={`/${locale}${link}`}>
       <div className={`${className} card ${isActive ? 'active' : ''}`} onClick={onClick}>
         <div className="card-image">
           <img src={`https://strapi.softylus.com${images[0].attributes.url}`} alt={images[0].attributes.name} />

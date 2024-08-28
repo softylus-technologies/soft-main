@@ -29,6 +29,7 @@ const DetailMobile = () => {
       </Helmet>
 
       <Seo
+      url="https://softylus.com/en/services/best-mobile-app-developers/"
         // Use Seo component for other meta tags
         title="Mobile App Development | Softylus Technologies"
         description="Discover Softylus Technologies' innovative mobile app development services. We create engaging, efficient, and essential apps for businesses of all sizes."

@@ -17,7 +17,7 @@ const NotFoundPage = () => {
                 <h1>404</h1>
                 <h2>Page Not Found</h2>
                 <p>Sorry, we couldn’t find the page you ‘re looking for </p>
-                <Link to={`/${locale}/`} className='primary-cta no-underline inline-flex items-center justify-center text-base font-extrabold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10'>Back to Home Page</Link>
+                <Link rel="canonical"  to={`/${locale}/`} className='primary-cta no-underline inline-flex items-center justify-center text-base font-extrabold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10'>Back to Home Page</Link>
             </div>
         </section>
    </Layout>

@@ -84,7 +84,7 @@ const About = () => {
             <IconCard imageUrl="/icon4.svg" text="اليقظة الأمنية" />
           </div>
           <div className="my-4">
-            <Link
+            <Link rel="canonical" 
               to={`/${locale}/contact-us`}
               className="no-underline mt-7 inline-flex items-center justify-center px-3 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
             >

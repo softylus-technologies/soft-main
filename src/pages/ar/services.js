@@ -51,7 +51,7 @@ const Services = () => {
             </p>
 
             <div className="my-4">
-              <Link
+              <Link rel="canonical" 
                 to={`/${locale}/contact-us`}
                 className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
               >
@@ -95,8 +95,8 @@ const Services = () => {
         {service.subHeading}
       </p>
       <div className="mt-4">
-        <Link
-          to={`/${locale}/${service.path}`}
+        <Link rel="canonical" 
+          to={`/${locale}/services/${service.path}`}
           className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
         >
           {service.buttonText}

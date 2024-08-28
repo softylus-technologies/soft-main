@@ -29,6 +29,9 @@ const Clients = () => {
 
   return (
     <Layout>
+        <Seo
+          url="https://softylus.com/en/clients/"
+      />
       {/* Use Helmet for keywords and other meta data */}
       <Helmet>
         <title>Our Clients | Softylus Success Stories</title>

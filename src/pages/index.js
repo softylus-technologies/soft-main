@@ -8,6 +8,7 @@ const index = () => {
         title="Pioneering Software Development | Softylus"
         description="Discover Softylus, your premier partner in software development excellence. Specializing in bespoke solutions for businesses globally. Contact us to transform your vision into reality."
       />
+      <h1></h1>
     </Layout>
   )
 }

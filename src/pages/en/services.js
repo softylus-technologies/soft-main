@@ -22,6 +22,7 @@ const Services = () => {
 
   return ( <Layout>
       <Seo 
+        url="https://softylus.com/en/services/"
         title="Comprehensive Software Solutions | Softylus Services"
         description="Explore our full range of services including web & mobile development, UI/UX design, and more. Softylus is dedicated to delivering tailored solutions that meet your specific business needs."
       />
@@ -47,7 +48,7 @@ const Services = () => {
             </p>
 
             <div className="my-4">
-              <Link
+              <Link rel="canonical" 
                 to={`/${locale}/contact-us`}
                 className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
               >
@@ -82,8 +83,8 @@ const Services = () => {
                   <FormattedMessage id={`services.${service.id}.subHeading`} defaultMessage={service.subHeading} />
                 </p>
                 <div className="mt-4">
-                  <Link
-                    to={`/${locale}/${service.path}`}
+                  <Link rel="canonical" 
+                    to={`/${locale}/services/${service.path}`}
                     className="no-underline inline-flex items-center justify-center px-4 py-3 text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full  focus:ring-10 w-auto"
                   >
                     <FormattedMessage id={`services.${service.id}.buttonText`} defaultMessage={service.buttonText} />

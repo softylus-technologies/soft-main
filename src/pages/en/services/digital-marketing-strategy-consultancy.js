@@ -30,6 +30,7 @@ const DetailDigitalMarketing = () => {
       </Helmet>
 
       <Seo
+        url="https://softylus.com/en/services/digital-marketing-strategy-consultancy/"
         // Use Seo component for other meta tags
         title="Top Digital Marketing Services | Softylus Technologies"
         description="Explore Softylus Technologies' premier digital marketing services. From SEO to PPC, we drive growth and online success for businesses."

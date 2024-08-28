@@ -72,9 +72,9 @@ const SecTwo = () => {
 
   return (
     <TowSideLayout reverse={true} imgUrl={"/Frame 1000003299.svg"} classNameres={"desktop"}>
-      <h1 className="text-3xl md:text-5xl mb-3">
+      <h2 className="text-3xl md:text-5xl mb-3">
         <FormattedMessage id="industries.heading" defaultMessage="We work across many industries – find yours!" />
-      </h1>
+      </h2>
       <div className="gif-container flex mx-auto items-start justify-start w-100 h-100 relative mobile">
         <img className="w-full h-full object-cover border-radius30" src="/Frame 1000003299.svg" alt={intl.formatMessage({ id: "industries.imageAlt", defaultMessage: "Industries illustration" })} />
       </div>
@@ -97,7 +97,7 @@ const SecTwo = () => {
           ))}
         </Tabs>
       </div>
-      <Link
+      <Link rel="canonical" 
         to={`/${locale}/contact-us`}
         className="primary-cta no-underline inline-flex items-center justify-center text-base font-bold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10"
       >

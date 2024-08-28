@@ -16,7 +16,7 @@ const FooterCon = ({ titleId, titleOverSpanId, subHeadingId, hideSoftylus, butto
           <FormattedMessage id={titleOverSpanId} />
         </h2>
         <p><FormattedMessage id={subHeadingId} /></p>
-        <Link
+        <Link rel="canonical" 
           to={`/${locale}/contact-us`}
           className="no-underline inline-flex items-center justify-center text-base font-bold text-main bg-white hover:opacity-85 border-0 rounded-full focus:ring-10"
         >

@@ -22,7 +22,7 @@ const BlogCard = ({ item }) => {
             : item.content}
         </p>
         <div className="absolute bottom-0 left-0 right-0 bg-[#1c1c1c] p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out BlogCard-button-card">
-          <Link 
+          <Link rel="canonical"  
           to={`/${locale}/blog-detail/?slug=${item.url}`}
           className="inline-flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-full text-sm font-medium hover:bg-red-700 transition-colors duration-300 ease-in-out"
             aria-label={intl.formatMessage(

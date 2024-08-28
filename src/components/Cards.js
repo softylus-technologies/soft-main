@@ -251,9 +251,9 @@ const Cards = () => {
   return (
     <section className="services-container container-cards">
     <header className="heading-container">
-      <h1 className="text-4xl md:text-5xl">
+      <h2 className="text-4xl md:text-5xl">
         <FormattedMessage id="cards.mainHeading" defaultMessage="Name any, we got many" />
-      </h1>
+      </h2>
       <p className="max-w-100 md:max-w-[80%] text-center mx-auto">
         <FormattedMessage 
           id="cards.subHeading" 
@@ -263,7 +263,7 @@ const Cards = () => {
     </header>
     <article className="services-cards-container pl-4 pr-4 md:pl-0 md:pr-0 grid grid-rows-6 grid-cols-1 grid-flow-col md:grid-cols-1 md:grid-rows-6 lg:grid-rows-2 lg:grid-cols-3 ">
       {services_info.map((card, index) => (
-        <Link to={`/${locale}${card.link}`} key={index}>
+        <Link rel="canonical"  to={`/${locale}${card.link}`} key={index}>
           <div className="bg-mainDark flex flex-col px-4 py-3 items-start text-left rounded-[20px] card-hover">
             <SvgIcon svgContent={card.icon} />
             <h2 className="service-name text-2xl m-0">

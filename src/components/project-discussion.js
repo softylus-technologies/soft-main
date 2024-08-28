@@ -29,7 +29,7 @@ const ProjectDiscussion = () => {
             />
           </div>
           <p><FormattedMessage id="projectDiscussion.description" /></p>
-          <Link
+          <Link rel="canonical" 
             to="https://calendly.com/aseel-softylus/30min"
             className="no-underline mb-4 inline-flex items-center justify-center px-4 py-[12px] text-base font-semibold text-white bg-main hover:opacity-85 border-0 rounded-full focus:ring-10 w-auto"
           >
