@@ -239,7 +239,9 @@ const BlogDetail = () => {
                   {readingTimeEstimate.humanizedDuration}
                 </p>
               </div>
-              <p className="post-category">{blog.categories}</p>
+              {blog.categories !== "" && (
+                <p className="post-category">{blog.categories}</p>
+              )}
             </header>
             <div className="blog-card-big-content">
               <div className="mt-4 line-height-p dangerouslySetInnerHTML current-post-text">
