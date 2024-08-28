@@ -209,7 +209,7 @@ const BlogDetail = () => {
     if (readingTimeMinutes === 1) {
       readingTime = `يُقرأ خلال دقيقة واحدة`;
     } else if (readingTimeMinutes === 2) {
-      readingTime = `يُقرأ خلال دقيقتان`;
+      readingTime = `يُقرأ خلال دقيقتين`;
     } else if (readingTimeMinutes > 2 && readingTimeMinutes < 11) {
       readingTime = `يُقرأ خلال ${readingTimeMinutes} دقائق`;
     } else {
