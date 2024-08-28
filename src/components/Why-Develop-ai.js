@@ -19,7 +19,7 @@ const WhyDevelopai = () => {
             <div className='WhyDevelopai-cards-container'>
                 {WhyDevelopaiData.map((item) => (
                     <div className='WhyDevelopai-card'>
-                    <img src={item.icon}/>
+                    <img src={item.icon} alt='icon'/>
                     <h3>{item.title}</h3>
                     <p>{item.subtitle}</p>
                 </div>

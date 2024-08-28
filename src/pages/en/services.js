@@ -41,7 +41,7 @@ const Services = () => {
               <FormattedMessage id="services.streamline.title" defaultMessage="Streamline Your Software Development Journey" />
             </h1>
             <div class="gif-container flex mx-auto items-start justify-start w-100 h-100 relative mobile">
-              <img class="w-full h-full object-cover border-radius30" src="/Image services1.svg"/>
+              <img class="w-full h-full object-cover border-radius30" src="/Image services1.svg" alt="Image services"/>
             </div>
             <p>
               <FormattedMessage id="services.streamline.description" defaultMessage="Partner with us and eliminate the need to juggle multiple service providers. Get comprehensive solutions in one place with a team that prioritizes your success and offers 24/7 customer support." />
@@ -62,6 +62,7 @@ const Services = () => {
               className="circle !top-[-10%] !bottom-[unset] !right-100 "
               id="circle1"
               src="/Frame 1000003358.svg"
+              alt="circle services"
             />
             <h1><FormattedMessage id="services.techStack.title" defaultMessage="Our Technology Stack" /></h1>
             <div className="md:bg-service-desktop bg-service-mobile min-h-[50vh] bg-center bg-no-repeat	bg-contain"></div>

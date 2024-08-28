@@ -19,7 +19,7 @@ const IndustriesWeServe = () => {
             <div className='IndustriesWeServe-cards-container'>
             {IndustriesWeServeData.map((item) =>(
                 <div className='IndustriesWeServe-card'>
-                    <img src={item.icon}/>
+                    <img src={item.icon} alt='icon'/>
                     <h3>{item.title}</h3>
                 </div>
             ))}

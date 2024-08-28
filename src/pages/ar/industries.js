@@ -94,7 +94,7 @@ const Industries = () => {
             {industriesData.map((industry, index) => (
               <SwiperSlide key={index}>
                 <div className='Industries-singel-card card-hover'>
-                  <img src={industry.icon}  />
+                  <img src={industry.icon}  alt='industry`s Icon'/>
                   <h2><FormattedMessage id={`industries.${industry.id}.title`} /></h2>
                   <p><FormattedMessage id={`industries.${industry.id}.description`} /></p>
                 </div>
