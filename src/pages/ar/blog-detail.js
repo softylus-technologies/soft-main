@@ -9,6 +9,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { navigate } from "gatsby";
+import SocialShareButtons from "../../components/social-share/SocialShareButtons";
 
 const BlogDetail = () => {
   const location = useLocation();
@@ -258,6 +259,24 @@ const BlogDetail = () => {
             <div className="blog-card-big-content">
               <div className="mt-4 line-height-p dangerouslySetInnerHTML current-post-text">
                 {htmlContent}
+              </div>
+              <div className="share-post-container">
+                <SocialShareButtons
+                  url={window.location.href}
+                  title={blog.title}
+                  shareWord={"شارك المقال"}
+                />
+                <div className="free-consultation-card">
+                  اكتشف ما إذا كان Softylus مناسبًا لك. دعنا نبتكر شيئًا
+                  استثنائيًا معًا! <br /> أطلق العنان لإمكاناتك وارفع مستوى عملك
+                  مع شريك متخصص ملتزم بنجاحك.
+                  <button
+                    type="button"
+                    onClick={() => navigate("/ar/contact-us")}
+                  >
+                    احجز استشارتك المجانية الآن
+                  </button>
+                </div>
               </div>
             </div>
           </div>

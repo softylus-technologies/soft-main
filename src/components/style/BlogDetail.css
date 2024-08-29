@@ -151,7 +151,10 @@
   max-width: 1200px;
 }
 .blog-card-big-content {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px 300px;
 }
 .clamp-3-lines {
   -webkit-line-clamp: 3;
@@ -362,4 +365,34 @@
 
 html[dir="rtl"] .blog-card-list .blog-card-list-content .post-title {
   height: 80px;
+}
+
+.share-post-container {
+  position: sticky;
+  top: 40px;
+  max-height: calc(100vh - 500px);
+}
+
+.free-consultation-card {
+  color: #fff;
+  margin-top: 40px;
+  background: #331717;
+  padding: 20px;
+  border-radius: 20px;
+  width: 350px;
+}
+
+.free-consultation-card button {
+  margin-top: 20px;
+  background: #ec2227;
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.social-share-buttons {
+  gap: 10px;
+}
+
+.rtl .share-post-container *:not(a) {
+  font-family: "Noto Kufi Arabic", sans-serif !important;
 }

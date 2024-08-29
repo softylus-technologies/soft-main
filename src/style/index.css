@@ -52,7 +52,8 @@ body {
  html[lang="ar"] textarea,
  html[lang="ar"] span,
  html[lang="ar"] label,
- html[lang="ar"] button {
+ html[lang="ar"] button,
+ html[lang="ar"] strong {
   font-family: "Noto Kufi Arabic", sans-serif !important;
   line-height: normal !important;
   direction: rtl !important;
