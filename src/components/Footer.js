@@ -22,6 +22,7 @@ const Footer = () => {
               <address>
                 <p><FormattedMessage id="footer.addressSaudi" /></p>
                 <p><FormattedMessage id="footer.addressJordan" /></p>
+                <p><FormattedMessage id="footer.addressUK" /></p>
               </address>
               <div className="social-icon">
                 <Link rel="canonical" 
