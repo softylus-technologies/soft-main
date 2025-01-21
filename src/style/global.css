@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.custom-wrap{
+    flex-wrap: nowrap !important;
+    overflow-y: auto;
+}
+.min-w-custom{
+    min-width: 10rem;
+}
+@media(max-width:800px){
+    .custom-wrap{
+        flex-wrap: wrap !important;
+    }
+}
